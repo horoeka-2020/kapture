@@ -22,3 +22,7 @@ AIM: To encourage interaction with nature by capturing images/descriptions of na
 | As a user I want to see a video of a flying bird as a backgound to the login/register screen |  TBC | TBC |
 | As a user I want to have the ability for my description of a bird shared with the community to enable ientification | TBC | TBC |
 | As a user I want to be asked questions to identify my bird | TBC | TBC |
+
+
+## Database design
+https://dbdiagram.io/d/5f9c5e863a78976d7b79e1ca
