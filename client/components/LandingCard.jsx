@@ -14,8 +14,7 @@ export default class LandingCard extends React.Component {
       <nav>
         <Link to="/login">Login</Link>
         <Link to="/register">Register</Link>
-      </nav>
-      <Route
+        <Route
         path="/login"
         component={LoginCard}
       />
@@ -23,6 +22,7 @@ export default class LandingCard extends React.Component {
         path="/register"
         component={RegisterCard}
       />
+      </nav>
     </div>
     </>
     )

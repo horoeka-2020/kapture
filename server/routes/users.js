@@ -3,36 +3,36 @@ const express = require('express')
 const router = express.Router()
 
 const db = require('../db/db')
-
 // put routes here
-//Create a new object in the database
-router.post('/', (req, res) => {
-  const object = req.body
-  db.addObject(object)
-    .then((id) => {
-      const returnedId = Number(id[0])
-      return db.getObject(returnedId)
-    })  
-    .then((object) => {
-      res.status(201).json(object)
-      return null
-    })
-    .catch(err => {
-      res.status(500).send(err.message)
-    })
-})
 
-// Get all objects records from database
+// Get all users from database
 router.get('/', (req, res) => {
-  db.getObjects()
-    .then((allObjects) => {
-      res.status(200).json(allObjects)
+  db.getUsers()
+    .then((allUsers) => {
+      res.status(200).json(allUsers)
       return null
     })
     .catch(err => {
       res.status(500).send('DB ERROR ' + err)
     })
 })
+
+
+//Create a new user in the database
+router.post('/', (req, res) => {
+  const user = req.body
+  console.log(req.body)
+  db.createUser(user)
+    .then((user) => {
+      res.status(201).json(user)
+      return null
+    })
+    .catch(err => {
+      console.log('Router post: ', err.message)
+      res.status(500).send(err.message)
+    })
+})
+
 
 // Get an object from the database by id
 router.get('/:id', (req, res) => {

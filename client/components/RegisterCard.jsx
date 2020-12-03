@@ -1,9 +1,10 @@
 import React from 'react'
+import { createUser } from '../api'
 
 export default class RegisterCard extends React.Component {
     // State to store user credentials
     state = {
-        username: '',
+        email: '',
         password: ''
         // Do we need to link a userId??
         // userId: null
@@ -18,7 +19,8 @@ export default class RegisterCard extends React.Component {
 
     // Handles our click to fire off our 
       handleClick = () => {
-     
+        const { email, password } = this.state
+        createUser({ email, password})
         }
     
 
@@ -26,20 +28,30 @@ export default class RegisterCard extends React.Component {
       return (
       <>
         <h1>Register page</h1>
-        <input
-          className="input"
-          name="username"
-          value={this.state.username}
-          placeholder="username"
-          onChange={this.handleChange}
-        ></input>
-        <input
-          className="input"
-          name="password"
-          value={this.state.password}
-          placeholder="password"
-          onChange={this.handleChange}
-        ></input>
+        <form action="/">
+
+          <div className="inputBox">
+
+            <input
+              className="input"
+              name="email"
+              value={this.state.email}
+              placeholder="email"
+              onChange={this.handleChange}
+            ></input>
+          </div>
+          <div className="inputBox">
+
+            <input
+              className="input"
+              name="password"
+              value={this.state.password}
+              placeholder="password"
+              onChange={this.handleChange}
+            ></input>
+          </div>
+          <input className="btn-submit" onClick={this.handleClick} type="submit" name="" value="Submit" />
+        </form>
       </>
       )
     }
