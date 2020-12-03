@@ -21,6 +21,7 @@ router.get('/', (req, res) => {
 //Create a new user in the database
 router.post('/', (req, res) => {
   const user = req.body
+  console.log(req.body)
   db.createUser(user)
     .then((user) => {
       res.status(201).json(user)
