@@ -4,14 +4,13 @@ import React from 'react'
 import LandingCard from './LandingCard'
 
 export default class Landing extends React.Component {
+  render () {
+    return (
+    //   Header
 
-    render () {
-      return (
-        //   Header
-        
-        <LandingCard />
+      <LandingCard />
 
-        //   Footer/Slick copyright
-      )
-    }
+    //   Footer/Slick copyright
+    )
   }
+}
