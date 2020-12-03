@@ -4,8 +4,9 @@ export default class RegisterCard extends React.Component {
     // State to store user credentials
     state = {
         username: '',
-        password: '',
-        userId: null
+        password: ''
+        // Do we need to link a userId??
+        // userId: null
       }
 
     // Handles our inputs to change state
@@ -23,7 +24,23 @@ export default class RegisterCard extends React.Component {
 
     render () {
       return (
-          
+      <>
+        <h1>Register page</h1>
+        <input
+          className="input"
+          name="username"
+          value={this.state.username}
+          placeholder="username"
+          onChange={this.handleChange}
+        ></input>
+        <input
+          className="input"
+          name="password"
+          value={this.state.password}
+          placeholder="password"
+          onChange={this.handleChange}
+        ></input>
+      </>
       )
     }
   }
