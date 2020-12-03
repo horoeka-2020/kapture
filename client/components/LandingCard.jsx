@@ -10,7 +10,7 @@ export default class LandingCard extends React.Component {
     <div className='box'>
 
       <h1 className='cardTitle'>Join the Flock</h1>
-      <p className='text'>This is the beggining of your journey to learn about all the birds of Aotearoa, go out and look for all our little feather friends!</p>
+      <p className='cardText'>This is the beggining of your journey to learn about all the birds of Aotearoa, go out and look for all our little feather friends!</p>
       <nav>
         <Link to="/login">Login</Link>
         <Link to="/register">Register</Link>

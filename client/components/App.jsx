@@ -5,7 +5,7 @@ export default class App extends React.Component {
   render () {
     return (
     <>
-      <h1>Kapture</h1>
+      <h1 className="logo">Kapture</h1>
       <Landing />
     </>
     )
