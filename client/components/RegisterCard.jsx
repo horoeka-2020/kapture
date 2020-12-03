@@ -23,6 +23,7 @@ export default class RegisterCard extends React.Component {
 
     render () {
       return (
+          
       )
     }
   }
