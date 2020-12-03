@@ -31,7 +31,7 @@ AIM: To encourage interaction with nature by capturing images/descriptions of na
 https://dbdiagram.io/d/5f9c5e863a78976d7b79e1ca
 
 ## Project decisions
-1. A grred to move from original concept of mobile based app to web based app after spike completed in this area
+1. Agreed to move from original concept of mobile based app to web based app after spike completed in this area
 2. Agreed to add in question functionality as such user story M/S/C ranking was upgraded
 3. AR has been agreed as a stretch for the project
 4. Team decided to use react instaed of redux.  Thought is oppurtunity to refact or into redux on Mon or Tues if feasible
