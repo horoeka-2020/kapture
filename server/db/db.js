@@ -30,10 +30,10 @@ function createUser (user, db = connection) {
 
 
 // Create userExists function to see if user aleady exists
-function userExists (username, db = connection) {
+function userExists (email, db = connection) {
   return db('users')
     .count('id as n')
-    .where('username', username)
+    .where('email', email)
     .then((count) => {
       return count[0].n > 0
     })
