@@ -36,6 +36,10 @@ export default class LoginCard extends React.Component {
           placeholder="password"
           onChange={this.handleChange}
         ></input>
+        <span className='enterbtn'><a href="#" className='anchor'>
+          <h3 className='enter'>Enter</h3>
+        </a>
+        </span>
       </>
       )
     }

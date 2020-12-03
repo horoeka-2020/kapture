@@ -7,7 +7,10 @@ export default class LandingCard extends React.Component {
   render () {
     return (
     <>
-      <h1>This is Landing Card Component</h1>
+    <div className='landingCard'>
+
+      <h1 className='cardTitle'>Join the Flock</h1>
+      <p className='text'>This is the beggining of your journey to learn about all the birds of Aotearoa, go out and look for all our little feather friends!</p>
       <nav>
         <Link to="/login">Login</Link>
         <Link to="/register">Register</Link>
@@ -20,6 +23,7 @@ export default class LandingCard extends React.Component {
         path="/register"
         component={RegisterCard}
       />
+    </div>
     </>
     )
   }
