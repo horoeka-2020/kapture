@@ -2,8 +2,8 @@
 exports.up = knex => {
   return knex.schema.createTable('bird_sightings', table => {
     table.increments('id').primary()
-    table.integer('user_id')
-    table.integer('bird_id')
+    table.integer('user_id').references('user.id')
+    table.integer('bird_id').references('bird.id')
     table.integer('latitude')
     table.integer('longitude')
     table.date('date_of_sighting')

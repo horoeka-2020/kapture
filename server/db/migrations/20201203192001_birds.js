@@ -10,8 +10,8 @@ exports.up = knex => {
     table.string('sound')
     table.string('conservation_status')
     table.string('threats')
-    table.integer('colour_id')
-    table.integer('size_id')
+    table.integer('colour_id').references('colour.id')
+    table.integer('size_id').references('size.id')
   })
 };
 
