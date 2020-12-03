@@ -38,3 +38,7 @@ https://dbdiagram.io/d/5f9c5e863a78976d7b79e1ca
 5. Agreed to change database design to add in colour and size tables and links
 5. Agreed to deviate fro original design so there will not be an inital camera landing page when logged in
 6. Agreed to investigate usig github pages to test mimicking a phone camera 
+7. Agreed to have bird/forest sound on the Landing Page
+8. Agreed to inital static image that will have transition effects on inital page build
+9. Agreed to use pure css for styling
+10. Agreed the application pages should be responsive
