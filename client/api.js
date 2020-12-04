@@ -1,6 +1,9 @@
 // Create client portion of api functions
 // import request from 'superagent'
 import requestor from './consume'
+// import request from 'superagent'
+
+// const userUrl = 'http://localhost:3000/api/v1/users'
 
 // Create createUser function for api on client components side
 export function createUser (user, consume = requestor) {
@@ -27,7 +30,6 @@ export function createUser (user, consume = requestor) {
 //     })
 //     .catch(errorHandler('GET', '/:id'))
 // }
-
 
 // // Create updateObject function for api on client components side
 // export function updateObject (object) {
@@ -59,5 +61,3 @@ function errorHandler (method, route) {
     }
   }
 }
-
-

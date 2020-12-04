@@ -21,32 +21,32 @@ export default class LoginCard extends React.Component {
     render () {
       return (
         <>
-        <h1>Login page</h1>
-        <form action="">
+          <h1>Login page</h1>
+          <form action="">
 
-          <div className="inputBox">
+            <div className="inputBox">
 
-            <input
-              className="input"
-              name="username"
-              value={this.state.username}
-              placeholder="username"
-              onChange={this.handleChange}
-            ></input>
-          </div>
-          <div className="inputBox">
+              <input
+                className="input"
+                name="username"
+                value={this.state.username}
+                placeholder="username"
+                onChange={this.handleChange}
+              ></input>
+            </div>
+            <div className="inputBox">
 
-            <input
-              className="input"
-              name="password"
-              value={this.state.password}
-              placeholder="password"
-              onChange={this.handleChange}
-            ></input>
-          </div>
-          <input className="btn-submit" type="submit" name="" value="Submit" />
-        </form>
-      </>
+              <input
+                className="input"
+                name="password"
+                value={this.state.password}
+                placeholder="password"
+                onChange={this.handleChange}
+              ></input>
+            </div>
+            <input className="btn-submit" type="submit" name="" value="Submit" />
+          </form>
+        </>
       )
     }
 }

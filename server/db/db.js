@@ -15,15 +15,14 @@ function getUsers (db = connection) {
 
 // Create createUser function for api on server/database side
 function createUser (user, db = connection) {
-  return userExists (user.email, db)
-  .then((exists) => {
-    if (exists) {
-      throw new Error ('Bird already in flock')
-    }
-    return db('users').insert(user, 'id')
-  })
+  return userExists(user.email, db)
+    .then((exists) => {
+      if (exists) {
+        throw new Error('Bird already in flock')
+      }
+      return db('users').insert(user, 'id')
+    })
 }
-
 
 // Create userExists function to see if user aleady exists
 function userExists (email, db = connection) {

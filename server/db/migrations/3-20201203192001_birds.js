@@ -1,4 +1,3 @@
-
 exports.up = knex => {
   return knex.schema.createTable('birds', table => {
     table.increments('id').primary()
@@ -13,8 +12,8 @@ exports.up = knex => {
     table.integer('colour_id').references('colour.id')
     table.integer('size_id').references('size.id')
   })
-};
+}
 
-exports.down = function(knex) {
+exports.down = function (knex) {
   return knex.schema.dropTable('birds')
-};
+}
