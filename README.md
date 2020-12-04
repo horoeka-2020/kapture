@@ -1,4 +1,4 @@
-![Staging](https://github.com/horoeka-2020/gardenz/workflows/Staging/badge.svg)
+![Staging](https://github.com/horoeka-2020/kapture/workflows/Staging/badge.svg)
 
 # kapture
 AIM: To encourage interaction with nature by capturing images/descriptions of native birds
