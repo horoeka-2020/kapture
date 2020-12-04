@@ -1,4 +1,3 @@
-
 exports.up = knex => {
   return knex.schema.createTable('size', table => {
     table.increments('id').primary()
@@ -6,8 +5,8 @@ exports.up = knex => {
     table.integer('height')
     table.integer('width')
   })
-};
+}
 
-exports.down = function(knex) {
+exports.down = function (knex) {
   return knex.schema.dropTable('size')
-};
+}

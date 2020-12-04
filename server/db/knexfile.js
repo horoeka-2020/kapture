@@ -1,5 +1,5 @@
 // Update with your config settings.
-const path = require("path")
+const path = require('path')
 
 module.exports = {
 
@@ -15,7 +15,7 @@ module.exports = {
     client: 'postgresql',
     connection: {
       database: 'kapture',
-      user:     'slick',
+      user: 'slick',
       password: 'forever_sleek_4'
     },
     pool: {
@@ -42,4 +42,4 @@ module.exports = {
     }
   }
 
-};
+}
