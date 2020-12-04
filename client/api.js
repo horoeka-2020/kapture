@@ -42,7 +42,6 @@ export function createUser (user, consume = requestor) {
 //     .catch(errorHandler('GET', '/:id'))
 // }
 
-
 // // Create updateObject function for api on client components side
 // export function updateObject (object) {
 //   return request.patch(`/api/v1/objects/${object.id}`)
@@ -73,5 +72,8 @@ function errorHandler (method, route) {
     }
   }
 }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 7282b50ff96853aba248f3e55430a574f68b3bad

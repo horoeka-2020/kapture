@@ -17,8 +17,7 @@ router.get('/', (req, res) => {
     })
 })
 
-
-//Create a new user in the database
+// Create a new user in the database
 router.post('/', (req, res) => {
   const user = req.body
   db.createUser(user)
@@ -31,7 +30,6 @@ router.post('/', (req, res) => {
     })
 })
 
-
 // Get an object from the database by id
 router.get('/:id', (req, res) => {
   const id = Number(req.params.id)
@@ -39,7 +37,7 @@ router.get('/:id', (req, res) => {
     .then((object) => {
       res.status(201).json(object)
       return null
-    })  
+    })
     .catch(err => {
       res.status(500).send('DB ERROR ' + err)
     })
@@ -55,6 +53,7 @@ router.patch('/:id', (req, res) => {
     })
     .then((object) => {
       res.status(200).json(object)
+      return null
     })
     .catch(err => {
       res.status(500).send('DB ERROR ' + err)
@@ -64,7 +63,7 @@ router.patch('/:id', (req, res) => {
 // Delete an object from the database
 router.delete('/:id', (req, res) => {
   const id = Number(req.params.id)
-  console.log("objectRoute DELETE:", id)
+  console.log('objectRoute DELETE:', id)
   db.deleteObjectById(id)
     .then((post) => {
       return res.status(200).json(post)
@@ -75,4 +74,3 @@ router.delete('/:id', (req, res) => {
 })
 
 module.exports = router
-
