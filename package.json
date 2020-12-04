@@ -6,13 +6,17 @@
   "scripts": {
     "dev:client": "webpack --watch --config client/webpack.config.js",
     "dev:server": "nodemon --watch server",
+    "client": "webpack --config client/webpack.config.js",
     "dev": "run-p dev:client dev:server",
     "knex": "knex --knexfile server/db/knexfile.js",
     "webpack:server": "webpack-dev-server --hot --inline --content-base server/public --config client/webpack.config.js",
     "test": "jest --watchAll",
-    "start": "node server/server",
+    "start": "node server",
     "lint": "eslint .",
-    "build": "knex migrate:latest"
+    "db:migrate": "npm run knex migrate:latest",
+    "db:seed": "npm run knex seed:run",
+    "db:reset": "npm run knex migrate:rollback && npm run db:migrate && npm run db:seed",
+    "build": "run-s client db:reset"
   },
   "repository": {
     "type": "git",

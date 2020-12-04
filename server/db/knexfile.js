@@ -35,6 +35,9 @@ module.exports = {
     },
     migrations: {
       tableName: 'knex_migrations'
+    },
+    seeds: {
+      directory: path.join(__dirname, 'prod/seeds')
     }
   }
 
