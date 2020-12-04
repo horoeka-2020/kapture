@@ -16,7 +16,7 @@
     "db:migrate": "npm run knex migrate:latest",
     "db:seed": "npm run knex seed:run",
     "db:reset": "npm run knex migrate:rollback && npm run db:migrate",
-    "build": "run-s client db:reset"
+    "build": "run-s client db:migrate"
   },
   "repository": {
     "type": "git",
