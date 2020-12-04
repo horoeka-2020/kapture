@@ -17,12 +17,42 @@
   color: #fff;
 }
 
-html {
-  background: url(index.jpeg) no-repeat center center fixed;
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  visibility: visible;
+  background: url(index.jpeg) no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
-  -o-background-size: cover;
+  -o-background-size: cover; 
   background-size: cover;
+  animation-name: blur;
+  animation-duration: 3s;
+}
+
+@keyframes blur {
+  0% {
+    filter: blur(30px);
+  }
+  50% {
+    filter: blur(15px)
+  }
+  100% {
+    filter: blur(0);
+  }
+}
+@-moz-keyframes blur {
+  0% {
+    filter: blur(10px);
+  }
+  100% {
+    filter: blur(0);
+  }
 }
 
 .box {
@@ -137,21 +167,21 @@ html {
     display: block;
     margin: 0 auto;
     width: 25%;
-}
+}  */
 
-.landingCard{
+/* .landingCard{
     width: 70%;
     height: 65%;
-    display: block;
+    display: none;
     margin: 3rem auto 0 auto;
     border: 2px solid white;
     border-radius: 5px;
     color: white;
     padding: 25px;
-}
+}   */
 
 
-
+/*
 .text{
     font-size: 2rem;
     font-family: "Gudea", sans-serif;
