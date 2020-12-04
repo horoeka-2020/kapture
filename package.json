@@ -6,16 +6,31 @@
   "scripts": {
     "dev:client": "webpack --watch --config client/webpack.config.js",
     "dev:server": "nodemon --watch server",
+    "client": "webpack --config client/webpack.config.js",
     "dev": "run-p dev:client dev:server",
     "knex": "knex --knexfile server/db/knexfile.js",
     "webpack:server": "webpack-dev-server --hot --inline --content-base server/public --config client/webpack.config.js",
-    "test": "jest --watchAll",
+    "test": "jest --verbose",
+    "server": "node server",
     "start": "node server",
-    "lint": "eslint ."
+    "lint": "eslint --ext .js,.jsx client server",
+    "db:migrate": "npm run knex migrate:latest",
+    "db:seed": "npm run knex seed:run",
+    "db:reset": "npm run knex migrate:rollback && npm run db:migrate",
+    "build": "run-s client db:migrate"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/horoeka-2020/kapture"
+  },
+  "eslintConfig": {
+    "extends": "eda",
+    "ignorePatterns": [
+      "bundle.js"
+    ]
+  },
+  "engines": {
+    "node": ">=12.0"
   },
   "keywords": [
     "react",
@@ -67,6 +82,7 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "knex": "^0.21.12",
+    "pg": "^8.5.1",
     "react-router-dom": "^5.2.0",
     "superagent": "^5.3.1"
   },

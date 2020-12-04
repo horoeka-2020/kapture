@@ -1,4 +1,3 @@
-
 exports.up = knex => {
   return knex.schema.createTable('colour', table => {
     table.increments('id').primary()
@@ -6,9 +5,8 @@ exports.up = knex => {
     table.string('hex')
     table.string('image')
   })
-};
+}
 
-exports.down = function(knex) {
+exports.down = function (knex) {
   return knex.schema.dropTable('colour')
-};
-
+}
