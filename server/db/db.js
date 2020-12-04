@@ -21,7 +21,7 @@ function createUser (user, db = connection) {
     if (exists) {
       throw new Error ('Bird already in flock')
     }
-    return db('users').insert(user)
+    return db('users').insert(user, 'id')
   })
 }
 
