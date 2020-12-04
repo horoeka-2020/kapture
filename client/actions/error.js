@@ -4,7 +4,7 @@ export const HIDE_ERROR = 'HIDE_ERROR'
 export const showError = (errorMessage) => {
   return {
     type: SHOW_ERROR,
-    errorMessage: "Bird already in flock"
+    errorMessage: 'Bird already in flock'
   }
 }
 
