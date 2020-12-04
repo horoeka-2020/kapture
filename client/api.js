@@ -1,12 +1,10 @@
 // Create client portion of api functions
-import request from 'superagent'
-
-const userUrl = 'http://localhost:3000/api/v1/users'
+// import request from 'superagent'
+import requestor from './consume'
 
 // Create createUser function for api on client components side
-export function createUser (user) {
-  return request.post('/api/v1/users/')
-    .send(user)
+export function createUser (user, consume = requestor) {
+  return consume('/users', 'post', user)
     .then(res => {
       return res.body
     })
@@ -51,15 +49,15 @@ export function createUser (user) {
 //     .catch(errorHandler('DELETE', '/api/v1/objects/:id'))
 // }
 
-// // Handle errors in application
-// function errorHandler (method, route) {
-//   return (err) => {
-//     if (err.message === 'Not Found') {
-//       throw Error(`Error: API route for ${method} ${route} ${err.message} missing`)
-//     } else {
-//       throw Error(`${err.message} on ${method} ${route}`)
-//     }
-//   }
-// }
+// Handle errors in application
+function errorHandler (method, route) {
+  return (err) => {
+    if (err.message === 'Not Found') {
+      throw Error(`Error: API route for ${method} ${route} ${err.message} missing`)
+    } else {
+      throw Error(`${err.message} on ${method} ${route}`)
+    }
+  }
+}
 
 
