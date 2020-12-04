@@ -1,4 +1,4 @@
-// Server and port configuration for the repo 
+// Server and port configuration for the repo
 const server = require('./server')
 
 const port = process.env.PORT || 3000
