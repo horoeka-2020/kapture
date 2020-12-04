@@ -66,7 +66,6 @@ export function createUser (user, consume = requestor) {
 // }
 
 // Handle errors in application
-<<<<<<< HEAD
 // function errorHandler (method, route) {
 //   return (err) => {
 //     if (err.message === 'Not Found') {
@@ -76,14 +75,3 @@ export function createUser (user, consume = requestor) {
 //     }
 //   }
 // }
-=======
-function errorHandler (method, route) {
-  return (err) => {
-    if (err.message === 'Not Found') {
-      throw Error(`Error: API route for ${method} ${route} ${err.message} missing`)
-    } else {
-      throw Error(`${err.message} on ${method} ${route}`)
-    }
-  }
-}
->>>>>>> b2411ad3bb71ba6976ccc4dddcb1cda8b382418d
