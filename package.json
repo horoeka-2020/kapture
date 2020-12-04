@@ -10,7 +10,7 @@
     "dev": "run-p dev:client dev:server",
     "knex": "knex --knexfile server/db/knexfile.js",
     "webpack:server": "webpack-dev-server --hot --inline --content-base server/public --config client/webpack.config.js",
-    "test": "jest --watchAll --verbose",
+    "test": "jest --verbose",
     "server": "node server",
     "start": "node server",
     "lint": "eslint --ext .js,.jsx client server",
