@@ -15,7 +15,7 @@ beforeEach(() => {
 test('getUsers returns our users', () => {
   return users.getUsers(testDb)
     .then(users => {
-      return expect(users.length).toHaveLength(4)
+      return expect(users).toHaveLength(4)
     })
 })
 
