@@ -12,7 +12,7 @@
     "test": "jest --watchAll",
     "start": "node server/server",
     "lint": "eslint .",
-    "build": "webpack --mode=production && knex migrate:latest"
+    "build": "knex migrate:latest"
   },
   "repository": {
     "type": "git",
