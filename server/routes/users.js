@@ -21,14 +21,12 @@ router.get('/', (req, res) => {
 //Create a new user in the database
 router.post('/', (req, res) => {
   const user = req.body
-  console.log(req.body)
   db.createUser(user)
     .then((user) => {
       res.status(201).json(user)
       return null
     })
     .catch(err => {
-      console.log('Router post: ', err.message)
       res.status(500).send(err.message)
     })
 })

@@ -1,6 +1,17 @@
 // Create client portion of api functions
 // import request from 'superagent'
 import requestor from './consume'
+import { showError } from './actions/error'
+import { dispatch } from './store'
+
+// Create createUser function for api on client components side
+// export function createUser (user, consume = requestor) {
+//   return consume('/users', 'post', user)
+//     .then(res => {
+//       return res.body
+//     })
+//     .catch(errorHandler('POST', '/'))
+// }
 
 // Create createUser function for api on client components side
 export function createUser (user, consume = requestor) {
@@ -8,7 +19,10 @@ export function createUser (user, consume = requestor) {
     .then(res => {
       return res.body
     })
-    .catch(errorHandler('POST', '/'))
+    .catch((error) => {
+      console.log(error.message)
+      dispatch(showError(error.message))
+    })
 }
 
 // // Create getObjects function for api on client components side

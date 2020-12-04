@@ -20,7 +20,11 @@ export default class RegisterCard extends React.Component {
     // Handles our click to fire off our 
       handleClick = () => {
         const { email, password } = this.state
-        createUser({ email, password})
+        createUser({ email, password })
+        this.setState({
+          email: '',
+          password: ''
+          })
         }
     
 
@@ -28,7 +32,6 @@ export default class RegisterCard extends React.Component {
       return (
       <>
         <h1>Register page</h1>
-        <form action="/">
 
           <div className="inputBox">
 
@@ -51,7 +54,6 @@ export default class RegisterCard extends React.Component {
             ></input>
           </div>
           <input className="btn-submit" onClick={this.handleClick} type="submit" name="" value="Submit" />
-        </form>
       </>
       )
     }
