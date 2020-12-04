@@ -2,7 +2,7 @@
 exports.up = knex => {
   return knex.schema.createTable('user_badges', table => {
     table.increments('id').primary()
-    table.integer('user_id').references('user.id')
+    table.integer('user_id').references('users.id')
     table.integer('badges_id').references('badges.id')
   })
 };
