@@ -6,7 +6,7 @@ import { hide } from './errorHelper'
 function errorMessage ({ error }) {
   return (
     error
-      ? <div>
+      ? <div className="button-cancel">
         {error}
         <a className="button-cancel" onClick={hide}>&#10005;</a>
       </div>

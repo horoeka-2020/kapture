@@ -1,10 +1,10 @@
 import React from 'react'
-import Landing from './Landing'
-// import { Route } from 'react-router-dom'
+import { HashRouter as Router, Route, Link, Redirect } from 'react-router-dom'
 import { connect } from 'react-redux'
 
 // Import components
 import ErrorMessage from './ErrorMessage'
+import LandingCard from './LandingCard'
 
 class App extends React.Component {
   render () {
@@ -12,7 +12,11 @@ class App extends React.Component {
       <>
         <ErrorMessage />
         <h1 className="logo">Kapture</h1>
-        <Landing />
+        <Route
+          path="/"
+          component={LandingCard}
+        />
+        <p className='footer'>&#169; Kapture by Slick</p>
       </>
     )
   }
