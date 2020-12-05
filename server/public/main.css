@@ -1,7 +1,8 @@
-/* body {
-    display: flex;
+body {
+    /* display: flex; */
+    /* background-color: rgb(3, 25, 43); */
   }
-   */
+  
 .container {
   display: flex;
   flex-direction: column;
@@ -19,6 +20,32 @@
 .logo {
   text-align: center;
   color: #fff;
+}
+
+nav ul {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  text-align: center;
+  background: #333;
+}
+
+nav li {
+  list-style: none;
+  display: table-cell;
+  background: #333;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  padding: 0.75em 1em;
+  font-size: 1.25em;
+}
+
+nav a:hover {
+  background: #888;
 }
 
 body::before {
@@ -325,3 +352,52 @@ body::before {
     bottom: 0;
     right: 25px;
 }
+
+/* Image Slider */
+.carousel-wrapper {
+  width: 60%;
+  margin: 50px auto;
+  padding: 20px 20px;
+  display: block;
+  border: 1px solid #DDD;
+  box-sizing: border-box;
+  background: url('../../images/focus.png') no-repeat center center;
+  position: relative;
+  background-color: white;
+}
+
+
+.bg-slider-img {
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 60vh;
+  position: relative;
+}
+
+.bg-slider-img-bellbird {
+  background-image: url('./images/bellbird.jpg');
+}
+
+.bg-slider-img-brown-kiwi {
+  background-image: url('./images/brown-kiwi.jpg');
+}
+
+.bg-slider-img-kaka {
+  background-image: url('./images/kaka.jpg');
+}
+
+.bg-slider-img-kakapo {
+  background-image: url('./images/kakapo.jpg');
+}
+
+.bg-slider-img-ruru-hero {
+  background-image: url('./images/ruru-hero.jpg');
+}
+
+.bg-slider-img-tui {
+  background-image: url('./images/tui.jpg');
+}
+
+
+
