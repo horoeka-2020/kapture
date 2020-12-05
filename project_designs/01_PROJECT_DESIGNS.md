@@ -12,3 +12,4 @@
 
 ![Registration Page Design](./Registration_Page_Design.png?raw=true)
 
+
