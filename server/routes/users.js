@@ -27,8 +27,7 @@ router.post('/', (req, res) => {
       return null
     })
     .catch(err => {
-      console.log('Router post: ', err.message)
-      res.status(500).send(err.message)
+      res.status(400).send(err.message)
     })
 })
 
