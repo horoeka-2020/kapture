@@ -34,10 +34,7 @@ class LoginCard extends React.Component {
     render () {
       return (
         <>
-          <h1 className='cardText'>Login page</h1>
-
           <div className="inputBox">
-
             <input
               className="input"
               type="text"
