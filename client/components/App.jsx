@@ -16,6 +16,7 @@ class App extends React.Component {
           path="/"
           component={LandingCard}
         />
+        <LandingCard/>
         <p className='footer'>&#169; Kapture by Slick</p>
       </>
     )
