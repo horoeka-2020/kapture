@@ -23,7 +23,7 @@ export function createUser (user, consume = requestor) {
       return res.body
     })
     .catch((error) => {
-      console.log(error.message)
+    //   console.log(error.message)
       dispatch(showError(error.message))
     })
 }

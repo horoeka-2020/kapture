@@ -1,7 +1,10 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+// eslint-disable-next-line import/no-unresolved
+import { isAuthenticated, logIn, getDecodedToken } from 'authenticare/client'
+import { connect } from 'react-redux'
+import { setUser } from '../actions/user'
 
-export default class LoginCard extends React.Component {
+class LoginCard extends React.Component {
     state = {
       email: '',
       password: ''
@@ -16,7 +19,16 @@ export default class LoginCard extends React.Component {
 
     // Handles our click to fire off our
     handleClick = () => {
-
+      const { email, password } = this.state
+      return logIn({ email, password }, { baseUrl: '/api/v1' })
+        .then(() => {
+          if (isAuthenticated()) {
+            const { email } = getDecodedToken()
+            this.props.dispatch(setUser({ email }))
+            return this.props.history.push('/home')
+          }
+          return null
+        })
     }
 
     render () {
@@ -46,8 +58,15 @@ export default class LoginCard extends React.Component {
               onChange={this.handleChange}
             ></input>
           </div>
-          <Link to="/home"><input className="btn-submit" type="submit" name="" value="Submit" /></Link>
+          <input
+            className="btn-submit"
+            type="submit"
+            name=""
+            value="Submit"
+            onClick={this.handleClick}/>
         </>
       )
     }
 }
+
+export default connect()(LoginCard)

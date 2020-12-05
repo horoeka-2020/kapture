@@ -1,5 +1,5 @@
 import React from 'react'
-import { createUser } from '../api'
+import { registerUser } from './registerHelper'
 
 export default class RegisterCard extends React.Component {
   // State to store user credentials
@@ -19,12 +19,7 @@ export default class RegisterCard extends React.Component {
 
   // Handles our click to fire off our
       handleClick = () => {
-        const { email, password } = this.state
-        createUser({ email, password })
-        this.setState({
-          email: '',
-          password: ''
-        })
+        registerUser(this.state, this.props.history.push)
       }
 
       render () {
@@ -36,10 +31,11 @@ export default class RegisterCard extends React.Component {
 
               <input
                 className="input"
+                id="email"
                 name="email"
                 type="text"
                 value={this.state.email}
-                placeholder="email"
+                placeholder="email address"
                 onChange={this.handleChange}
               ></input>
             </div>
@@ -47,6 +43,7 @@ export default class RegisterCard extends React.Component {
 
               <input
                 className="input"
+                id="password"
                 name="password"
                 type="password"
                 value={this.state.password}
@@ -54,7 +51,7 @@ export default class RegisterCard extends React.Component {
                 onChange={this.handleChange}
               ></input>
             </div>
-            <input className="btn-submit" onClick={this.handleClick} type="submit" name="" value="Submit" />
+            <input className="btn-submit" name="btn-submit" onClick={this.handleClick} type="submit" value="Submit" />
           </>
         )
       }

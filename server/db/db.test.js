@@ -15,7 +15,8 @@ beforeEach(() => {
 test('getUsers returns our users', () => {
   return users.getUsers(testDb)
     .then(users => {
-      return expect(users).toHaveLength(4)
+      expect(users).toHaveLength(4)
+      return null
     })
 })
 
@@ -26,7 +27,8 @@ test('createUser creates a new user', () => {
   }
   return users.createUser(user, testDb)
     .then((users) => {
-      return expect(user.email).toBe('abc@gmail.com')
+      expect(user.email).toBe('abc@gmail.com')
+      return null
     })
 })
 
@@ -35,7 +37,8 @@ test('userExists finds an existing user', () => {
 
   return users.userExists(email, testDb)
     .then(email => {
-      return expect(email).toBe(true)
+      expect(email).toBe(true)
+      return null
     })
 })
 
@@ -44,6 +47,7 @@ test('userExists does not find an existing user', () => {
 
   return users.userExists(email, testDb)
     .then(email => {
-      return expect(email).toBe(false)
+      expect(email).toBe(false)
+      return null
     })
 })
