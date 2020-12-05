@@ -7,8 +7,8 @@ export default class LandingCard extends React.Component {
   render () {
     return (
       <>
+        <div className='wraper'></div>
         <div className='box'>
-
           <h1 className='cardTitle'>Join the Flock</h1>
           <p className='cardText'>This is the beggining of your journey to learn about all the birds of Aotearoa, go out and look for all our little feather friends!</p>
           <nav>
@@ -23,6 +23,7 @@ export default class LandingCard extends React.Component {
               component={RegisterCard}
             />
           </nav>
+
         </div>
       </>
     )
