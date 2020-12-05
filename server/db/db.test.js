@@ -17,7 +17,7 @@ test('getUsers returns our users', () => {
     .then(users => {
       expect(users).toHaveLength(4)
       return null
-    }).catch
+    })
 })
 
 test('createUser creates a new user', () => {

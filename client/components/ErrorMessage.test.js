@@ -2,7 +2,7 @@ import React from 'react'
 import { screen } from '@testing-library/react'
 
 import { renderWithRedux } from '../test-utils'
-import Error from './Error.jsx'
+import Error from './Error'
 
 jest.mock('./errorHelper')
 
