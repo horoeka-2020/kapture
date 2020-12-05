@@ -21,16 +21,16 @@ export default class LoginCard extends React.Component {
     render () {
       return (
         <>
-          <h1>Login page</h1>
+          <h1 className='cardText'>Login page</h1>
           <form action="">
 
             <div className="inputBox">
 
               <input
                 className="input"
-                name="username"
-                value={this.state.username}
-                placeholder="username"
+                name="email"
+                value={this.state.email}
+                placeholder="email address"
                 onChange={this.handleChange}
               ></input>
             </div>

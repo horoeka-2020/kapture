@@ -26,7 +26,7 @@ export default class RegisterCard extends React.Component {
   render () {
     return (
       <>
-        <h1>Register page</h1>
+        <h1 className='cardText'>Register page</h1>
         <form action="/">
 
           <div className="inputBox">
@@ -35,7 +35,7 @@ export default class RegisterCard extends React.Component {
               className="input"
               name="email"
               value={this.state.email}
-              placeholder="email"
+              placeholder="email address"
               onChange={this.handleChange}
             ></input>
           </div>
