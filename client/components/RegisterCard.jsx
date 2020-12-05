@@ -37,6 +37,7 @@ export default class RegisterCard extends React.Component {
               <input
                 className="input"
                 name="email"
+                type="text"
                 value={this.state.email}
                 placeholder="email"
                 onChange={this.handleChange}
@@ -47,6 +48,7 @@ export default class RegisterCard extends React.Component {
               <input
                 className="input"
                 name="password"
+                type="password"
                 value={this.state.password}
                 placeholder="password"
                 onChange={this.handleChange}

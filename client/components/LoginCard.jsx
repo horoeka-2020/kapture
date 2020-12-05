@@ -2,7 +2,7 @@ import React from 'react'
 
 export default class LoginCard extends React.Component {
     state = {
-      username: '',
+      email: '',
       password: ''
     }
 
@@ -22,30 +22,30 @@ export default class LoginCard extends React.Component {
       return (
         <>
           <h1 className='cardText'>Login page</h1>
-          <form action="">
 
-            <div className="inputBox">
+          <div className="inputBox">
 
-              <input
-                className="input"
-                name="email"
-                value={this.state.email}
-                placeholder="email address"
-                onChange={this.handleChange}
-              ></input>
-            </div>
-            <div className="inputBox">
+            <input
+              className="input"
+              type="text"
+              name="email"
+              value={this.state.email}
+              placeholder="email address"
+              onChange={this.handleChange}
+            ></input>
+          </div>
+          <div className="inputBox">
 
-              <input
-                className="input"
-                name="password"
-                value={this.state.password}
-                placeholder="password"
-                onChange={this.handleChange}
-              ></input>
-            </div>
-            <input className="btn-submit" type="submit" name="" value="Submit" />
-          </form>
+            <input
+              className="input"
+              name="password"
+              type="password"
+              value={this.state.password}
+              placeholder="password"
+              onChange={this.handleChange}
+            ></input>
+          </div>
+          <input className="btn-submit" type="submit" name="" value="Submit" />
         </>
       )
     }
