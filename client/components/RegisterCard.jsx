@@ -17,41 +17,43 @@ export default class RegisterCard extends React.Component {
     })
   }
 
-  // Handles our click to fire off our event
-  handleClick = () => {
-    const { email, password } = this.state
-    createUser({ email, password })
-  }
+  // Handles our click to fire off our
+      handleClick = () => {
+        const { email, password } = this.state
+        createUser({ email, password })
+        this.setState({
+          email: '',
+          password: ''
+        })
+      }
 
-  render () {
-    return (
-      <>
-        <h1 className='cardText'>Register page</h1>
-        <form action="/">
+      render () {
+        return (
+          <>
+            <h1>Register page</h1>
 
-          <div className="inputBox">
+            <div className="inputBox">
 
-            <input
-              className="input"
-              name="email"
-              value={this.state.email}
-              placeholder="email address"
-              onChange={this.handleChange}
-            ></input>
-          </div>
-          <div className="inputBox">
+              <input
+                className="input"
+                name="email"
+                value={this.state.email}
+                placeholder="email"
+                onChange={this.handleChange}
+              ></input>
+            </div>
+            <div className="inputBox">
 
-            <input
-              className="input"
-              name="password"
-              value={this.state.password}
-              placeholder="password"
-              onChange={this.handleChange}
-            ></input>
-          </div>
-          <input className="btn-submit" onClick={this.handleClick} type="submit" name="" value="Submit" />
-        </form>
-      </>
-    )
-  }
+              <input
+                className="input"
+                name="password"
+                value={this.state.password}
+                placeholder="password"
+                onChange={this.handleChange}
+              ></input>
+            </div>
+            <input className="btn-submit" onClick={this.handleClick} type="submit" name="" value="Submit" />
+          </>
+        )
+      }
 }

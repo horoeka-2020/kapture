@@ -1,6 +1,17 @@
 // Create client portion of api functions
 // import request from 'superagent'
 import requestor from './consume'
+import { showError } from './actions/error'
+import { dispatch } from './store'
+
+// Create createUser function for api on client components side
+// export function createUser (user, consume = requestor) {
+//   return consume('/users', 'post', user)
+//     .then(res => {
+//       return res.body
+//     })
+//     .catch(errorHandler('POST', '/'))
+// }
 // import request from 'superagent'
 
 // const userUrl = 'http://localhost:3000/api/v1/users'
@@ -11,7 +22,10 @@ export function createUser (user, consume = requestor) {
     .then(res => {
       return res.body
     })
-    .catch(errorHandler('POST', '/'))
+    .catch((error) => {
+      console.log(error.message)
+      dispatch(showError(error.message))
+    })
 }
 
 // // Create getObjects function for api on client components side
@@ -52,12 +66,12 @@ export function createUser (user, consume = requestor) {
 // }
 
 // Handle errors in application
-function errorHandler (method, route) {
-  return (err) => {
-    if (err.message === 'Not Found') {
-      throw Error(`Error: API route for ${method} ${route} ${err.message} missing`)
-    } else {
-      throw Error(`${err.message} on ${method} ${route}`)
-    }
-  }
-}
+// function errorHandler (method, route) {
+//   return (err) => {
+//     if (err.message === 'Not Found') {
+//       throw Error(`Error: API route for ${method} ${route} ${err.message} missing`)
+//     } else {
+//       throw Error(`${err.message} on ${method} ${route}`)
+//     }
+//   }
+// }

@@ -2,6 +2,8 @@
 const environment = process.env.NODE_ENV || 'development'
 const config = require('./knexfile')[environment]
 const connection = require('knex')(config)
+const { generateHash } = require('authenticare/server')
+
 module.exports = {
   getUsers,
   createUser,
@@ -16,11 +18,18 @@ function getUsers (db = connection) {
 // Create createUser function for api on server/database side
 function createUser (user, db = connection) {
   return userExists(user.email, db)
-    .then((exists) => {
+    .then(exists => {
       if (exists) {
         throw new Error('Bird already in flock')
       }
-      return db('users').insert(user, 'id')
+      return false
+    })
+    .then(() => generateHash(user.password))
+    .then(passwordHash => {
+      return db('users').insert({
+        email: user.email,
+        password: passwordHash
+      })
     })
 }
 
