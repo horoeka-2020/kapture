@@ -26,7 +26,7 @@ AIM: To encourage interaction with nature by capturing images/descriptions of na
 | As a user I want to be able to download and print a photo of a bird |COULD | TBC |
 | As a user I want to see a video of a flying bird as a backgound to the login/register screen |  COULD | TBC |
 | As a user I want to be able to organise an event to look for birds | COULD | TBC |
-| As a user I want to have the ability for my description of a bird shared with the community to enable identification | TBC | TBC |
+| As a user I want to have the ability for my description of a bird shared with the community to enable identification | COULD | TBC |
 
 
 
