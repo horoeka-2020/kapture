@@ -1,8 +1,8 @@
 # Designs
 
-## Langing Page Design
+## Landing Page Design
 
-![Langing Page Design](./Landing_Page_Design.png?raw=true)
+![Landing Page Design](./Landing_Page_Design.png?raw=true)
 
 ## Login Page Design
 
