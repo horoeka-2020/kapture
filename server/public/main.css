@@ -48,7 +48,7 @@ nav a:hover {
   background: #888;
 }
 
-/* body::before {
+body::before {
   content: "";
   position: fixed;
   top: 0;
@@ -64,7 +64,7 @@ nav a:hover {
   background-size: cover;
   animation-name: blur;
   animation-duration: 3.5s;
-} */
+}
 
 @keyframes blur {
   0% {
