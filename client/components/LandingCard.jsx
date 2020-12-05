@@ -14,16 +14,9 @@ export default class LandingCard extends React.Component {
           <nav>
             <Link to="/login"> <h3 className='cardText'>Login</h3></Link>
             <Link to="/register"><h3 className='cardText'>Register</h3></Link>
-            <Route
-              path="/login"
-              component={LoginCard}
-            />
-            <Route
-              path="/register"
-              component={RegisterCard}
-            />
+            <Route path="/login" component={LoginCard}/>
+            <Route path="/register"component={RegisterCard}/>
           </nav>
-
         </div>
       </>
     )

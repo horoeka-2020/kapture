@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default class LoginCard extends React.Component {
     state = {
@@ -45,7 +46,7 @@ export default class LoginCard extends React.Component {
               onChange={this.handleChange}
             ></input>
           </div>
-          <input className="btn-submit" type="submit" name="" value="Submit" />
+          <Link to="/home"><input className="btn-submit" type="submit" name="" value="Submit" /></Link>
         </>
       )
     }
