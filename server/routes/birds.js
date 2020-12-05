@@ -14,14 +14,11 @@ router.get('/', (req, res) => {
     })
 })
 
-router.get('/bird/:id', (req, res) => {
+router.get('/:id', (req, res) => {
   const id = req.params.id
   db.getBirdsById(id)
     .then((bird) => {
-      const info = {
-
-      }
-      res.status(200).json(info)
+      res.status(200).json(bird)
       return null
     })
     .catch(err => {
