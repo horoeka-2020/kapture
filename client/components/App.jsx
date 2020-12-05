@@ -11,9 +11,8 @@ class App extends React.Component {
     return (
       <>
         <ErrorMessage />
-        <h1 className="logo">Kapture</h1>
         <Route
-          path="/"
+          exact path="/"
           component={LandingCard}
         />
         <LandingCard/>

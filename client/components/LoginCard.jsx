@@ -57,7 +57,12 @@ class LoginCard extends React.Component {
               onChange={this.handleChange}
             ></input>
           </div>
-          <input className="btn-submit" type="submit" name="" value="Submit" onClick={this.handleClick}/>
+          <input
+            className="btn-submit"
+            type="submit"
+            name=""
+            value="Submit"
+            onClick={this.handleClick}/>
           {/* </form> */}
         </>
       )
