@@ -2,6 +2,12 @@ body {
     /* display: flex; */
     /* background-color: rgb(3, 25, 43); */
   }
+
+img{
+  display: block;
+  margin: 0 auto;
+  top: 0;
+}
   
 .container {
   display: flex;
