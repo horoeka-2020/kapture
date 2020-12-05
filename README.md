@@ -1,4 +1,5 @@
 ![Staging](https://github.com/horoeka-2020/kapture/workflows/Staging/badge.svg)
+![Deployment](https://github.com/horoeka-2020/kapture/workflows/Deployment/badge.svg)
 
 # kapture
 AIM: To encourage interaction with nature by capturing images/descriptions of native birds
@@ -44,3 +45,11 @@ https://dbdiagram.io/d/5f9c5e863a78976d7b79e1ca
 8. Agreed to inital static image that will have transition effects on inital page build
 9. Agreed to use pure css for styling
 10. Agreed the application pages should be responsive
+
+## Parked Items List
+1. Matching bird from written description
+2. Where/how photos stored
+3. Platform of ANDROID vs IPHONE
+4. Deployment of a mobile App
+
+
