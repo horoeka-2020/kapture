@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 
 // Import components
 import ErrorMessage from './ErrorMessage'
-import LandingCard from './ColourCard'
+import LandingCard from './QuizCard'
 import RegisterCard from './RegisterCard'
 import LoginCard from './LoginCard'
 import Home from './Home'
