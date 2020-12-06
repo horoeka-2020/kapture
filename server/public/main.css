@@ -113,6 +113,27 @@ nav a {
   background: #888;
 } */
 
+
+/* color card */
+.quizText{
+  font-size: 1.25em;
+  color: white;
+}
+
+.colorPick{
+  display: inline-block;
+
+}
+
+.control{
+  color: white;
+}
+
+label {
+  display: inline-block;
+  margin: 10px 25px;
+}
+
 body::before {
   content: "";
   position: fixed;
@@ -168,6 +189,7 @@ body::before {
   animation-name: fadeOut;
   animation-duration: 1.5s;
 }
+
 @keyframes fadeOut {
   0% {
     opacity: 1;
