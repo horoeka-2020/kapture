@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Abel|Abril+Fatface|Alegreya|Arima+Madurai|Dancing+Script|Dosis|Merriweather|Oleo+Script|Overlock|PT+Serif|Pacifico|Playball|Playfair+Display|Share|Unica+One|Vibur');
 
-.favicon {
-    -webkit-filter: invert(1);
-    filter: invert(1);
-}
 .logo {
   display: block;
   margin: 0 auto;
@@ -233,9 +229,6 @@ body::before {
   background-color: #fff;
 }
 
-.box .inputBox {
-  position: relative;
-}
 .box .inputBox input {
   width: 100%;
   padding: 10px 0;
