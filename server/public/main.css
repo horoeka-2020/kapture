@@ -6,113 +6,12 @@
   margin-top: -4rem;
 }
 
-.log-in {
-  float: left;
-  display: block;
-  color: #252537;
-
-  width: 280px;
-  height: 50px;
-
-  padding: 0 20px;
-  background: #fff;
-  border-radius: 5px;
-  
-  outline: none;
-  border: none;
-
-  cursor: pointer;
-  text-align: center;
-  transition: all 0.2s linear;
-  
-  margin: 7% auto;
-  letter-spacing: 0.05em;
-}
-
-/* buttons hover Animation */
-button:hover {
-  animation: ani9 0.4s ease-in-out infinite alternate;
-}
-@keyframes ani9 {
-  0% {
-      transform: translateY(3px);
-  }
-  100% {
-      transform: translateY(5px);
-  }
-}
-
-
-.register {
-  float: right;
-  display: block;
-  color: #252537;
-
-  width: 280px;
-  height: 50px;
-
-  padding: 0 20px;
-  background: #fff;
-  border-radius: 5px;
-  
-  outline: none;
-  border: none;
-
-  cursor: pointer;
-  text-align: center;
-  transition: all 0.2s linear;
-  
-  margin: 7% auto;
-  letter-spacing: 0.05em;
-
-  align-items: right;
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.button-cancel {
-  color: #fff;
-}
-
-* {
-  font-family: 'Playfair Display', serif;
-}
-
-.logo {
+/* .logo {
   text-align: center;
   color: #fff;
-}
-
-nav ul {
-  display: table;
-  table-layout: fixed;
-  width: 100%;
-  text-align: center;
-  background: #333;
-}
-
-nav li {
-  list-style: none;
-  display: table-cell;
-  background: #333;
-}
-
-nav a {
-  text-decoration: none;
-  color: #fff;
-  display: block;
-  padding: 0.75em 1em;
-  font-size: 1.25em;
-}
-
-/* nav a:hover {
-  background: #888;
 } */
 
+/* landing page with animation */
 body::before {
   content: "";
   position: fixed;
@@ -189,6 +88,8 @@ body::before {
    }
 }
 
+
+/* general card with animation for landing page */
 .box {
   position: absolute;
   top: 50%;
@@ -294,6 +195,140 @@ body::before {
 
 .box input[type="submit"]:hover {
   background-color: rgba(3, 169, 244, 0.7);
+}
+
+/* log in  card */
+.log-in {
+  float: left;
+  display: block;
+  color: #252537;
+
+  width: 280px;
+  height: 50px;
+
+  padding: 0 20px;
+  background: #fff;
+  border-radius: 5px;
+  
+  outline: none;
+  border: none;
+
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.2s linear;
+  
+  margin: 7% auto;
+  letter-spacing: 0.05em;
+}
+
+/* buttons hover Animation */
+button:hover {
+  animation: ani9 0.4s ease-in-out infinite alternate;
+}
+@keyframes ani9 {
+  0% {
+      transform: translateY(3px);
+  }
+  100% {
+      transform: translateY(5px);
+  }
+}
+
+/* register card */
+.register {
+  float: right;
+  display: block;
+  color: #252537;
+
+  width: 280px;
+  height: 50px;
+
+  padding: 0 20px;
+  background: #fff;
+  border-radius: 5px;
+  
+  outline: none;
+  border: none;
+
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.2s linear;
+  
+  margin: 7% auto;
+  letter-spacing: 0.05em;
+
+  align-items: right;
+}
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.button-cancel {
+  color: #fff;
+}
+
+* {
+  font-family: 'Playfair Display', serif;
+}
+
+
+
+/* navigation menu */
+nav ul {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  text-align: center;
+  background: #333;
+}
+
+nav li {
+  list-style: none;
+  display: table-cell;
+  background: #333;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  padding: 0.75em 1em;
+  font-size: 1.25em;
+}
+
+/* nav a:hover {
+  background: #888;
+} */
+
+/* size card */
+
+.quizText{
+  font-size: 1.25em;
+  color: white;
+}
+
+.cardText{
+  width: 90%;
+  text-align: center;
+  padding-bottom: 2em;
+}
+
+.sizePick{
+  width: 90%;
+  margin: 0 auto;
+}
+
+.control{
+  color: white;
+  display: inline-block;
+  padding: 0 15px;
+}
+.control:hover{
+  color: lightgrey;
 }
 
 @media (max-width: 720px) {
