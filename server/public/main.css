@@ -6,7 +6,6 @@
   margin-top: -4rem;
 }
 
-<<<<<<< HEAD
 .log-in {
   float: left;
   display: block;
@@ -91,14 +90,10 @@ nav ul {
   display: table;
   table-layout: fixed;
   width: 100%;
-=======
-/* .logo {
->>>>>>> e89ec469e7491bd2dddd6368b8400eef6f3c4e91
   text-align: center;
   color: #fff;
 } */
 
-<<<<<<< HEAD
 
 /* color card */
 .quizText{
@@ -123,9 +118,6 @@ label {
   margin-right: 50px;
 }
 
-=======
-/* landing page with animation */
->>>>>>> e89ec469e7491bd2dddd6368b8400eef6f3c4e91
 body::before {
   content: "";
   position: fixed;
