@@ -1,8 +1,9 @@
 exports.up = knex => {
   return knex.schema.createTable('users', table => {
     table.increments('id').primary()
-    table.string('email')
-    table.binary('password')
+    table.string('username')
+    table.binary('hash')
+    table.boolean('is_admin')
   })
 }
 
