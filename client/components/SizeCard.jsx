@@ -1,48 +1,46 @@
 import React from 'react'
 import { getSizes } from '../api'
+import { dispatch } from '../store'
+import { showError } from '../actions/error'
 export default class SizeCard extends React.Component {
   state = {
-    sizes: [{}],
-    names: []
+    sizes: [{}, {}, {}, {}]
   }
 
   componentDidMount () {
     getSizes()
       .then((sizes) => {
-        const names = []
-        names.push(sizes.map((size) => size.name))
-        console.log(names)
         this.setState({
-          sizes,
-          names
+          sizes
         })
+        return null
+      })
+      .catch((error) => {
+        dispatch(showError(error.message))
       })
   }
 
   render () {
     return (
       <>
-        <ul>
-          {this.state.sizes.map((sizes) => console.log(sizes.name))}
-        </ul>
         <div className='sizeCard'>
           <h2 className='cardQuiz'>What is the size of the bird?</h2>
           <p className='cardText'>Please select the size to find out what your bird might be?</p>
           <div className="colorSize">
             <label className="control control--radio">{this.state.sizes[0].name}
-              <input type="radio" name="radioSize" value='{this.state.sizes[0].name}' />
+              <input type="radio" name="radioSize" value={this.state.sizes[0].name} />
               <div className="control__indicator"></div>
             </label>
-            <label className="control control--radio">small
-              <input type="radio" name="radioSize" value='{this.state.size.samll}' />
+            <label className="control control--radio">{this.state.sizes[1].name}
+              <input type="radio" name="radioSize" value={this.state.sizes[1].name} />
               <div className="control__indicator"></div>
             </label>
-            <label className="control control--radio">Medium
-              <input type="radio" name="radioSize" value='{this.state.size.medium}'/>
+            <label className="control control--radio">{this.state.sizes[2].name}
+              <input type="radio" name="radioSize" value={this.state.sizes[2].name} />
               <div className="control__indicator"></div>
             </label>
-            <label className="control control--radio">Large
-              <input type="radio" name="radioSize" value='{this.state.size.large}' />
+            <label className="control control--radio">{this.state.sizes[3].name}
+              <input type="radio" name="radioSize" value={this.state.sizes[3].name} />
               <div className="control__indicator"></div>
             </label>
           </div>
