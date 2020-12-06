@@ -5,7 +5,6 @@ function getBirds (db = connection) {
 }
 
 function getBirdsById (id, db = connection) {
-  console.log(db('colour'))
   return db('birds')
     .join('colour', 'birds.colour_id', 'colour.id')
     .join('size', 'birds.size_id', 'size.id')
@@ -28,6 +27,7 @@ function getBirdsById (id, db = connection) {
 }
 
 function getColours (db = connection) {
+  console.log(db('colour'))
   return db('colour').select()
 }
 
