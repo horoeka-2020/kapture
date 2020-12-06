@@ -9,7 +9,7 @@ export default class ColourCard extends React.Component {
           <p className='cardText'>Please select the main colours to find out what your bird might be?</p>
           <div className="colorPick">
             <label className="control controlColour--radio">Black
-              <input type="radio" name="radioColour" value='{this.state.colour.black}'ked />
+              <input type="radio" name="radioColour" value='{this.state.colour.black}' />
               <div className="control__indicator"></div>
             </label>
             <label className="control control--radio">White

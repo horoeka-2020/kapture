@@ -8,7 +8,7 @@ export function getAllSizes () {
   return getSizes
     .then(sizes => {
       dispatch(clearWaiting())
-      const { id, name, height, width } = sizes[0]
+      const { id, name, height, width } = sizes
       return {
         id,
         name,
