@@ -6,12 +6,126 @@
   margin-top: -4rem;
 }
 
+<<<<<<< HEAD
 /* .logo {
+=======
+.log-in {
+  float: left;
+  display: block;
+  color: #252537;
+
+  width: 280px;
+  height: 50px;
+
+  padding: 0 20px;
+  background: #fff;
+  border-radius: 5px;
+  
+  outline: none;
+  border: none;
+
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.2s linear;
+  
+  margin: 7% auto;
+  letter-spacing: 0.05em;
+}
+
+/* buttons hover Animation */
+button:hover {
+  animation: ani9 0.4s ease-in-out infinite alternate;
+}
+@keyframes ani9 {
+  0% {
+      transform: translateY(3px);
+  }
+  100% {
+      transform: translateY(5px);
+  }
+}
+
+.register {
+  float: right;
+  display: block;
+  color: #252537;
+
+  width: 280px;
+  height: 50px;
+
+  padding: 0 20px;
+  background: #fff;
+  border-radius: 5px;
+  
+  outline: none;
+  border: none;
+
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.2s linear;
+  
+  margin: 7% auto;
+  letter-spacing: 0.05em;
+
+  align-items: right;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.button-cancel {
+  color: #fff;
+}
+
+* {
+  font-family: 'Playfair Display', serif;
+}
+
+.logo {
+  text-align: center;
+  color: #fff;
+}
+
+nav ul {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+>>>>>>> 5338f777fe35d0b4ff495ea4e09ff11e39bf2e3d
   text-align: center;
   color: #fff;
 } */
 
+<<<<<<< HEAD
 /* landing page with animation */
+=======
+
+/* color card */
+.quizText{
+  font-size: 1.25em;
+  color: white;
+}
+
+.colorPick{
+  display: inline-block;
+
+}
+
+.control{
+  color: white;
+}
+
+label {
+  display: inline-block;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  margin-left: 0px;
+  margin-right: 50px;
+}
+
+>>>>>>> 5338f777fe35d0b4ff495ea4e09ff11e39bf2e3d
 body::before {
   content: "";
   position: fixed;
@@ -67,6 +181,7 @@ body::before {
   animation-name: fadeOut;
   animation-duration: 1.5s;
 }
+
 @keyframes fadeOut {
   0% {
     opacity: 1;
@@ -107,6 +222,7 @@ body::before {
   animation-name: fadeIn;
   animation-duration: 3s;
 }
+
 @keyframes fadeIn {
   0% {
    opacity: 0;
@@ -130,13 +246,13 @@ body::before {
    }
  }
 
-.box h2 {
+/* .box h2 {
   margin: 0 0 30px;
   padding: 0;
   color: rgb(0, 78, 52);
   text-align: center;
   background-color: #fff;
-}
+} */
 
 .box .inputBox {
   position: relative;
@@ -342,10 +458,18 @@ nav a {
   display: block;
 }
 
-.cardTitle{
+.cardTitle {
   font-size: 3.3rem;
   color: #fff;
   text-align: center;
+  letter-spacing: 0.10rem;
+}
+
+.cardQuiz{ 
+  font-size: 2.3rem;
+  color: #fff;
+  text-align: center;
+  letter-spacing: 0.145rem;
 }
 
 .cardText {
@@ -371,7 +495,6 @@ nav a {
   position: relative;
   background-color: white;
 }
-
 
 .bg-slider-img {
   background-position: top center;
@@ -404,6 +527,5 @@ nav a {
 .bg-slider-img-tui {
   background-image: url('./images/tui.jpg');
 }
-
 
 

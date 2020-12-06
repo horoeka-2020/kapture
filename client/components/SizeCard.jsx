@@ -1,7 +1,7 @@
 import React from 'react'
 // import { Link, Route } from 'react-router-dom'
 import { getSizes } from '../api'
-export default class LandingCard extends React.Component {
+export default class SizeCard extends React.Component {
   state = {
     id: '',
     name: '',
