@@ -3,7 +3,7 @@ import requestor from './consume'
 import { showError } from './actions/error'
 import { dispatch } from './store'
 
-const apiUrl = '/api/v1/birds'
+const apiUrl = '/birds'
 
 // Create createUser function for api on client components side
 export function createUser (user, consume = requestor) {
@@ -18,7 +18,7 @@ export function createUser (user, consume = requestor) {
 
 // Bird APIs
 export function getAllBirds (consume = requestor) {
-  return consume(apiUrl + '/bird/', 'get')
+  return consume(apiUrl + '/birds', 'get', {})
     .then((res) => res.body)
     .catch(errorHandler)
 }

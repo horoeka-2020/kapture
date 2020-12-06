@@ -1,10 +1,30 @@
 import React from 'react'
 // import { Link, Route } from 'react-router-dom'
-// import getSize from '../api'
+import { getSizes } from '../api'
 export default class LandingCard extends React.Component {
-  // getSize()
+  state = {
+    id: '',
+    name: '',
+    height: '',
+    width: ''
+  }
+
+  componentDidMount () {
+    getSizes()
+      .then((res) => {
+        console.log(res)
+        const { id, name, height, width } = res
+        this.setState({
+          id,
+          name,
+          height,
+          width
+        })
+      })
+  }
 
   render () {
+    console.log(this.state)
     return (
       <>
         <div className='wraper'></div>
