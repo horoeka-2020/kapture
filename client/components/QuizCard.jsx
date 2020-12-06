@@ -1,7 +1,7 @@
 import React from 'react'
 import ColourCard from './ColourCard'
 import SizeCard from './SizeCard'
-export default class LandingCard extends React.Component {
+export default class QuizCard extends React.Component {
   render () {
     return (
       <>
@@ -9,19 +9,9 @@ export default class LandingCard extends React.Component {
         <div className='box'>
           <div> <ColourCard /> </div>
           <div> <SizeCard /> </div>
+          <input className="btn-submit" name="btn-submit" onClick={this.handleClick} type="submit" value="Submit" />
         </div>
       </>
     )
   }
 }
-
-<nav role="navigation">
-  <ul>
-    <li><a href="#">home</a></li>
-    <li><a href="#">about</a></li>
-    <li><a href="#">quiz</a></li>
-    <li><a href="#">gallery</a></li>
-    <li><a href="#">contact us</a></li>
-  </ul>
-</nav>
-{ /* <ImageSlider /> */ }
