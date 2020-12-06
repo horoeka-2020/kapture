@@ -253,9 +253,6 @@ body::before {
   background-color: #fff;
 } */
 
-.box .inputBox {
-  position: relative;
-}
 .box .inputBox input {
   width: 100%;
   padding: 10px 0;

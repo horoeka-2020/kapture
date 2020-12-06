@@ -1,5 +1,5 @@
 import React from 'react'
-import { HashRouter as Route } from 'react-router-dom'
+import { Route, Redirect } from 'react-router-dom'
 import { connect } from 'react-redux'
 
 // Import components
@@ -7,16 +7,17 @@ import LandingCard from './LandingCard'
 import RegisterCard from './RegisterCard'
 import LoginCard from './LoginCard'
 import Home from './Home'
+import QuizCard from './QuizCard'
 
 class App extends React.Component {
   render () {
     return (
       <div className='app'>
         <img className="logo" src="../../images/apture.png" alt='logo' width='25%'></img>
-        <LandingCard exact path="/" component={LandingCard}/>
-        <Route exact path="/register" component={RegisterCard}/>
-        <Route exact path="/login" component={LoginCard}/>
+        <Redirect from="/" to="/welcome"/>
+        <Route path="/welcome" component={LandingCard}/>
         <Route exact path="/home" component={Home}/>
+        <Route exact path="/quiz" component={QuizCard}/>
         <p className='footer'>&#169; Kapture by Slick</p>
       </div>
     )

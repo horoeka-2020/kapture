@@ -32,8 +32,8 @@ class LoginCard extends React.Component {
                 placeholder="email address"
                 onChange={this.handleChange}
               ></input>
-            </div>
-            <div className="inputBox">
+              {/* </div>
+            <div className="inputBox"> */}
 
               <input
                 className="input"
