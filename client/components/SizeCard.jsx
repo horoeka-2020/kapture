@@ -26,25 +26,24 @@ export default class SizeCard extends React.Component {
     console.log(this.state)
     return (
       <>
-        <div className='wraper'></div>
-        <div className='box'>
-          <h1 className='cardTitle'>What is the size?</h1>
-          <p className='cardText'>Compared to other birds, what size was the bird you saw?</p>
-          <div className="sizePick">
+        <div className='sizeCard'>
+          <h2 className='cardQuiz'>What is the size of the bird?</h2>
+          <p className='cardText'>Please select the size to find out what your bird might be?</p>
+          <div className="colorSize">
             <label className="control control--radio">Tiny
-              <input type="radio" name="radio" value='{props.size.tiny}' />
+              <input type="radio" name="radioSize" value='{this.state.size.tiny}' />
               <div className="control__indicator"></div>
             </label>
             <label className="control control--radio">Small
-              <input type="radio" name="radio" value='{props.size.small}' />
+              <input type="radio" name="radioSize" value='{this.state.size.samll}' />
               <div className="control__indicator"></div>
             </label>
             <label className="control control--radio">Medium
-              <input type="radio" name="radio" value='{props.size.medium}' />
+              <input type="radio" name="radioSize" value='{this.state.size.medium}'/>
               <div className="control__indicator"></div>
             </label>
             <label className="control control--radio">Large
-              <input type="radio" name="radio" value='{props.size.large}' />
+              <input type="radio" name="radioSize" value='{this.state.size.large}' />
               <div className="control__indicator"></div>
             </label>
           </div>
