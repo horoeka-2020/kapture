@@ -1,5 +1,5 @@
 import React from 'react'
-import { Route } from 'react-router-dom'
+import { Route, Redirect } from 'react-router-dom'
 import { connect } from 'react-redux'
 
 // Import components
@@ -13,7 +13,7 @@ class App extends React.Component {
     return (
       <div className='app'>
         <img className="logo" src="../../images/apture.png" alt='logo' width='25%'></img>
-        {/* <Redirect from="/" to="/welcome"/> */}
+        <Redirect from="/" to="/welcome"/>
         <Route path="/welcome" component={LandingCard}/>
         <Route exact path="/home" component={Home}/>
         <Route exact path="/quiz" component={QuizCard}/>
