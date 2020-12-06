@@ -315,7 +315,28 @@ nav a {
   width: 90%;
   text-align: center;
   padding-bottom: 2em;
+  font-size: 1em;
 }
+
+.flex-container {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+}
+
+.birdImg{
+    height: 200px;
+    width: auto;
+    display: block;
+    margin: auto;
+    border: 5px solid #fff; 
+}
+.birdText{
+    width: 90%;
+    text-align: left;
+    color: white;
+    padding-left: 5px;
+  }
 
 .sizePick{
   width: 90%;
@@ -341,6 +362,11 @@ nav a {
   float: right;
   display: block;
 }
+
+.btn-submit-bird {
+    float: inline-end;
+    display: block;
+  }
 
 .cardTitle{
   font-size: 3.3rem;
