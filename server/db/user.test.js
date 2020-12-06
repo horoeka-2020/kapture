@@ -2,7 +2,7 @@ const knex = require('knex')
 const config = require('./knexfile').test
 const testDb = knex(config)
 
-const users = require('./db')
+const users = require('./users')
 
 beforeAll(() => {
   return testDb.migrate.latest()
@@ -21,21 +21,33 @@ test('getUsers returns our users', () => {
 })
 
 test('userExists finds an existing user', () => {
-  const email = 'shellymutugrigg@gmail.com'
+  const username = 'shellymutugrigg@gmail.com'
 
-  return users.userExists(email, testDb)
-    .then(email => {
-      expect(email).toBe(true)
+  return users.userExists(username, testDb)
+    .then(username => {
+      expect(username).toBe(true)
       return null
     })
 })
 
 test('userExists does not find an existing user', () => {
-  const email = 'webdev@gmail.com'
+  const username = 'webdev@gmail.com'
 
-  return users.userExists(email, testDb)
-    .then(email => {
-      expect(email).toBe(false)
+  return users.userExists(username, testDb)
+    .then(username => {
+      expect(username).toBe(false)
+      return null
+    })
+})
+
+test('createUser creates a new user', () => {
+  const user = {
+    username: 'abc@gmail.com',
+    password: '12345'
+  }
+  return users.createUser(user, testDb)
+    .then((users) => {
+      expect(user.username).toBe('abc@gmail.com')
       return null
     })
 })

@@ -27,7 +27,6 @@ function getBirdsById (id, db = connection) {
 }
 
 function getColours (db = connection) {
-  console.log(db('colour'))
   return db('colour').select()
 }
 
