@@ -3,7 +3,6 @@ import { HashRouter as Route } from 'react-router-dom'
 import { connect } from 'react-redux'
 
 // Import components
-import ErrorMessage from './ErrorMessage'
 import LandingCard from './LandingCard'
 import RegisterCard from './RegisterCard'
 import LoginCard from './LoginCard'
