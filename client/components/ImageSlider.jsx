@@ -16,7 +16,7 @@ function ImageSlider (props) {
       name: 'kakapo'
     },
     {
-      name: 'ruru-hero'
+      name: 'ruru'
     },
     {
       name: 'tui'
