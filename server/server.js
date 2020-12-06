@@ -20,7 +20,6 @@ server.use('/api/v1', authRoutes)
 server.use('/api/v1/*', (req, res) => res.sendStatus(404))
 
 server.get('*', (req, res) => {
-  console.log('Got here')
   res.sendFile(path.join(__dirname, 'public/index.html'))
 })
 
