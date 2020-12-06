@@ -10,10 +10,10 @@ exports.seed = function (knex) {
     ]))
     .then(([adminHash, memberHash]) =>
       knex('users').insert([
-        { id: 1, email: 'shellymutugrigg@gmail.com', password: memberHash },
-        { id: 2, email: 'rodrigohdiaz@gmail.com', password: memberHash },
-        { id: 3, email: 'web-dev-steel@gmail.com', password: adminHash },
-        { id: 4, email: 'bootcamp@kittisanpuangkum.com', password: memberHash }
+        { id: 1, username: 'shellymutugrigg@gmail.com', hash: memberHash, is_admin: false },
+        { id: 2, username: 'rodrigohdiaz@gmail.com', hash: memberHash, is_admin: false },
+        { id: 3, username: 'web-dev-steel@gmail.com', hash: adminHash, is_admin: true },
+        { id: 4, username: 'bootcamp@kittisanpuangkum.com', hash: memberHash, is_admin: false }
       ])
     )
 }

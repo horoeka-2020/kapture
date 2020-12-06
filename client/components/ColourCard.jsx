@@ -1,6 +1,25 @@
 import React from 'react'
-
+import { getColours } from '../api'
+import { dispatch } from '../store'
+import { showError } from '../actions/error'
 export default class ColourCard extends React.Component {
+  state = {
+    colours: [{}, {}, {}, {}, {}]
+  }
+
+  componentDidMount () {
+    getColours()
+      .then((colours) => {
+        this.setState({
+          colours
+        })
+        return null
+      })
+      .catch((error) => {
+        dispatch(showError(error.message))
+      })
+  }
+
   render () {
     return (
       <>
@@ -8,42 +27,26 @@ export default class ColourCard extends React.Component {
           <h2 className='cardQuiz'>What colours does the bird have?</h2>
           <p className='cardText'>Please select the main colours to find out what your bird might be?</p>
           <div className="colorPick">
-            <label className="control controlColour--radio">Black
-              <input type="radio" name="radioColour" value='{this.state.colour.black}'ked />
+            <label className="control controlColour--radio">{this.state.colours[0].name}
+              <input type="radio" name="radioColour" value={this.state.colours[0].name} />
               <div className="control__indicator"></div>
             </label>
-            <label className="control control--radio">White
-              <input type="radio" name="radioColour" value='{this.state.colour.white}' />
+            <label className="control control--radio">{this.state.colours[1].name}
+              <input type="radio" name="radioColour" value={this.state.colours[1].name} />
               <div className="control__indicator"></div>
             </label>
-            <label className="control control--radio">Red
-              <input type="radio" name="radioColour" value='{this.state.colour.red}' />
+            <label className="control control--radio">{this.state.colours[2].name}
+              <input type="radio" name="radioColour" value={this.state.colours[2].name} />
               <div className="control__indicator"></div>
             </label>
-            <label className="control control--radio">Green
-              <input type="radio" name="radioColour" value='{this.state.colour.green}' />
+            <label className="control control--radio">{this.state.colours[3].name}
+              <input type="radio" name="radioColour" value={this.state.colours[3].name} />
               <div className="control__indicator"></div>
             </label>
-            <label className="control control--radio">Brown
-              <input type="radio" name="radioColour" value='{this.state.colour.brown}' />
+            <label className="control control--radio">{this.state.colours[4].name}
+              <input type="radio" name="radioColour" value={this.state.colours[4].name} />
               <div className="control__indicator"></div>
             </label>
-            {/* <label className="control control--radio">Green
-            <input type="radio" name="radioColour" value='{this.state.colour.green}' />
-            <div className="control__indicator"></div>
-            </label>
-            <label className="control control--radio">Yellow
-            <input type="radio" name="radioColour" value='{this.state.colour.yellow}' />
-            <div className="control__indicator"></div>
-            </label>
-            <label className="control control--radio">Rainbow
-            <input type="radio" name="radioColour" value='{this.state.colour.rainbow}' />
-            <div className="control__indicator"></div>
-            </label>
-            <label className="control control--radio">Others
-            <input type="radio" name="radioColour" value='{this.state.colour.others}' />
-            <div className="control__indicator"></div>
-            </label> */}
           </div>
         </div>
       </>

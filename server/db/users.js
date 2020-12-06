@@ -16,15 +16,18 @@ function getUsers (db = connection) {
 
 // Create createUser function for api on server/database side
 function createUser (user, db = connection) {
+  console.log('db/users.js > createUser:', user)
   return userExists(user.username, db)
     .then(exists => {
       if (exists) {
         throw new Error('Bird already in flock')
       }
+      console.log('db/users.js > createUser > user does not exist:', user)
       return false
     })
     .then(() => generateHash(user.password))
     .then(passwordHash => {
+      console.log('db/users.js > createUser > insert user:', user)
       return db('users').insert({
         username: user.username,
         hash: passwordHash,
@@ -35,6 +38,7 @@ function createUser (user, db = connection) {
 
 // Create userExists function to see if user aleady exists
 function userExists (username, db = connection) {
+  console.log('db/users.js > userExists:', username)
   return db('users')
     .count('id as n')
     .where('username', username)
@@ -44,13 +48,14 @@ function userExists (username, db = connection) {
 }
 
 function getUserByName (username, db = connection) {
+  console.log('db/users.js > getUserByName:', username)
   return db('users')
     .select('username', 'is_admin as isAdmin', 'id', 'hash')
     .where('username', username)
     .first()
 }
 
-// Test to be added back in when authenticare working
+// Test to be added back into userExists.test.js when authenticare working
 // txest('createUser creates a new user', () => {
 //     const user = {
 //       email: 'abc@gmail.com',
@@ -62,24 +67,3 @@ function getUserByName (username, db = connection) {
 //         return null
 //       })
 //   })
-
-// Create addObjects function for api on server/database side
-// function addObject (newObject, db = connection) {
-//   return db('object').insert(newObject)
-// }
-
-// // Create getObject function for api on server/database side
-// function getObject (id, db = connection) {
-//   return db('object').where('object.id', id).select('id', 'name', 'description')
-// }
-
-// // Create updateObject function for api on server/database side
-// function updateObject (id, update, db = connection) {
-//   return db('object').where('object.id', id).update(update)
-// }
-
-// // Create deleteObjectById function for api on server/database side
-// function deleteObjectById(id, db = connection) {
-//   console.log("db.js deleteObject:", id)
-//   return db('object').where('object.id', id).delete()
-// }

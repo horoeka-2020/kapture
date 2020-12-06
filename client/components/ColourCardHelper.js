@@ -1,19 +1,19 @@
 import { dispatch } from '../store' // , getState
 import { setWaiting, clearWaiting } from '../actions/waiting'
 import { showError } from '../actions/error'
-import { getSizes } from '../api'
+import { getColours } from '../api'
 
-export function getAllSizes () {
+export function getAllColours () {
   dispatch(setWaiting())
-  return getSizes
-    .then(sizes => {
+  return getColours
+    .then(colours => {
       dispatch(clearWaiting())
-      const { id, name, height, width } = sizes
+      const { id, name, hex, image } = colours
       return {
         id,
         name,
-        height,
-        width
+        hex,
+        image
       }
     })
     .catch((error) => {

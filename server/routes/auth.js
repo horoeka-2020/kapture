@@ -3,15 +3,17 @@ const { applyAuthRoutes } = require('authenticare/server')
 
 const {
   getUsers,
+  getUserByName,
   userExists,
   createUser
-} = require('../db/db')
+} = require('../db/users')
 
 const router = express.Router()
 
 applyAuthRoutes(router, {
   getUsers,
   userExists,
+  getUserByName,
   createUser
 })
 

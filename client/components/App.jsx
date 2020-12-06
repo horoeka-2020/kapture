@@ -3,7 +3,6 @@ import { HashRouter as Route } from 'react-router-dom'
 import { connect } from 'react-redux'
 
 // Import components
-import ErrorMessage from './ErrorMessage'
 import LandingCard from './LandingCard'
 import RegisterCard from './RegisterCard'
 import LoginCard from './LoginCard'
@@ -14,7 +13,6 @@ class App extends React.Component {
     return (
       <div className='app'>
         <img className="logo" src="../../images/apture.png" alt='logo' width='25%'></img>
-        <ErrorMessage />
         <LandingCard exact path="/" component={LandingCard}/>
         <Route exact path="/register" component={RegisterCard}/>
         <Route exact path="/login" component={LoginCard}/>
