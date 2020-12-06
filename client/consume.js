@@ -7,7 +7,6 @@ export default function consume (endpoint, method = 'get', data = {}) {
   const headers = {
     Accept: 'application/json'
   }
-
   return request[method](baseUrl + endpoint)
     .set(headers)[payLoadMethod](data)
     .then(res => res)

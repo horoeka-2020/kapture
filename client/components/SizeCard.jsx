@@ -1,7 +1,29 @@
 import React from 'react'
-
+// import { getSizes } from '../api'
 export default class SizeCard extends React.Component {
+  state = {
+    id: '',
+    name: '',
+    height: '',
+    width: ''
+  }
+
+  // componentDidMount () {
+  //   getSizes()
+  //     .then((res) => {
+  //       console.log(res)
+  //       const { id, name, height, width } = res
+  //       this.setState({
+  //         id,
+  //         name,
+  //         height,
+  //         width
+  //       })
+  //     })
+  // }
+
   render () {
+    console.log(this.state)
     return (
       <>
         <div className='sizeCard'>
