@@ -24,7 +24,7 @@ export function getAllBirds (consume = requestor) {
 }
 
 export function getBirdByID (id, consume = requestor) {
-  return consume(apiUrl + '/birds/' + id, 'get')
+  return consume('/birds/birds/' + id, 'get')
     .then((res) => res.body)
     .catch(errorHandler)
 }
