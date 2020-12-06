@@ -1,6 +1,5 @@
 import React from 'react'
-// import { Link, Route } from 'react-router-dom'
-import { getSizes } from '../api'
+// import { getSizes } from '../api'
 export default class SizeCard extends React.Component {
   state = {
     id: '',
@@ -9,19 +8,19 @@ export default class SizeCard extends React.Component {
     width: ''
   }
 
-  componentDidMount () {
-    getSizes()
-      .then((res) => {
-        console.log(res)
-        const { id, name, height, width } = res
-        this.setState({
-          id,
-          name,
-          height,
-          width
-        })
-      })
-  }
+  // componentDidMount () {
+  //   getSizes()
+  //     .then((res) => {
+  //       console.log(res)
+  //       const { id, name, height, width } = res
+  //       this.setState({
+  //         id,
+  //         name,
+  //         height,
+  //         width
+  //       })
+  //     })
+  // }
 
   render () {
     console.log(this.state)
@@ -48,10 +47,6 @@ export default class SizeCard extends React.Component {
               <input type="radio" name="radio" value='{props.size.large}' />
               <div className="control__indicator"></div>
             </label>
-            {/* <label className="control control--radio">Moa
-              <input type="radio" name="radio" value='{props.size.moa}' />
-              <div className="control__indicator"></div>
-            </label> */}
           </div>
         </div>
       </>
