@@ -67,7 +67,7 @@ class QuizResult extends React.Component {
                   onClick={this.handleClick}/>
               </div>
               <div>
-                <h3 className='birdText'>Māori Name: {birdIgnoa}</h3>
+                <h3 name='māoriname' className='birdText'>Māori Name: {birdIgnoa}</h3>
                 <h3 className='birdText'>Name: {birdName}</h3>
                 <h3 className='birdText'>Description: {birdDesc}</h3>
                 <h3 className='birdText'>Found In: {birdFoundIn}</h3>
