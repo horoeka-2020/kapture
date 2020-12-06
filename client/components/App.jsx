@@ -14,7 +14,6 @@ class App extends React.Component {
     return (
       <div className='app'>
         <img className="logo" src="../../images/apture.png" alt='logo' width='25%'></img>
-        <ErrorMessage />
         <LandingCard exact path="/" component={LandingCard}/>
         <Route exact path="/register" component={RegisterCard}/>
         <Route exact path="/login" component={LoginCard}/>

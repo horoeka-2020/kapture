@@ -2,6 +2,7 @@ import React from 'react'
 import { Link, Route } from 'react-router-dom'
 import LoginCard from './LoginCard'
 import RegisterCard from './RegisterCard'
+import ErrorMessage from './ErrorMessage'
 
 export default class LandingCard extends React.Component {
   render () {
@@ -11,6 +12,7 @@ export default class LandingCard extends React.Component {
         <div className='box'>
           <h1 className='cardTitle'>Join the Flock</h1>
           <p className='cardText'>This is the beginning of your journey to learn about birds of Aotearoa, make sure you go out and look for all our feathered little friends!</p>
+          <ErrorMessage />
           <Link to="/login"><button className="log-in">Log In</button></Link>
           <Link to="/register"><button className="register">Register</button></Link>
           <Route exact path="/login" component={LoginCard}/>
