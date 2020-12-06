@@ -99,31 +99,9 @@ nav ul {
   width: 100%;
   text-align: center;
   color: #fff;
-} */
-
-
-/* color card */
-.quizText{
-  font-size: 1.25em;
-  color: white;
 }
 
-.colorPick{
-  display: inline-block;
-
-}
-
-.control{
-  color: white;
-}
-
-label {
-  display: inline-block;
-  margin-top: 5px;
-  margin-bottom: 10px;
-  margin-left: 0px;
-  margin-right: 50px;
-}
+/* landing page with animation */
 
 body::before {
   content: "";
@@ -180,7 +158,6 @@ body::before {
   animation-name: fadeOut;
   animation-duration: 1.5s;
 }
-
 @keyframes fadeOut {
   0% {
     opacity: 1;
@@ -221,7 +198,6 @@ body::before {
   animation-name: fadeIn;
   animation-duration: 3s;
 }
-
 @keyframes fadeIn {
   0% {
    opacity: 0;
@@ -245,13 +221,13 @@ body::before {
    }
  }
 
-/* .box h2 {
+.box h2 {
   margin: 0 0 30px;
   padding: 0;
   color: rgb(0, 78, 52);
   text-align: center;
   background-color: #fff;
-} */
+}
 
 .box .inputBox {
   position: relative;
@@ -426,28 +402,7 @@ nav a {
   width: 90%;
   text-align: center;
   padding-bottom: 2em;
-  font-size: 1em;
 }
-
-.flex-container {
-  display: flex;
-  justify-content: space-around;
-  flex-direction: row;
-}
-
-.birdImg{
-    height: 200px;
-    width: auto;
-    display: block;
-    margin: auto;
-    border: 5px solid #fff; 
-}
-.birdText{
-    width: 90%;
-    text-align: left;
-    color: white;
-    padding-left: 5px;
-  }
 
 .sizePick{
   width: 90%;
@@ -474,23 +429,10 @@ nav a {
   display: block;
 }
 
-.btn-submit-bird {
-    float: inline-end;
-    display: block;
-  }
-
 .cardTitle{
   font-size: 3.3rem;
   color: #fff;
   text-align: center;
-  letter-spacing: 0.10rem;
-}
-
-.cardQuiz{ 
-  font-size: 2.3rem;
-  color: #fff;
-  text-align: center;
-  letter-spacing: 0.145rem;
 }
 
 .cardText {
@@ -516,6 +458,7 @@ nav a {
   position: relative;
   background-color: white;
 }
+
 
 .bg-slider-img {
   background-position: top center;
@@ -550,3 +493,54 @@ nav a {
 }
 
 
+/* waiting indicator */
+
+.bird:after{
+  border-radius: 100% 100% 0 0;
+  box-shadow: inset 0px 5px 0 white;
+  width:100px; height:100px;
+  margin-top:-7px; margin-left:-50px;
+  transform-origin: 100% 0%;
+  animation:alas 3s linear infinite;
+}
+
+/* bird beak */
+.bird{
+  background:white;
+  border-radius: 50% 50% 20% 20%;
+  position:absolute;
+  top:32%; 
+  left:70%;
+  margin-top:-20px; 
+  margin-left:-10px;
+  width:0.7em; height:0.7em;
+  z-index:9;
+}
+
+.bird:after,
+.bird:before{
+  content:"";
+  position:absolute;
+  top:50%; left:50%;
+}
+
+/* bird wings */
+
+.bird:after{
+  border-radius: 100% 100% 0 0;
+  box-shadow: inset 0px 5px 0 white;
+  width:100px; 
+  height:100px;
+  margin-top:-7px; margin-left:-50px;
+  transform-origin: 100% 0%;
+  animation:alas 3s linear infinite;
+}
+
+
+/* wings animation */
+
+@keyframes alas {
+  50%{
+    transform:rotateX(-1440deg);
+  }
+}

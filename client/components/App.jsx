@@ -7,12 +7,18 @@ import LandingCard from './LandingCard'
 import RegisterCard from './RegisterCard'
 import LoginCard from './LoginCard'
 import Home from './Home'
+import WaitingIcon from './WaitingIcon'
+import WaitingIndicator from './WaitingIndicator'
+import ErrorMessage from './Error'
 
 class App extends React.Component {
   render () {
     return (
       <div className='app'>
         <img className="logo" src="../../images/apture.png" alt='logo' width='25%'></img>
+        <ErrorMessage />
+        <WaitingIndicator />
+        <WaitingIcon />
         <LandingCard exact path="/" component={LandingCard}/>
         <Route exact path="/register" component={RegisterCard}/>
         <Route exact path="/login" component={LoginCard}/>
