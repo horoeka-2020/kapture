@@ -6,7 +6,7 @@ import { connect } from 'react-redux'
 import LandingCard from './LandingCard'
 import Home from './Home'
 // import WaitingIcon from './WaitingIcon'
-// import WaitingIndicator from './WaitingIndicator'
+import WaitingIndicator from './WaitingIndicator'
 import ErrorMessage from './Error'
 import QuizCard from './QuizCard'
 import QuizResult from './QuizResult'
@@ -17,6 +17,7 @@ class App extends React.Component {
       <>
         <div className='app'>
           <ErrorMessage />
+          <WaitingIndicator />
           <img className="logo" src="/images/build/apture.png" alt='logo' width='25%'></img>
           <Route exact path="/">
             <Redirect to="/welcome"/>
