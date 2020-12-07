@@ -34,6 +34,62 @@ nav ul {
   nav a:hover {
     background: #888;
   }
+
+
+
+  /* waiting icon */
+
+  
+  .pajaro:after{
+    border-radius: 100% 100% 0 0;
+    box-shadow: inset 0px 5px 0 black;
+    width:100px; height:100px;
+    margin-top:-7px; margin-left:-50px;
+    transform-origin: 100% 0%;
+    animation:alas 3s linear infinite;
+  }
+  
+  /* bird beak */
+  .pajaro{
+    background:black;
+    border-radius: 50% 50% 20% 20%;
+    position:absolute;
+    top:50%; 
+    left:50%;
+    margin-top:-20px; 
+    margin-left:-10px;
+    width:0.7em; height:0.7em;
+    z-index:9;
+  }
+  
+  .pajaro:after,
+  .pajaro:before{
+    content:"";
+    position:absolute;
+    top:50%; left:50%;
+  }
+  
+  /* bird wings */
+  
+  .pajaro:after{
+    border-radius: 100% 100% 0 0;
+    box-shadow: inset 0px 5px 0 black;
+    width:100px; 
+    height:100px;
+    margin-top:-7px; margin-left:-50px;
+    transform-origin: 100% 0%;
+    animation:alas 3s linear infinite;
+  }
+
+  
+  /* wings animation */
+  
+  @keyframes alas {
+    50%{
+      transform:rotateX(-1440deg);
+    }
+  }
+  
   
 
  

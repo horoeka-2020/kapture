@@ -1,12 +1,12 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-import { hide } from './errorHelper'
+import { hide } from './helpers/errorHelper'
 
 function errorMessage ({ error }) {
   return (
     error
-      ? <div className="button-cancel">
+      ? <div className="message-error">
         {error}
         <a className="button-cancel" onClick={hide}>&#10005;</a>
       </div>

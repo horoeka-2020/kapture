@@ -25,6 +25,7 @@
   },
   "eslintConfig": {
     "extends": "eda",
+    "root": true,
     "ignorePatterns": [
       "bundle.js"
     ]
@@ -89,6 +90,7 @@
     "authenticare": "^0.4.7",
     "cors": "^2.8.5",
     "express": "^4.17.1",
+    "dotenv": "^8.2.0",
     "knex": "^0.21.12",
     "pg": "^8.5.1",
     "superagent": "^5.3.1"

@@ -1,23 +1,32 @@
 import React from 'react'
-import { HashRouter as Route } from 'react-router-dom'
+import { Route, Redirect } from 'react-router-dom'
 import { connect } from 'react-redux'
 
 // Import components
-import ErrorMessage from './ErrorMessage'
 import LandingCard from './LandingCard'
+import Home from './Home'
+// import WaitingIcon from './WaitingIcon'
+import WaitingIndicator from './WaitingIndicator'
+import ErrorMessage from './Error'
+import QuizCard from './QuizCard'
+import QuizResult from './QuizResult'
 
 class App extends React.Component {
   render () {
     return (
       <>
-        <ErrorMessage />
-        <h1 className="logo">Kapture</h1>
-        <Route
-          path="/"
-          component={LandingCard}
-        />
-        <LandingCard/>
-        <p className='footer'>&#169; Kapture by Slick</p>
+        <div className='app'>
+          <ErrorMessage />
+          <WaitingIndicator />
+          <img className="logo" src="/images/build/apture.png" alt='logo' width='25%'></img>
+          <Route exact path="/">
+            <Redirect to="/welcome"/>
+          </Route>
+          <Route path="/welcome" component={LandingCard}/>
+          <Route exact path="/home" component={Home}/>
+          <Route exact path="/quiz" component={QuizCard}/>
+          <Route exact path="/quiz/result" component={QuizResult}/>
+        </div>
       </>
     )
   }

@@ -8,25 +8,25 @@ AIM: To encourage interaction with nature by capturing images/descriptions of na
 
 | Description | Must / Should / Could | Priority | 
 | ------------- | ------------- | ------------- |
-| As a user I want to be presented with a landing page when the app is opened | MUST | TBC |
-| As a user I want to be able to register with the application | MUST | TBC |
-| As a user I want to be able to login to the application | MUST | TBC |
-| As a user I want to be able to record a photo of a bird  | MUST | TBC |
-| As a user I want to be able to record a description of a bird  |  MUST | TBC |
-| As a user I want to be able to pin the location of a bird I have seen on a map | MUST | TBC |
-| As a user I want to be able to see info for a bird | MUST | TBC |
-| As a user I want to be able to download and print a photo of a bird | MUST | TBC |
-| As a user I want to be asked questions to identify my bird | SHOULD| TBC |
+| As a user I want to be presented with a landing page when the app is opened | MUST | 1 |
+| As a user I want to be able to register with the application | MUST | 2 |
+| As a user I want to be able to login to the application | MUST | 3 |
+| As a user I want to be asked questions to identify my bird | MUST| 4 |
+| As a user I want to be able to see info for a bird | MUST | 5 |
+| As a user I want my password to be stored securely | MUST | 6 |
+| As a user I want to be able to unlock badges / achievements | SHOULD | 7 |
+| As a user I want to be able to share my badges | SHOULD | 8 |
+| As a user I want to be able to pin the location of a bird I have seen on a map | SHOULD | 9 |
+| As a user I want to be able to access an information page that describes the apps functionality | SHOULD | 10 |
+| As a user I want to be able to interact with other users | SHOULD | 11 |
+| As a user I want to be able to have a bird identified from a photo | COULD | TBC |
+| As a user I want to be able to record a photo of a bird  | COULD | TBC |
+| As a user I want to be able to record a description of a bird  |  COULD | TBC |
 | As a user I want to be able to record a video of a bird | SHOULD | TBC |
-| As a user I want to be able to unlock badges / achievements | SHOULD | TBC |
-| As a user I want to be able to share my badges | SHOULD | TBC |
-| As a user I want to be able to interact with other users | SHOULD | TBC |
+| As a user I want to be able to download and print a photo of a bird |COULD | TBC |
 | As a user I want to see a video of a flying bird as a backgound to the login/register screen |  COULD | TBC |
 | As a user I want to be able to organise an event to look for birds | COULD | TBC |
-| As a user I want to be able to have a bird identified from a photo | COULD | TBC |
-| As a user I want to be able to access an information page that describes the apps functionality | COULD | TBC |
-| As a user I want my password to be stored securely | TBC | TBC |
-| As a user I want to have the ability for my description of a bird shared with the community to enable identification | TBC | TBC |
+| As a user I want to have the ability for my description of a bird shared with the community to enable identification | COULD | TBC |
 
 
 

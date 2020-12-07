@@ -1,8 +1,77 @@
-body {
-    /* display: flex; */
-    /* background-color: rgb(3, 25, 43); */
-  }
+@import url('https://fonts.googleapis.com/css?family=Abel|Abril+Fatface|Alegreya|Arima+Madurai|Dancing+Script|Dosis|Merriweather|Oleo+Script|Overlock|PT+Serif|Pacifico|Playball|Playfair+Display|Share|Unica+One|Vibur');
+
+.logo {
+  display: block;
+  margin: 0 auto;
+}
+
+.message-error {
+  border: 2px solid red;
+  padding: 0.5rem;
+  background-color: #ffcccc;
+}
+
+.log-in {
+  float: left;
+  display: block;
+  color: #252537;
+
+  width: 280px;
+  height: 50px;
+
+  padding: 0 20px;
+  background: #fff;
+  border-radius: 5px;
   
+  outline: none;
+  border: none;
+
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.2s linear;
+  
+  margin: 7% auto;
+  letter-spacing: 0.05em;
+}
+
+/* buttons hover Animation */
+button:hover {
+  animation: ani9 0.4s ease-in-out infinite alternate;
+}
+@keyframes ani9 {
+  0% {
+      transform: translateY(3px);
+  }
+  100% {
+      transform: translateY(5px);
+  }
+}
+
+.register {
+  float: right;
+  display: block;
+  color: #252537;
+
+  width: 280px;
+  height: 50px;
+
+  padding: 0 20px;
+  background: #fff;
+  border-radius: 5px;
+  
+  outline: none;
+  border: none;
+
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.2s linear;
+  
+  margin: 7% auto;
+  letter-spacing: 0.05em;
+
+  align-items: right;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -10,11 +79,12 @@ body {
 }
 
 .button-cancel {
-  color: #fff;
+  float: right;
+  color: black;
 }
 
 * {
-  font-family: "Fredericka the Great", cursive;
+  font-family: 'Playfair Display', serif;
 }
 
 .logo {
@@ -27,26 +97,10 @@ nav ul {
   table-layout: fixed;
   width: 100%;
   text-align: center;
-  background: #333;
-}
-
-nav li {
-  list-style: none;
-  display: table-cell;
-  background: #333;
-}
-
-nav a {
-  text-decoration: none;
   color: #fff;
-  display: block;
-  padding: 0.75em 1em;
-  font-size: 1.25em;
 }
 
-nav a:hover {
-  background: #888;
-}
+/* landing page with animation */
 
 body::before {
   content: "";
@@ -57,27 +111,18 @@ body::before {
   right: 0;
   z-index: -1;
   visibility: visible;
-  background: url(index.jpeg) no-repeat center center;
+  background: url(./images/build/background.jpeg) no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover; 
   background-size: cover;
   animation-name: blur;
-  animation-duration: 3.5s;
+  animation-duration: 1.5s;
 }
 
 @keyframes blur {
   0% {
     filter: blur(30px);
-  }
-  25% {
-    filter: blur(20px)
-  }
-  50% {
-    filter: blur(10px)
-  }
-  75% {
-    filter: blur(5px)
   }
   100% {
     filter: blur(0);
@@ -87,19 +132,11 @@ body::before {
   0% {
     filter: blur(30px);
   }
-  25% {
-    filter: blur(20px)
-  }
-  50% {
-    filter: blur(10px)
-  }
-  75% {
-    filter: blur(5px)
-  }
   100% {
     filter: blur(0);
   }
 }
+
 .wraper{
   width: 90%;
   height: 90%;
@@ -113,33 +150,24 @@ body::before {
   right: 0;
   z-index: -1;
   opacity: 0;
-  background: url(focus.png) no-repeat center center;
+  background: url(./images/build/focus.png) no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover; 
   background-size: cover;
   animation-name: fadeOut;
-  animation-duration: 3.7s;
+  animation-duration: 1.5s;
 }
 @keyframes fadeOut {
   0% {
     opacity: 1;
     blur: 30px;
    }
-   25% {
-     blur: 5px;
-   }
-   50% {
-     blur: 0;
-   }
-   97% {
-     opacity: 1;
-
-   }
    100% {
      opacity: 0;
    }
 }
+
 @-moz-keyframes fadeOut {
   0% {
     opacity: 0;
@@ -152,6 +180,7 @@ body::before {
    }
 }
 
+/* general card with animation for landing page */
 .box {
   position: absolute;
   top: 50%;
@@ -161,13 +190,13 @@ body::before {
   padding: 40px;
   background: rgba(0, 0, 0, 0.3);
   box-sizing: border-box;
-  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 10);
   border-radius: 10px;
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(6px);
   border: solid white 1px;
   opacity: 1;
   animation-name: fadeIn;
-  animation-duration: 4.5s;
+  animation-duration: 3s;
 }
 @keyframes fadeIn {
   0% {
@@ -188,10 +217,123 @@ body::before {
      opacity: 0;
    }
    100% {
-     opacity: 1;
-   }
- }
+    opacity: 1;
+  }
+}
 
+.box-quiz {
+    position: absolute;
+    top: 37rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 10);
+    border-radius: 10px;
+    backdrop-filter: blur(6px);
+    border: solid white 1px;
+    opacity: 1;
+    animation-name: fadeIn;
+    animation-duration: 3s;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+     opacity: 0;
+    }
+    75% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @-moz-keyframes fadeIn {
+    0% {
+      opacity: 0;
+     }
+     75% {
+       opacity: 0;
+     }
+     100% {
+      opacity: 1;
+    }
+  }
+
+  .box-quiz input[type="submit"] {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #03a9f4;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  .box-quiz input[type="submit"]:hover {
+    background-color: rgba(3, 169, 244, 0.7);
+  }
+
+  .box-quiz-results {
+    position: absolute;
+    top: 55rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 10);
+    border-radius: 10px;
+    backdrop-filter: blur(6px);
+    border: solid white 1px;
+    opacity: 1;
+    animation-name: fadeIn;
+    animation-duration: 3s;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+     opacity: 0;
+    }
+    75% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @-moz-keyframes fadeIn {
+    0% {
+      opacity: 0;
+     }
+     75% {
+       opacity: 0;
+     }
+     100% {
+      opacity: 1;
+    }
+  }
+
+  .box-quiz-results input[type="submit"] {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #03a9f4;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  .box-quiz-results input[type="submit"]:hover {
+    background-color: rgba(3, 169, 244, 0.7);
+  }
 .box h2 {
   margin: 0 0 30px;
   padding: 0;
@@ -200,9 +342,6 @@ body::before {
   background-color: #fff;
 }
 
-.box .inputBox {
-  position: relative;
-}
 .box .inputBox input {
   width: 100%;
   padding: 10px 0;
@@ -215,6 +354,7 @@ body::before {
   outline: none;
   background: transparent;
 }
+
 .box .inputBox label {
   position: absolute;
   top: 0;
@@ -254,9 +394,173 @@ body::before {
   border-radius: 5px;
   font-size: 14px;
 }
+
 .box input[type="submit"]:hover {
   background-color: rgba(3, 169, 244, 0.7);
 }
+
+/* log in  card */
+.log-in {
+  float: left;
+  display: block;
+  color: #252537;
+
+  width: 280px;
+  height: 50px;
+
+  padding: 0 20px;
+  background: #fff;
+  border-radius: 5px;
+  
+  outline: none;
+  border: none;
+
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.2s linear;
+  
+  margin: 7% auto;
+  letter-spacing: 0.05em;
+}
+
+/* buttons hover Animation */
+button:hover {
+  animation: ani9 0.4s ease-in-out infinite alternate;
+}
+@keyframes ani9 {
+  0% {
+      transform: translateY(3px);
+  }
+  100% {
+      transform: translateY(5px);
+  }
+}
+
+/* register card */
+.register {
+  float: right;
+  display: block;
+  color: #252537;
+
+  width: 280px;
+  height: 50px;
+
+  padding: 0 20px;
+  background: #fff;
+  border-radius: 5px;
+  
+  outline: none;
+  border: none;
+
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.2s linear;
+  
+  margin: 7% auto;
+  letter-spacing: 0.05em;
+
+  align-items: right;
+}
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+* {
+  font-family: 'Playfair Display', serif;
+}
+
+/* navigation menu */
+
+/*  Mobile first - no media query */
+.navbar {
+  width: 100%;
+  margin: 0 auto 2rem;
+  display: block;
+}
+
+/* Extra large and above */
+@media  (min-width: 1200px) {
+  .navbar { 
+    width: calc(100% / 2);
+  }
+}
+
+.navbar ul {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  display: inline-block;
+  width: calc(100% / 5);
+  text-align: center;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  font-size: 1.25em;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+  padding-bottom: 5px;
+}
+
+.navbar a:hover {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+  margin-bottom: 0;
+}
+
+.nav-underline {
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* size card */
+
+.quizText{
+  font-size: 1.25em;
+  color: white;
+}
+
+.cardText{
+  width: 90%;
+  text-align: center;
+  padding-bottom: 2em;
+}
+
+.birdImg{
+    height: 200px;
+    width: auto;
+    display: block;
+    margin: auto;
+    border: 5px solid #fff; 
+    border-radius: 5px;
+}
+.birdText{
+    width: 90%;
+    text-align: left;
+    color: white;
+    padding-left: 5px;
+  }
+
+.sizePick{
+  width: 90%;
+  margin: 0 auto;
+}
+
+.control{
+  color: white;
+  display: inline-block;
+  padding: 0 15px;
+}
+.control:hover{
+  color: lightgrey;
+}
+
 @media (max-width: 720px) {
   .box {
     width: 80%;
@@ -264,9 +568,8 @@ body::before {
 }
 
 .btn-submit {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  float: right;
+  display: block;
 }
 
 .cardTitle{
@@ -274,83 +577,23 @@ body::before {
   color: #fff;
   text-align: center;
 }
+.cardTitleQuiz{
+    font-size: 2.5rem;
+    color: #fff;
+    text-align: center;
+  }
 
 .cardText {
   color: #fff;
 }
-/* Roddies CSS */
-
-/* .wrapper{
-    width: 100%;
-    height: 100%;
-}
-
-.title{
-    font-size: 4rem;
-    display: block;
-    margin: 0 auto;
-    width: 25%;
-}  */
-
-/* .landingCard{
-    width: 70%;
-    height: 65%;
-    display: none;
-    margin: 3rem auto 0 auto;
-    border: 2px solid white;
-    border-radius: 5px;
-    color: white;
-    padding: 25px;
-}   */
-
-
-/*
-.text{
-    font-size: 2rem;
-    font-family: "Gudea", sans-serif;
-    width: 70%;
-    height: 40%;
-    display: block;
-    margin: 0 auto;
-}
-
-.enterbtn{
-    width: 25%;
-    height: 11%;
-    border: 2px solid white;
-    border-radius: 5px;
-    display: block;
-    margin: 0 auto;
-    position: relative;
-    top: 5rem;
-}
-
-.enterbtn:hover{
-    background-color: white;
-    transition: 1.5s;
-    color: lightblue;
-}
-
-.enterbtn:hover h3 {
-    color: lightblue;
-    transition: 1s;
-}
-
-.enter{
-    font-size: 1.3rem;
-    text-align: center;
-}
-
-.anchor{
-    text-decoration: none;
-    color: white;
-} */
 
 .footer{
-    color: white;
-    position: absolute;
-    bottom: 0;
-    right: 25px;
+  color: white;
+  text-align: center;
+  position: absolute;
+  bottom: 0px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.3);
 }
 
 /* Image Slider */
@@ -361,9 +604,9 @@ body::before {
   display: block;
   border: 1px solid #DDD;
   box-sizing: border-box;
-  background: url('../../images/focus.png') no-repeat center center;
+  background: url(./images/build/focus2.png) no-repeat center center;
   position: relative;
-  background-color: white;
+  background-color: #fff;
 }
 
 
@@ -376,28 +619,78 @@ body::before {
 }
 
 .bg-slider-img-bellbird {
-  background-image: url('./images/bellbird.jpg');
+  background-image: url('./images/birds/bellbird.jpg');
 }
 
 .bg-slider-img-brown-kiwi {
-  background-image: url('./images/brown-kiwi.jpg');
+  background-image: url('./images/birds/brown-kiwi.jpg');
 }
 
 .bg-slider-img-kaka {
-  background-image: url('./images/kaka.jpg');
+  background-image: url('./images/birds/kaka.jpg');
 }
 
 .bg-slider-img-kakapo {
-  background-image: url('./images/kakapo.jpg');
+  background-image: url('./images/birds/kakapo.jpg');
 }
 
-.bg-slider-img-ruru-hero {
-  background-image: url('./images/ruru-hero.jpg');
+.bg-slider-img-ruru {
+  background-image: url('./images/birds/ruru.jpg');
 }
 
 .bg-slider-img-tui {
-  background-image: url('./images/tui.jpg');
+  background-image: url('./images/birds/tui.jpg');
 }
 
 
+/* waiting indicator */
 
+.bird:after{
+  border-radius: 100% 100% 0 0;
+  box-shadow: inset 0px 5px 0 white;
+  width:100px; height:100px;
+  margin-top:-7px; margin-left:-50px;
+  transform-origin: 100% 0%;
+  animation:alas 3s linear infinite;
+}
+
+/* bird beak */
+.bird{
+  background:white;
+  border-radius: 50% 50% 20% 20%;
+  position:absolute;
+  top:32%; 
+  left:70%;
+  margin-top:-20px; 
+  margin-left:-10px;
+  width:0.7em; height:0.7em;
+  z-index:9;
+}
+
+.bird:after,
+.bird:before{
+  content:"";
+  position:absolute;
+  top:50%; left:50%;
+}
+
+/* bird wings */
+
+.bird:after{
+  border-radius: 100% 100% 0 0;
+  box-shadow: inset 0px 5px 0 white;
+  width:100px; 
+  height:100px;
+  margin-top:-7px; margin-left:-50px;
+  transform-origin: 100% 0%;
+  animation:alas 3s linear infinite;
+}
+
+
+/* wings animation */
+
+@keyframes alas {
+  50%{
+    transform:rotateX(-1440deg);
+  }
+}

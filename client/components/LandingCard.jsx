@@ -2,6 +2,7 @@ import React from 'react'
 import { Link, Route } from 'react-router-dom'
 import LoginCard from './LoginCard'
 import RegisterCard from './RegisterCard'
+import ErrorMessage from './ErrorMessage'
 
 export default class LandingCard extends React.Component {
   render () {
@@ -10,20 +11,12 @@ export default class LandingCard extends React.Component {
         <div className='wraper'></div>
         <div className='box'>
           <h1 className='cardTitle'>Join the Flock</h1>
-          <p className='cardText'>This is the beggining of your journey to learn about all the birds of Aotearoa, go out and look for all our little feather friends!</p>
-          <nav>
-            <Link to="/login"> <h3 className='cardText'>Login</h3></Link>
-            <Link to="/register"><h3 className='cardText'>Register</h3></Link>
-            <Route
-              path="/login"
-              component={LoginCard}
-            />
-            <Route
-              path="/register"
-              component={RegisterCard}
-            />
-          </nav>
-
+          <p className='cardText'>This is the beginning of your journey to learn about birds of Aotearoa, make sure you go out and look for all our feathered little friends!</p>
+          <ErrorMessage />
+          <Link to="/welcome/login"><button className="log-in">Log In</button></Link>
+          <Link to="/welcome/register"><button className="register">Register</button></Link>
+          <Route exact path="/welcome/login" component={LoginCard}/>
+          <Route exact path="/welcome/register" component={RegisterCard}/>
         </div>
       </>
     )

@@ -1,52 +1,58 @@
 import React from 'react'
+import { signInUser } from './helpers/loginCardHelper'
 
-export default class LoginCard extends React.Component {
+class LoginCard extends React.Component {
     state = {
       username: '',
       password: ''
     }
 
-    // Handles our inputs to change state
-    handleChange = (e) => {
-      this.setState({
-        [e.target.name]: e.target.value
-      })
-    }
+      handleChange = (e) => {
+        const { name, value } = e.target
+        this.setState({
+          [name]: value
+        })
+      }
 
-    // Handles our click to fire off our
-    handleClick = () => {
+      handleClick = (e) => {
+        e.preventDefault()
+        signInUser(this.state, this.props.history.push)
+      }
 
-    }
-
-    render () {
-      return (
-        <>
-          <h1 className='cardText'>Login page</h1>
-          <form action="">
-
+      render () {
+        return (
+          <>
             <div className="inputBox">
-
               <input
                 className="input"
-                name="email"
-                value={this.state.email}
+                id="username"
+                type="text"
+                name="username"
+                value={this.state.username}
                 placeholder="email address"
                 onChange={this.handleChange}
               ></input>
-            </div>
-            <div className="inputBox">
 
               <input
                 className="input"
+                id="password"
                 name="password"
+                type="password"
                 value={this.state.password}
                 placeholder="password"
                 onChange={this.handleChange}
               ></input>
             </div>
-            <input className="btn-submit" type="submit" name="" value="Submit" />
-          </form>
-        </>
-      )
-    }
+            <input
+              className="btn-submit"
+              type="submit"
+              data-testid="submit-button"
+              name="login-submit"
+              value="Submit"
+              onClick={this.handleClick}/>
+          </>
+        )
+      }
 }
+
+export default LoginCard
