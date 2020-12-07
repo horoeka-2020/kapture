@@ -446,6 +446,13 @@ nav a {
     padding-left: 5px;
   }
 
+  .birdTexth2{
+    width: 90%;
+    text-align: center;
+    color: white;
+    padding-left: 5px;
+  }
+
 .sizePick{
   width: 90%;
   margin: 0 auto;
@@ -472,7 +479,7 @@ nav a {
 }
 
 .btn-submit-bird {
-    float: inline-end;
+    float: right;
     display: block;
   }
 
