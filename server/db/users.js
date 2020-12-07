@@ -6,7 +6,8 @@ module.exports = {
   getUsers,
   createUser,
   userExists,
-  getUserByName
+  getUserByName,
+  getBirdsByUserID
 }
 
 // Create getUser function for api on server/database side
@@ -51,4 +52,14 @@ function getUserByName (username, db = connection) {
     .then((user) => {
       return user
     })
+}
+
+function getBirdsByUserID (id, db = connection) {
+  return db('bird_sightings')
+    .join('users', 'bird_sightings.user_id', 'users.id')
+    .where('users.id', id)
+    .select('bird_sightings.user_id as birdUserID',
+      'bird_sightings.bird_id as birdSightingID',
+      'bird_sightings.latitude as birdLat',
+      'bird_sightings.longitude as birdLong', 'bird_sightings.date_of_sighting as birdDate', 'bird_sightings.time as birdTime')
 }
