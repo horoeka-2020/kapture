@@ -1,6 +1,6 @@
-import { HIDE_ERROR } from '../actions/error'
+import { HIDE_ERROR } from '../../actions/error'
 import { hide } from './errorHelper'
-import { dispatch } from '../store'
+import { dispatch } from '../../store'
 
 jest.mock('../store')
 

@@ -2,9 +2,9 @@ import React from 'react'
 import { screen } from '@testing-library/react'
 import '@testing-library/jest-dom/extend-expect'
 
-import QuizResult from './QuizResult'
-import { getSpecificBird } from './quizResultHelper'
-import { renderWithRedux } from '../test-utils'
+import QuizResult from '../QuizResult'
+import { getSpecificBird } from '../helpers/quizResultHelper'
+import { renderWithRedux } from '../../test-utils'
 
 jest.mock('./quizResultHelper')
 

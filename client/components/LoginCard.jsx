@@ -1,5 +1,5 @@
 import React from 'react'
-import { signInUser } from './loginCardHelper'
+import { signInUser } from './helpers/loginCardHelper'
 
 class LoginCard extends React.Component {
     state = {

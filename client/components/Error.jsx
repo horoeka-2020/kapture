@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-import { hide } from './errorHelper'
+import { hide } from './helpers/errorHelper'
 
 function Error ({ error }) {
   return (

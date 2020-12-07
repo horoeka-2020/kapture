@@ -1,8 +1,8 @@
 import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
 
-import { registerUser } from './registerHelper'
-import RegisterCard from './RegisterCard.jsx'
+import { registerUser } from '../helpers/registerHelper'
+import RegisterCard from '../RegisterCard.jsx'
 
 jest.mock('./registerHelper')
 
