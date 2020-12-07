@@ -1,16 +1,17 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import WaitingIcon from './WaitingIcon'
 
-const WaitingIcon = (props) => {
-  return props.waiting
-    ? <div className="bird"></div>
+const WaitingIndicator = ({ waiting }) => {
+  return waiting
+    ? <WaitingIcon />
     : null
 }
 
 function mapStateToProps (state) {
   return {
-    waiting: state.pending
+    waiting: state.waiting
   }
 }
 
-export default connect(mapStateToProps)(WaitingIcon)
+export default connect(mapStateToProps)(WaitingIndicator)
