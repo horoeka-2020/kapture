@@ -46,6 +46,20 @@ export function getSizes (consume = requestor) {
     .catch(errorHandler)
 }
 
+export function getUserBadges (userId, consume = requestor) {
+  dispatch(setWaiting())
+  return consume(apiUrl + '/badges/' + userId)
+    .then((res) => res.body)
+    .catch(errorHandler)
+}
+
+export function getSightingsByUser (userId, consume = requestor) {
+  dispatch(setWaiting())
+  return consume(apiUrl + '/sightings/' + userId)
+    .then((res) => res.body)
+    .catch(errorHandler)
+}
+
 // Handle errors in application
 function errorHandler (method, route) {
   return (err) => {
