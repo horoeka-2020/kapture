@@ -4,7 +4,7 @@ import { render, screen, fireEvent } from '@testing-library/react'
 import { registerUser } from '../helpers/registerHelper'
 import RegisterCard from '../RegisterCard.jsx'
 
-jest.mock('./registerHelper')
+jest.mock('../helpers/registerHelper')
 
 test('register fields update correctly on user input', () => {
   render(<RegisterCard />)

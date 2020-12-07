@@ -6,7 +6,7 @@ import QuizResult from '../QuizResult'
 import { getSpecificBird } from '../helpers/quizResultHelper'
 import { renderWithRedux } from '../../test-utils'
 
-jest.mock('./quizResultHelper')
+jest.mock('../helpers/quizResultHelper')
 
 test('calls getSpecificBird and renders bird data on mount', () => {
   getSpecificBird.mockImplementation(() => Promise.resolve({

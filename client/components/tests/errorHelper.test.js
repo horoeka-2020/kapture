@@ -1,8 +1,8 @@
 import { HIDE_ERROR } from '../../actions/error'
-import { hide } from './errorHelper'
+import { hide } from '../helpers/errorHelper'
 import { dispatch } from '../../store'
 
-jest.mock('../store')
+jest.mock('../../store')
 
 afterEach(() => {
   return jest.resetAllMocks()
