@@ -1,30 +1,48 @@
 // Create client portion of api functions
 import requestor from '../consume'
+import { dispatch } from '../store'
+import { clearWaiting, setWaiting } from '../actions/waiting'
 
 const apiUrl = '/birds'
 
 // Bird APIs
 export function getAllBirds (consume = requestor) {
+  dispatch(setWaiting())
   return consume(apiUrl + '/birds', 'get', {})
-    .then((res) => res.body)
+    .then((res) => {
+      dispatch(clearWaiting())
+      return res.body
+    })
     .catch(errorHandler)
 }
 
 export function getBirdByID (id, consume = requestor) {
+  dispatch(setWaiting())
   return consume('/birds/birds/' + id, 'get')
-    .then((res) => res.body)
+    .then((res) => {
+      dispatch(clearWaiting())
+      return res.body
+    })
     .catch(errorHandler)
 }
 
 export function getColours (consume = requestor) {
+  dispatch(setWaiting())
   return consume(apiUrl + '/colour', 'get')
-    .then((res) => res.body)
+    .then((res) => {
+      dispatch(clearWaiting())
+      return res.body
+    })
     .catch(errorHandler)
 }
 
 export function getSizes (consume = requestor) {
+  dispatch(setWaiting())
   return consume(apiUrl + '/size', 'get')
-    .then((res) => res.body)
+    .then((res) => {
+      dispatch(clearWaiting())
+      return res.body
+    })
     .catch(errorHandler)
 }
 
