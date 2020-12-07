@@ -35,8 +35,8 @@ class ColourCard extends React.Component {
     return (
       <>
         <div className='colordCard'>
-          <h2 className='cardQuiz'>What colours does the bird have?</h2>
-          <p className='cardText'>Please select the main colours to find out what your bird might be?</p>
+          <h2 className='cardTitleQuiz'>What was the main colour of the bird?</h2>
+          <p className='cardText'>Please select a main colour to discover your bird might be?</p>
           <div className="colorPick">
             <label className="control controlColour--radio">{this.state.colours[0].name}
               <input type="radio" name="radioColour" onClick={this.handleClick} value={this.state.colours[0].name} />

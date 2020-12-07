@@ -6,7 +6,6 @@ import { showError } from '../../actions/error'
 
 export function signInUser (user, navigateTo) {
   const { username, password } = user
-  // console.log(navigateTo)
   dispatch(setWaiting())
   return signIn({ username, password }, { baseUrl: '/api/v1' })
     .then(() => {

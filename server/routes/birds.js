@@ -27,6 +27,19 @@ router.get('/birds/:id', (req, res) => {
     })
 })
 
+router.get('/birds/:colour/:size', (req, res) => {
+  const colour = req.params.colour
+  const size = req.params.size
+  db.getBirdsByColourAndSize(colour, size)
+    .then((birds) => {
+      res.status(200).json(birds)
+      return null
+    })
+    .catch(err => {
+      res.status(500).send('DB ERROR ' + err)
+    })
+})
+
 router.get('/colour', (req, res) => {
   db.getColours()
     .then((colour) => {

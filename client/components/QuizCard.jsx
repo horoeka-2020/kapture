@@ -1,6 +1,7 @@
 import React from 'react'
-import ColourCard from './ColourCard'
-import SizeCard from './SizeCard'
+import Header from './Header'
+import Questions from './Questions'
+import Footer from './Footer'
 import { connect } from 'react-redux'
 
 class QuizCard extends React.Component {
@@ -14,18 +15,9 @@ class QuizCard extends React.Component {
   render () {
     return (
       <>
-        <div className='wraper'></div>
-        <div className='box'>
-          <div> <ColourCard /> </div>
-          <div> <SizeCard /> </div>
-          <input
-            className="btn-submit"
-            name="btn-submit"
-            onClick={this.handleClick}
-            type="submit"
-            value="Submit"
-          />
-        </div>
+        <Header />
+        <div> <Questions handleClick={this.handleClick}/> </div>
+        <Footer />
       </>
     )
   }

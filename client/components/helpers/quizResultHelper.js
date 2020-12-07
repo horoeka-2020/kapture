@@ -1,14 +1,14 @@
 import { dispatch } from '../../store' // , getState
 import { setWaiting, clearWaiting } from '../../actions/waiting'
 import { showError } from '../../actions/error'
-import { getBirdByID } from '../../api/api'
+import { getBirdByID, getBirdsByColourAndSize } from '../../api/birds'
 
 export function getSpecificBird (birdId) {
   dispatch(setWaiting())
   return getBirdByID(birdId)
     .then(bird => {
       dispatch(clearWaiting())
-      const { birdName, birdIgnoa, birdDesc, birdImage, birdFoundIn, birdSound, birdCons, birdThreat, birdColourName, birdColourHex, birdSize, birdHeight, birdWidth, birdSizeId } = bird[0]
+      const { birdName, birdIgnoa, birdDesc, birdImage, birdFoundIn, birdSound, birdCons, birdThreat, birdColourId, birdColourName, birdColourHex, birdSize, birdHeight, birdWidth, birdSizeName } = bird[0]
       return {
         birdName,
         birdIgnoa,
@@ -18,13 +18,26 @@ export function getSpecificBird (birdId) {
         birdSound,
         birdCons,
         birdThreat,
+        birdColourId,
         birdColourName,
         birdColourHex,
         birdSize,
         birdHeight,
         birdWidth,
-        birdSizeId
+        birdSizeName
       }
+    })
+    .catch((error) => {
+      dispatch(showError(error.message))
+    })
+}
+
+export function getBirds (colour, size) {
+  dispatch(setWaiting())
+  return getBirdsByColourAndSize(colour, size)
+    .then(birds => {
+      dispatch(clearWaiting())
+      return birds
     })
     .catch((error) => {
       dispatch(showError(error.message))

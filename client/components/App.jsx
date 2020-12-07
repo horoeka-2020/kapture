@@ -26,7 +26,6 @@ class App extends React.Component {
           <Route exact path="/home" component={Home}/>
           <Route exact path="/quiz" component={QuizCard}/>
           <Route exact path="/quiz/result" component={QuizResult}/>
-          <p className='footer'>&#169; Kapture by Slick</p>
         </div>
       </>
     )
