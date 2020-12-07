@@ -12,6 +12,7 @@ import WaitingIndicator from './WaitingIndicator'
 import ErrorMessage from './Error'
 import QuizCard from './QuizCard'
 import QuizResult from './QuizResult'
+import Profile from './Profile'
 
 class App extends React.Component {
   componentDidMount () {
@@ -35,6 +36,7 @@ class App extends React.Component {
           <Route exact path="/home" component={Home}/>
           <Route exact path="/quiz" component={QuizCard}/>
           <Route exact path="/quiz/result" component={QuizResult}/>
+          <Route exact path="/profile" component={Profile} />
         </div>
       </>
     )

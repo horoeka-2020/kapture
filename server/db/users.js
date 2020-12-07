@@ -6,10 +6,11 @@ module.exports = {
   getUsers,
   createUser,
   userExists,
-  getUserByName,
+  getUserInfoByName,
   getBirdsByUserID,
   getUserBadges,
-  addBadgeToUser
+  addBadgeToUser,
+  getUserByName
 }
 
 // Create getUser function for api on server/database side
@@ -46,14 +47,18 @@ function userExists (username, db = connection) {
     })
 }
 
+function getUserInfoByName (username, db = connection) {
+  return db('users')
+    .select('username', 'is_admin as isAdmin', 'id', 'hash')
+    .where('username', username)
+    .first()
+}
+
 function getUserByName (username, db = connection) {
   return db('users')
     .select('username', 'is_admin as isAdmin', 'id', 'hash')
     .where('username', username)
     .first()
-    .then((user) => {
-      return user
-    })
 }
 
 function getBirdsByUserID (id, db = connection) {
