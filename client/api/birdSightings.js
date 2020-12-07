@@ -3,12 +3,10 @@ import requestor from './consume'
 
 const apiUrl = '/birds'
 
-// Colour API
-export function getColours (consume = requestor) {
-  return consume(apiUrl + '/colour', 'get')
-    .then((res) => {
-      return res.body
-    })
+// Bird Sightings APIs
+export function getAllBirdSightings (consume = requestor) {
+  return consume(apiUrl + '/birds/sightings', 'get', {})
+    .then((res) => res.body)
     .catch(errorHandler)
 }
 
