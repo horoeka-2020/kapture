@@ -1,40 +1,7 @@
 // Create client portion of api functions
 import requestor from './consume'
-// import { showError } from './actions/error'
-// import { dispatch } from './store'
 
 const apiUrl = '/birds'
-
-// Create createUser function for api on client components side
-// export function createUser (user, consume = requestor) {
-//   return consume('/users', 'post', user)
-//     .then(res => {
-//       return res.body
-//     })
-//     .catch((error) => {
-//       dispatch(showError(error.message))
-//     })
-// }
-
-// Removed from api.test.js
-// txest('createUser returns a valid user', () => {
-//   const consume = () => Promise.resolve({
-//     body: {
-//       email: 'gmail@email.com',
-//       password: '12345'
-//     }
-//   })
-//   const user = {
-//     email: 'gmail@email.com',
-//     password: '12345'
-//   }
-
-//   return createUser(user, consume)
-//     .then((body) => {
-//       expect(body.email).toBe('gmail@email.com')
-//       return null
-//     })
-// })
 
 // Bird APIs
 export function getAllBirds (consume = requestor) {

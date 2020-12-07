@@ -17,6 +17,7 @@ class LoginCard extends React.Component {
       handleClick = (e) => {
         e.preventDefault()
         signInUser(this.state, this.props.history.push)
+        console.log(this.props.history)
       }
 
       render () {
@@ -32,8 +33,6 @@ class LoginCard extends React.Component {
                 placeholder="email address"
                 onChange={this.handleChange}
               ></input>
-              {/* </div>
-            <div className="inputBox"> */}
 
               <input
                 className="input"
