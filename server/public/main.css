@@ -112,7 +112,7 @@ body::before {
   right: 0;
   z-index: -1;
   visibility: visible;
-  background: url(index.jpeg) no-repeat center center;
+  background: url(./images/build/background.jpeg) no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover; 
@@ -150,7 +150,7 @@ body::before {
   right: 0;
   z-index: -1;
   opacity: 0;
-  background: url(focus.png) no-repeat center center;
+  background: url(./images/build/focus.png) no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover; 
@@ -451,9 +451,9 @@ nav a {
   display: block;
   border: 1px solid #DDD;
   box-sizing: border-box;
-  background: url('../../images/focus.png') no-repeat center center;
+  background: url(./images/build/focus.png) no-repeat center center;
   position: relative;
-  background-color: white;
+  background-color: grey;
 }
 
 
@@ -466,27 +466,27 @@ nav a {
 }
 
 .bg-slider-img-bellbird {
-  background-image: url('./images/bellbird.jpg');
+  background-image: url('./images/birds/bellbird.jpg');
 }
 
 .bg-slider-img-brown-kiwi {
-  background-image: url('./images/brown-kiwi.jpg');
+  background-image: url('./images/birds/brown-kiwi.jpg');
 }
 
 .bg-slider-img-kaka {
-  background-image: url('./images/kaka.jpg');
+  background-image: url('./images/birds/kaka.jpg');
 }
 
 .bg-slider-img-kakapo {
-  background-image: url('./images/kakapo.jpg');
+  background-image: url('./images/birds/kakapo.jpg');
 }
 
-.bg-slider-img-ruru-hero {
-  background-image: url('./images/ruru-hero.jpg');
+.bg-slider-img-ruru {
+  background-image: url('./images/birds/ruru.jpg');
 }
 
 .bg-slider-img-tui {
-  background-image: url('./images/tui.jpg');
+  background-image: url('./images/birds/tui.jpg');
 }
 
 

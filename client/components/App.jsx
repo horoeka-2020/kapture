@@ -18,8 +18,10 @@ class App extends React.Component {
         <ErrorMessage />
         <WaitingIcon />
         <WaitingIndicator />
-        <img className="logo" src="../../images/apture.png" alt='logo' width='25%'></img>
-        <Redirect from="/" to="/welcome"/>
+        <img className="logo" src="/images/build/apture.png" alt='logo' width='25%'></img>
+        <Route exact path="/">
+          <Redirect to="/welcome"/>
+        </Route>
         <Route path="/welcome" component={LandingCard}/>
         <Route exact path="/home" component={Home}/>
         <Route exact path="/quiz" component={QuizCard}/>
