@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { getSpecificBird } from './quizResultHelper'
+import { getSpecificBird } from './helpers/quizResultHelper'
 
 class QuizResult extends React.Component {
     state = {

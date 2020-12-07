@@ -1,7 +1,7 @@
-import { dispatch } from '../store' // , getState
-import { setWaiting, clearWaiting } from '../actions/waiting'
-import { showError } from '../actions/error'
-import { getColours } from '../api'
+import { dispatch } from '../../store' // , getState
+import { setWaiting, clearWaiting } from '../../actions/waiting'
+import { showError } from '../../actions/error'
+import { getColours } from '../../api/api'
 
 export function getAllColours () {
   dispatch(setWaiting())

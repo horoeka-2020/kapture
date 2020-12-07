@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { registerUser } from './registerHelper'
+import { registerUser } from './helpers/registerHelper'
 
 class RegisterCard extends React.Component {
   state = {
