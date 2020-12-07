@@ -1,7 +1,6 @@
 import React from 'react'
 
 function Bird (props) {
-  console.log('Bird.jsx > props', props)
   return (
     <>
       <h2 className='cardTitle'>{props.bird.birdIgnoa}</h2>

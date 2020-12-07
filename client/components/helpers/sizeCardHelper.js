@@ -1,7 +1,7 @@
 import { dispatch } from '../../store' // , getState
 import { setWaiting, clearWaiting } from '../../actions/waiting'
 import { showError } from '../../actions/error'
-import { getSizes } from '../../api/api'
+import { getSizes } from '../../api/sizes'
 
 export function getAllSizes () {
   dispatch(setWaiting())

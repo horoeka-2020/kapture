@@ -22,18 +22,6 @@ export function getBirdByID (id, consume = requestor) {
     .catch(errorHandler)
 }
 
-export function getColours (consume = requestor) {
-  return consume(apiUrl + '/colour', 'get')
-    .then((res) => res.body)
-    .catch(errorHandler)
-}
-
-export function getSizes (consume = requestor) {
-  return consume(apiUrl + '/size', 'get')
-    .then((res) => res.body)
-    .catch(errorHandler)
-}
-
 // Handle errors in application
 function errorHandler (method, route) {
   return (err) => {
