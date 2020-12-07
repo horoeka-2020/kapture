@@ -1,5 +1,5 @@
 import React from 'react'
-import { getColours } from '../api'
+import { getColours } from '../api/api'
 import { dispatch } from '../store'
 import { showError } from '../actions/error'
 import { connect } from 'react-redux'

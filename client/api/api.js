@@ -1,5 +1,5 @@
 // Create client portion of api functions
-import requestor from './consume'
+import requestor from '../consume'
 
 const apiUrl = '/birds'
 

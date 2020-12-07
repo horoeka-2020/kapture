@@ -1,5 +1,5 @@
 import React from 'react'
-import { getSizes } from '../api'
+import { getSizes } from '../api/api'
 import { dispatch } from '../store'
 import { showError } from '../actions/error'
 import { addSize } from '../actions/results'
