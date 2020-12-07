@@ -77,7 +77,6 @@ test('addBadgeToUser adds a badge to the db', () => {
     .then(() => {
       return users.getUserBadges(4, testDb)
     }).then((badges) => {
-      console.log(badges)
       expect(badges).toHaveLength(2)
       return null
     })

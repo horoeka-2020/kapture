@@ -25,6 +25,7 @@
   },
   "eslintConfig": {
     "extends": "eda",
+    "root": true,
     "ignorePatterns": [
       "bundle.js"
     ]
