@@ -17,7 +17,6 @@ class LoginCard extends React.Component {
       handleClick = (e) => {
         e.preventDefault()
         signInUser(this.state, this.props.history.push)
-        console.log(this.props.history)
       }
 
       render () {

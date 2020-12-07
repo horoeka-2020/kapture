@@ -51,3 +51,33 @@ test('createUser creates a new user', () => {
       return null
     })
 })
+
+test('getBirdsByUserID brings back the bird sightings', () => {
+  return users.getBirdsByUserID(1, testDb)
+    .then((sightings) => {
+      expect(sightings[0].birdName).toBe('Parson Bird')
+      return null
+    })
+})
+
+test('getUserBadges returns all user badges', () => {
+  return users.getUserBadges(2, testDb)
+    .then((badges) => {
+      expect(badges).toHaveLength(2)
+      return null
+    })
+})
+
+test('addBadgeToUser adds a badge to the db', () => {
+  const badge = {
+    user_id: 4,
+    badges_id: 3
+  }
+  return users.addBadgeToUser(badge, testDb)
+    .then(() => {
+      return users.getUserBadges(4, testDb)
+    }).then((badges) => {
+      expect(badges).toHaveLength(2)
+      return null
+    })
+})
