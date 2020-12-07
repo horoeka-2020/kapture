@@ -5,6 +5,7 @@ const db = require('../db/birdSightings')
 
 router.get('/sightings/:id', (req, res) => {
   const userId = req.params.id
+  console.log('userId:', userId)
   db.getBirdSightings(userId)
     .then((sighting) => {
       res.status(200).json(sighting)

@@ -4,7 +4,7 @@ import requestor from './consume'
 const apiUrl = '/birds'
 
 // Bird Sightings APIs
-export function getAllBirdSightings (consume = requestor) {
+export function getBirdSightings (consume = requestor) {
   return consume(apiUrl + '/birds/sightings', 'get', {})
     .then((res) => res.body)
     .catch(errorHandler)

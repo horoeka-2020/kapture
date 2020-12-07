@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import Map from './Map'
 import Header from './Header'
 import Footer from './Footer'
-import { getBirdSightings } from './helpers/birdSightingsHelper'
+import { getAllBirdSightings } from './helpers/birdSightingsHelper'
 
 class BirdSightings extends React.Component {
     state = {
@@ -13,7 +13,7 @@ class BirdSightings extends React.Component {
     }
 
     componentDidMount () {
-      return getBirdSightings(this.props.user)
+      return getAllBirdSightings(this.props.user.id)
         .then(sightings => {
           this.setState({ sightings: sightings })
           return sightings

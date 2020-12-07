@@ -5,7 +5,7 @@ const express = require('express')
 
 const authRoutes = require('./routes/auth')
 const birdRoutes = require('./routes/birds')
-const sightingsRoute = require('./routes/sightings')
+const sightingsRoute = require('./routes/birdSightings')
 
 const server = express()
 
