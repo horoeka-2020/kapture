@@ -1,10 +1,10 @@
 import React from 'react'
 import { screen } from '@testing-library/react'
 
-import { renderWithRedux } from '../test-utils'
-import Error from './Error.jsx'
+import { renderWithRedux } from '../../test-utils'
+import Error from '../Error.jsx'
 
-jest.mock('./errorHelper')
+jest.mock('../helpers/errorHelper')
 
 test('shows error message if there is one in the redux store', () => {
   renderWithRedux(<Error />, {

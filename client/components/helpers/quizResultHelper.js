@@ -1,11 +1,9 @@
-import { dispatch } from '../store' // , getState
-import { setWaiting, clearWaiting } from '../actions/waiting'
-import { showError } from '../actions/error'
-import { getBirdByID } from '../api'
+import { dispatch } from '../../store' // , getState
+import { setWaiting, clearWaiting } from '../../actions/waiting'
+import { showError } from '../../actions/error'
+import { getBirdByID } from '../../api/api'
 
 export function getSpecificBird (birdId) {
-//   const storeState = getState()
-//   const { birdId } = storeState.bird
   dispatch(setWaiting())
   return getBirdByID(birdId)
     .then(bird => {

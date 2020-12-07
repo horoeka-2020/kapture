@@ -1,5 +1,6 @@
 import React from 'react'
-import { getSpecificBird } from './quizResultHelper'
+import { connect } from 'react-redux'
+import { getSpecificBird } from './helpers/quizResultHelper'
 
 class QuizResult extends React.Component {
     state = {
@@ -83,4 +84,10 @@ class QuizResult extends React.Component {
     }
 }
 
-export default QuizResult
+const mapStateToProps = (state) => {
+  return {
+    results: state.results
+  }
+}
+
+export default connect(mapStateToProps)(QuizResult)
