@@ -4,7 +4,7 @@ function getBirds (db = connection) {
   return db('birds').select()
 }
 
-function getBirdsById (id, db = connection) {
+function getBirdById (id, db = connection) {
   return db('birds')
     .join('colour', 'birds.colour_id', 'colour.id')
     .join('size', 'birds.size_id', 'size.id')
@@ -25,6 +25,12 @@ function getBirdsById (id, db = connection) {
       'size.height as birdHeight',
       'size.width as birdWidth',
       'size.name as birdSizeName')
+}
+
+function getBirdIdByName (birdName, db = connection) {
+  return db('birds')
+    .where('birds.name', birdName)
+    .select('birds.id as birdId')
 }
 
 function getBirdsByColourAndSize (colour, size, db = connection) {
@@ -61,7 +67,8 @@ function getSizes (db = connection) {
 
 module.exports = {
   getBirds,
-  getBirdsById,
+  getBirdById,
+  getBirdIdByName,
   getColours,
   getSizes,
   getBirdsByColourAndSize

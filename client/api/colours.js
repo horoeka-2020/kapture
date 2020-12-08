@@ -6,7 +6,9 @@ const apiUrl = '/birds'
 // Colour API
 export function getColours (consume = requestor) {
   return consume(apiUrl + '/colour', 'get')
-    .then((res) => res.body)
+    .then((res) => {
+      return res.body
+    })
     .catch(errorHandler)
 }
 

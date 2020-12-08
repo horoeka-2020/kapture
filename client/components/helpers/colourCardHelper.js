@@ -5,16 +5,10 @@ import { getColours } from '../../api/colours'
 
 export function getAllColours () {
   dispatch(setWaiting())
-  return getColours
+  return getColours()
     .then(colours => {
       dispatch(clearWaiting())
-      const { id, name, hex, image } = colours
-      return {
-        id,
-        name,
-        hex,
-        image
-      }
+      return colours
     })
     .catch((error) => {
       dispatch(showError(error.message))
