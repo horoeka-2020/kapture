@@ -10,12 +10,13 @@ class Home extends React.Component {
       <header>
         <nav className="navbar">
           <ul>
-            <li><Link to="/home">Home</Link></li>
+            {/* <li><Link to="/home">Home</Link></li> */}
+            <li><Link to="/profile">Profile</Link></li>
+            <li><Link to="/gallery">Gallery</Link></li>
             <li><Link to="/about">About</Link></li>
             <li><Link to="/quiz">Quiz</Link></li>
             <li><Link to="/sightings">Sightings</Link></li>
             <li><Link to="/contact">Contact</Link></li>
-            <li><Link to={`/profile/${this.props.user.username}`}>Profile</Link></li>
             <IfAuthenticated>
               <li><Link to="/" onClick={logOut}><span>Log out</span></Link></li>
             </IfAuthenticated>

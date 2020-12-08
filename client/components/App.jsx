@@ -7,7 +7,6 @@ import { isAuthenticated, getDecodedToken } from '../auth'
 
 // Import components
 import LandingCard from './LandingCard'
-import Home from './Home'
 // import WaitingIcon from './WaitingIcon'
 import WaitingIndicator from './WaitingIndicator'
 import ErrorMessage from './Error'
@@ -15,6 +14,7 @@ import QuizCard from './QuizCard'
 import QuizResult from './QuizResult'
 import BirdSightings from './BirdSightings'
 import Profile from './Profile'
+import Gallery from './Gallery'
 
 class App extends React.Component {
   componentDidMount () {
@@ -31,13 +31,13 @@ class App extends React.Component {
           <ErrorMessage />
           <WaitingIndicator />
           <header>
-            <img className="logo" src="/images/build/kapture.png" alt='logo' width='25%'></img>
+            <img className="logo" src="/images/build/kapture.png" alt='logo' width='15%'></img>
           </header>
           <Route exact path="/">
             <Redirect to="/welcome"/>
           </Route>
           <Route path="/welcome" component={LandingCard}/>
-          <Route exact path="/home" component={Home}/>
+          <Route exact path="/gallery" component={Gallery}/>
           <Route exact path="/about" component={AboutUs}/>
           <Route exact path="/quiz" component={QuizCard}/>
           <Route exact path="/quiz/result" component={QuizResult}/>

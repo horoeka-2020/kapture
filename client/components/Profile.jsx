@@ -6,6 +6,9 @@ import { showError } from '../actions/error'
 import { getUserSightings } from '../api/user.js'
 import { getUserBadges } from '../api/badges'
 
+import Header from './Header'
+import Footer from './Footer'
+
 class Profile extends React.Component {
   state = {
     username: '',
@@ -48,12 +51,8 @@ class Profile extends React.Component {
     this.state.bird.map((bird) => console.log(bird.birdName))
     return (
       <>
+        <Header />
         <div className="flex-wrapper">
-
-          {/* Username Card */}
-          <div className='user-card col'>
-            <h1 className='userTitle'>{this.state.username}</h1>
-          </div>
 
           {/* Bird Sightings Card */}
           <div className='user-card col'>
@@ -70,6 +69,11 @@ class Profile extends React.Component {
             ))}
           </div>
 
+          {/* Username Card */}
+          <div className='user-card col'>
+            <h1 className='userTitle'>Welcome {this.state.username}!</h1>
+          </div>
+
           {/* Badges Card */}
           <div className='user-card col'>
             <h1 className='userTitle'>Badges you have collected!</h1>
@@ -80,6 +84,7 @@ class Profile extends React.Component {
           </div>
 
         </div>
+        <Footer />
       </>
     )
   }
