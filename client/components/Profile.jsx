@@ -32,7 +32,6 @@ class Profile extends React.Component {
       })
     getUserBadges(2)
       .then((badges) => {
-        console.log(badges)
         return this.setState({
           badges: badges
         })
@@ -43,9 +42,6 @@ class Profile extends React.Component {
   }
 
   render () {
-    // console.log(this.state.id)
-    // console.log(this.state.bird)
-    console.log(this.state)
     return (
       <>
         <div className="profile-card">

@@ -10,8 +10,8 @@ export function getBirdSightings (userId, consume = requestor) {
 
 // Bird Sightings APIs
 export function addBirdSighting (username, latitude, longitude, birdName, consume = requestor) {
-  return consume(`/sightings/${encodeURIComponent(username)}/${encodeURIComponent(latitude)}/${encodeURIComponent(longitude)}/${encodeURIComponent(birdName)}`, 'post', {})
-    .then((res) => res.body)
+  return consume(`/sightings/${encodeURIComponent(username)}/${encodeURIComponent(latitude)}/${encodeURIComponent(longitude)}/${encodeURIComponent(birdName)}`, 'post', { username, latitude, longitude, birdName })
+    .then((res) => (res.body))
     .catch(errorHandler)
 }
 

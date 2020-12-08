@@ -6,7 +6,7 @@ class UserSightingCard extends React.Component {
       username: 1,
       latitude: '',
       longitude: '',
-      bird: ''
+      birdName: ''
     }
 
       handleChange = (e) => {
@@ -18,7 +18,7 @@ class UserSightingCard extends React.Component {
 
       handleClick = (e) => {
         e.preventDefault()
-        addUserSighting(this.state, this.props.history.push)
+        addUserSighting(this.state)
       }
 
       render () {
@@ -47,10 +47,10 @@ class UserSightingCard extends React.Component {
 
               <input
                 className="input"
-                id="bird"
-                name="bird"
+                id="birdName"
+                name="birdName"
                 type="text"
-                value={this.state.bird}
+                value={this.state.birdName}
                 placeholder='bird name'
                 onChange={this.handleChange}
               ></input>

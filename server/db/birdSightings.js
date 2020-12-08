@@ -34,10 +34,10 @@ function getBirdSightings (userId, db = connection) {
 function addUserSighting (username, latitude, longitude, birdName, db = connection) {
   return db('bird_sightings')
     .insert({
-      user_id: username,
-      bird_id: birdName,
-      latitude: latitude,
-      longitude: longitude,
+      user_id: Number(username),
+      bird_id: Number(birdName),
+      latitude: Number(latitude),
+      longitude: Number(longitude),
       date_of_sighting: '12/12/2020',
       time: '13:00'
     })

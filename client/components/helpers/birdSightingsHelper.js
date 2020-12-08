@@ -1,4 +1,4 @@
-import { dispatch } from '../../store' // , getState
+import { dispatch } from '../../store'
 import { setWaiting, clearWaiting } from '../../actions/waiting'
 import { showError } from '../../actions/error'
 import { getBirdSightings } from '../../api/birdSightings'

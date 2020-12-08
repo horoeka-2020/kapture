@@ -16,10 +16,7 @@ router.get('/:id', (req, res) => {
 })
 
 router.post('/:username/:latitude/:longitude/:birdName', (req, res) => {
-  const username = req.params.username
-  const latitude = req.params.latitude
-  const longitude = req.params.longitude
-  const birdName = req.params.birdName
+  const { username, latitude, longitude, birdName } = req.body
   sightings.addUserSighting(username, latitude, longitude, birdName)
     .then((sighting) => {
       res.status(200).json(sighting)
