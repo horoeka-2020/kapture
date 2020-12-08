@@ -491,6 +491,7 @@ body::before {
   position: static;
   justify-content: center;
   overflow: hidden;
+  text-align: center;
 }
 
 .flex-wrapper .col {
@@ -514,12 +515,23 @@ body::before {
   opacity: 1;
 }
 
+
+
 .userTitle{
   font-size: 2rem;
   color: #fff;
+  background-color: rgba(0, 71, 0, 0.5);
   text-align: center;
-  overflow-wrap: break-word;
 }
+
+.userCardTitle{
+  font-size: 2rem;
+  color: #fff;
+  text-align: center;
+  text-decoration: underline;
+  
+}
+
 
 .userText{
   color: white;
@@ -894,3 +906,7 @@ header {
   display: inline;
 }
 
+.badge {
+  width: 20%;
+  float: center;
+}
