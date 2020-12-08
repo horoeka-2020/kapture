@@ -14,6 +14,13 @@ function Bird (props) {
             name=""
             value="Confirm"
             onClick={props.handleClick}/>
+          <br></br>
+          <input
+            className="btn-submit-bird"
+            type="submit"
+            name=""
+            value="More Info"
+            onClick={props.handleClick}/>
         </div>
         <div>
           <h3 name='māoriname' className='birdText'>Māori Name: {props.bird.birdIgnoa}</h3>
