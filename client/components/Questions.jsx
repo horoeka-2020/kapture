@@ -5,7 +5,6 @@ import SizeCard from './SizeCard'
 function Questions (props) {
   return (
     <>
-      <div className='wraper'></div>
       <div className='box-quiz'>
         <div> <ColourCard /> </div>
         <div> <SizeCard /> </div>

@@ -2,38 +2,40 @@ import React from 'react'
 import Carousel from 'react-material-ui-carousel'
 
 function ImageSlider (props) {
-  const items = [
-    {
-      name: 'bellbird'
-    },
-    {
-      name: 'brown-kiwi'
-    },
-    {
-      name: 'kaka'
-    },
-    {
-      name: 'kakapo'
-    },
-    {
-      name: 'ruru'
-    },
-    {
-      name: 'tui'
-    }
-  ]
+  console.log(props)
+  console.log(props.birds.map(bird => console.log(bird.birdImage)))
+  // const items = [
+  //   {
+  //     name: 'bellbird'
+  //   },
+  //   {
+  //     name: 'brown-kiwi'
+  //   },
+  //   {
+  //     name: 'kaka'
+  //   },
+  //   {
+  //     name: 'kakapo'
+  //   },
+  //   {
+  //     name: 'ruru'
+  //   },
+  //   {
+  //     name: 'tui'
+  //   }
+  // ]
 
   return (
     <Carousel className='carousel-wrapper' autoPlay={false}>
       {
-        items.map((item, i) => <Item key={i} item={item} />)
+        props.birds.map((bird, i) => <Item key={i} item={bird.birdName} />)
       }
     </Carousel>
   )
 }
 
 function Item (props) {
-  const imageClass = `bg-slider-img bg-slider-img-${props.item.name}`
+  const imageClass = `bg-slider-img bg-slider-img-${props.birdName}`
 
   return (
     <div className={imageClass}>

@@ -16,7 +16,7 @@ export function registerUser (user, navigateTo) {
       if (isAuthenticated()) {
         const { username, isAdmin } = getDecodedToken()
         dispatch(setUser({ username, isAdmin }))
-        navigateTo('/home')
+        navigateTo('/profile')
       } else {
         throw new Error('Not authenticated')
       }

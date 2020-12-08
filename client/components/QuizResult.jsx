@@ -31,7 +31,6 @@ class QuizResult extends React.Component {
       return (
         <>
           <Header />
-          <div className='wraper'></div>
           <div className='box-quiz-results'>
             <h2 className='cardTitle'>Congratulations! You probably saw:</h2>
             {birds.map((bird, i) =>
