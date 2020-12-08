@@ -3,7 +3,6 @@ import React from 'react'
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 
 function Map (props) {
-  console.log('Map.jsx > sightings:', props.sightings)
   return (
     <div className='map'>
       <MapContainer

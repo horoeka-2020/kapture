@@ -36,7 +36,6 @@ class Profile extends React.Component {
       })
     getUserBadges(5)
       .then((badges) => {
-        console.log(badges)
         return this.setState({
           badges: badges
         })
