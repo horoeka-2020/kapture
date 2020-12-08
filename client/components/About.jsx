@@ -7,6 +7,10 @@ export default class Home extends React.Component {
     return (
       <>
         <Header />
+        <div className='wraper'></div>
+        <div className='box'>
+          <h1 className='cardTitle'>About the Flock</h1>
+        </div>
         <Footer />
       </>
     )
