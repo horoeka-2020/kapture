@@ -10,6 +10,12 @@ export function getAllBirds (consume = requestor) {
     .catch(errorHandler)
 }
 
+export function getBirdIdByName (birdName, consume = requestor) {
+  return consume(`/birds/birds/${encodeURIComponent(birdName)}`, 'get')
+    .then((res) => res.body)
+    .catch(errorHandler)
+}
+
 export function getBirdsByColourAndSize (colour, size, consume = requestor) {
   return consume(`/birds/birds/${encodeURIComponent(colour)}/${encodeURIComponent(size)}`, 'get', {})
     .then((res) => res.body)
@@ -17,7 +23,7 @@ export function getBirdsByColourAndSize (colour, size, consume = requestor) {
 }
 
 export function getBirdByID (id, consume = requestor) {
-  return consume('/birds/birds/' + id, 'get')
+  return consume(`/birds/birds/${encodeURIComponent(id)}`, 'get')
     .then((res) => res.body)
     .catch(errorHandler)
 }

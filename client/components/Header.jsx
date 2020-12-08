@@ -8,7 +8,6 @@ class Home extends React.Component {
   render () {
     return (
       <header>
-        <img className="logo" src="/images/build/apture.png" alt='logo' width='15%'></img>
         <nav className="navbar">
           <ul>
             <li><Link to="/home">Home</Link></li>

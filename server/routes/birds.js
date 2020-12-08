@@ -16,9 +16,21 @@ router.get('/birds', (req, res) => {
     })
 })
 
+router.get('/birds/name/:birdName', (req, res) => {
+  const birdName = req.params.birdName
+  db.getBirdIdByName(birdName)
+    .then((bird) => {
+      res.status(200).json(bird)
+      return null
+    })
+    .catch(err => {
+      res.status(500).send('SERVER SIDE API ERROR ' + err)
+    })
+})
+
 router.get('/birds/:id', (req, res) => {
   const id = req.params.id
-  db.getBirdsById(id)
+  db.getBirdById(id)
     .then((bird) => {
       res.status(200).json(bird)
       return null

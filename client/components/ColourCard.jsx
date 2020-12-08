@@ -1,5 +1,5 @@
 import React from 'react'
-import { getColours } from '../api/colours'
+import { getAllColours } from './helpers/colourCardHelper'
 import { dispatch } from '../store'
 import { showError } from '../actions/error'
 import { connect } from 'react-redux'
@@ -11,7 +11,7 @@ class ColourCard extends React.Component {
   }
 
   componentDidMount () {
-    getColours()
+    getAllColours()
       .then((colours) => {
         this.setState({
           colours

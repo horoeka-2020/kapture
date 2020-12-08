@@ -47,12 +47,18 @@ class Profile extends React.Component {
     // console.log(this.state.bird)
     console.log(this.state)
     return (
-      <div className="profile-card">
-        <h1>Hello {this.state.bird[0].birdUser}!</h1>
-        <h1>{this.state.bird[0].birdUser}</h1>
-        <h2>You have had {this.state.bird.length} bird sightings!</h2>
-        <h2>You have earnt {this.state.badges.length} badges</h2>
-      </div>
+      <>
+        <div className="profile-card">
+          <h1>Hello {this.state.bird[0].birdUser}!</h1>
+          <h1>{this.state.bird[0].birdUser}</h1>
+          <h2>You have had {this.state.bird.length} bird sightings!</h2>
+          <h2>You have earnt {this.state.badges.length} badges</h2>
+        </div>
+        <div className='user-card'>
+          <h1 className='cardTitle'>Join the Flock</h1>
+          <p className='cardText'>This is the beginning of your journey to learn about birds of Aotearoa, make sure you go out and look for all our feathered little friends!</p>
+        </div>
+      </>
     )
   }
 }
