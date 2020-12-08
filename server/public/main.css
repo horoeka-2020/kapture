@@ -4,9 +4,26 @@
   box-sizing: border-box;
 }
 
+.logo-wrapper {
+  text-align: center;
+}
+
 .logo {
-  display: block;
+  display: inline-block;
   margin: 0 auto;
+  width:15%
+}
+
+/* Smaller logo */
+
+.small-logo-wrapper {
+  text-align: left;
+}
+
+.small-logo {
+  display: inline-block;
+  margin: 10px 10px auto;
+  width:10%
 }
 
 .map {

@@ -8,9 +8,11 @@ class Home extends React.Component {
   render () {
     return (
       <header>
+        <div className="small-logo-wrapper">
+          <a href="/"><img className="small-logo" src="/images/build/kapture.png" alt='logo'></img></a>
+        </div>
         <nav className="navbar">
           <ul>
-            {/* <li><Link to="/home">Home</Link></li> */}
             <li><Link to="/profile">Profile</Link></li>
             <li><Link to="/gallery">Gallery</Link></li>
             <li><Link to="/about">About</Link></li>

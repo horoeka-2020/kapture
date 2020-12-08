@@ -31,9 +31,6 @@ class App extends React.Component {
         <div className='app'>
           <ErrorMessage />
           <WaitingIndicator />
-          <header>
-            <img className="logo" src="/images/build/kapture.png" alt='logo' width='15%'></img>
-          </header>
           <Route exact path="/">
             <Redirect to="/welcome"/>
           </Route>
