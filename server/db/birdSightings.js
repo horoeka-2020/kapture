@@ -1,7 +1,6 @@
 const connection = require('./connection')
 
 function getBirdSightings (userId, db = connection) {
-  console.log('db/birdSightings.js > userId:', userId)
   return db('bird_sightings')
     .join('users', 'user_id', 'users.id')
     .join('birds', 'bird_sightings.bird_id', 'birds.id')
