@@ -86,6 +86,18 @@ router.get('/badges/:id', (req, res) => {
     })
 })
 
+router.get('/user/:username', (req, res) => {
+  const username = req.params.username
+  user.getUserInfoByName(username)
+    .then((user) => {
+      res.status(200).json(user)
+      return null
+    })
+    .catch(err => {
+      res.status(500).send('SERVER SIDE API ERROR ' + err)
+    })
+})
+
 // Route needs a bit of work to post
 // router.post('/badges/:id', (req, res) => {
 //   const id = req.params.id

@@ -34,22 +34,16 @@ function getBirdSightings (userId, db = connection) {
 function addUserSighting (username, latitude, longitude, birdName, db = connection) {
   return db('bird_sightings')
     .insert({
-      user_id: newEvent.gardenId,
-      bird_id: newEvent.title,
-      date: newEvent.date,
-      description: newEvent.description,
-      volunteers_needed: newEvent.volunteersNeeded
-    })
-    .then(ids => getEventById(ids[0], db))
-    .then(event => {
-      return {
-        ...event,
-        gardenId: event.garden_id,
-        volunteersNeeded: event.volunteers_needed
-      }
+      user_id: username,
+      bird_id: birdName,
+      latitude: latitude,
+      longitude: longitude,
+      date_of_sighting: '12/12/2020',
+      time: '13:00'
     })
 }
 
 module.exports = {
-  getBirdSightings
+  getBirdSightings,
+  addUserSighting
 }

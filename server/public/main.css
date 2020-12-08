@@ -520,7 +520,7 @@ button:hover {
 
 .navbar li {
   display: inline-block;
-  width: calc(100% / 5);
+  width: calc(100% / 7);
   text-align: center;
 }
 

@@ -1,6 +1,8 @@
 import React from 'react'
 import { Route, Redirect } from 'react-router-dom'
 import { connect } from 'react-redux'
+import { setUser } from '../actions/user'
+import { isAuthenticated, getDecodedToken } from '../auth'
 
 // Import components
 import LandingCard from './LandingCard'
@@ -11,8 +13,16 @@ import ErrorMessage from './Error'
 import QuizCard from './QuizCard'
 import QuizResult from './QuizResult'
 import BirdSightings from './BirdSightings'
+import Profile from './Profile'
 
 class App extends React.Component {
+  componentDidMount () {
+    if (isAuthenticated()) {
+      const { username, isAdmin } = getDecodedToken()
+      this.props.dispatch(setUser({ username, isAdmin }))
+    }
+  }
+
   render () {
     return (
       <>
@@ -30,6 +40,7 @@ class App extends React.Component {
           <Route exact path="/quiz" component={QuizCard}/>
           <Route exact path="/quiz/result" component={QuizResult}/>
           <Route exact path="/sightings" component={BirdSightings}/>
+          <Route exact path="/profile" component={Profile} />
         </div>
       </>
     )
