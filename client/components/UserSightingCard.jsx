@@ -3,7 +3,7 @@ import { addUserSighting } from './helpers/userSightingCardHelper'
 
 class UserSightingCard extends React.Component {
     state = {
-      username: 1,
+      username: 2,
       latitude: '',
       longitude: '',
       birdName: ''

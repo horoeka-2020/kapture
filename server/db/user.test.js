@@ -14,18 +14,18 @@ beforeEach(() => {
 
 test('getUsers returns our users', () => {
   return users.getUsers(testDb)
-    .then(users => {
-      expect(users).toHaveLength(4)
+    .then(allUsers => {
+      expect(allUsers).toHaveLength(1)
       return null
     })
 })
 
 test('userExists finds an existing user', () => {
-  const username = 'shellymutugrigg@gmail.com'
+  const username = 'this@email.com'
 
   return users.userExists(username, testDb)
-    .then(username => {
-      expect(username).toBe(true)
+    .then(usersUsername => {
+      expect(usersUsername).toBe(true)
       return null
     })
 })
@@ -34,8 +34,8 @@ test('userExists does not find an existing user', () => {
   const username = 'webdev@gmail.com'
 
   return users.userExists(username, testDb)
-    .then(username => {
-      expect(username).toBe(false)
+    .then(usersUsername => {
+      expect(usersUsername).toBe(false)
       return null
     })
 })
@@ -46,7 +46,7 @@ test('createUser creates a new user', () => {
     password: '12345'
   }
   return users.createUser(user, testDb)
-    .then((users) => {
+    .then((allUsers) => {
       expect(user.username).toBe('abc@gmail.com')
       return null
     })
@@ -70,14 +70,14 @@ test('getUserBadges returns all user badges', () => {
 
 test('addBadgeToUser adds a badge to the db', () => {
   const badge = {
-    user_id: 4,
+    user_id: 2,
     badges_id: 3
   }
   return users.addBadgeToUser(badge, testDb)
     .then(() => {
-      return users.getUserBadges(4, testDb)
+      return users.getUserBadges(2, testDb)
     }).then((badges) => {
-      expect(badges).toHaveLength(2)
+      expect(badges).toHaveLength(3)
       return null
     })
 })

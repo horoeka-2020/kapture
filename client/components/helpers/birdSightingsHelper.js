@@ -7,6 +7,7 @@ export function getAllBirdSightings (userId) {
   dispatch(setWaiting())
   return getBirdSightings(userId)
     .then(sightings => {
+      console.log('helpers/getAllBirdSightings.js > sightings:', sightings)
       dispatch(clearWaiting())
       return sightings
     })
