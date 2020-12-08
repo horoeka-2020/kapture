@@ -5,7 +5,8 @@ import { registerUser } from './helpers/registerHelper'
 class RegisterCard extends React.Component {
   state = {
     username: '',
-    password: ''
+    password: '',
+    confirm: ''
   }
 
   handleChange = (e) => {
@@ -16,7 +17,9 @@ class RegisterCard extends React.Component {
 
   handleClick = (e) => {
     e.preventDefault()
-    registerUser(this.state, this.props.history.push)
+    this.state.password === this.state.confirm
+      ? registerUser(this.state, this.props.history.push)
+      : console.log('Password does not match')
   }
 
   render () {
@@ -45,7 +48,18 @@ class RegisterCard extends React.Component {
               placeholder="password"
               onChange={this.handleChange}
             ></input>
+            <input
+              className="input"
+              id="confirm"
+              name="confirm"
+              type="password"
+              autoComplete="current-password"
+              value={this.state.confirm}
+              placeholder="confirm password"
+              onChange={this.handleChange}
+            ></input>
           </form>
+          <a className="password-forgot" href="#">Click here to go back</a>
         </div>
         <input
           className="btn-submit"
