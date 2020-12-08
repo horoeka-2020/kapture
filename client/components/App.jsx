@@ -10,6 +10,7 @@ import WaitingIndicator from './WaitingIndicator'
 import ErrorMessage from './Error'
 import QuizCard from './QuizCard'
 import QuizResult from './QuizResult'
+import BirdSightings from './BirdSightings'
 
 class App extends React.Component {
   render () {
@@ -18,7 +19,9 @@ class App extends React.Component {
         <div className='app'>
           <ErrorMessage />
           <WaitingIndicator />
-          <img className="logo" src="/images/build/apture.png" alt='logo' width='25%'></img>
+          <header>
+            <img className="logo" src="/images/build/kapture.png" alt='logo' width='25%'></img>
+          </header>
           <Route exact path="/">
             <Redirect to="/welcome"/>
           </Route>
@@ -26,6 +29,7 @@ class App extends React.Component {
           <Route exact path="/home" component={Home}/>
           <Route exact path="/quiz" component={QuizCard}/>
           <Route exact path="/quiz/result" component={QuizResult}/>
+          <Route exact path="/sightings" component={BirdSightings}/>
         </div>
       </>
     )

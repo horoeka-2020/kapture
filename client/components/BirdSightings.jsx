@@ -4,16 +4,19 @@ import { connect } from 'react-redux'
 import Map from './Map'
 import Header from './Header'
 import Footer from './Footer'
+import UserSightingCard from './UserSightingCard'
 import { getAllBirdSightings } from './helpers/birdSightingsHelper'
 
 class BirdSightings extends React.Component {
     state = {
       sightings: [],
-      user: null
+      user: {
+        id: 2
+      }
     }
 
     componentDidMount () {
-      return getAllBirdSightings(this.props.user.id)
+      return getAllBirdSightings(this.state.user.id)
         .then(sightings => {
           this.setState({ sightings: sightings })
           return sightings
@@ -33,11 +36,10 @@ class BirdSightings extends React.Component {
         <>
           <Header />
           <div className='wraper'></div>
-          <div className='box-sightings'>
+          <div className='box'>
             <h2 className='cardTitle'>Bird Sightings</h2>
-            {sightings.map((sighting, i) =>
-              <Map key={i} sighting={sighting} handleClick={this.handleClick} />
-            )}
+            <Map sightings={sightings} handleClick={this.handleClick} />
+            <UserSightingCard />
           </div>
           <Footer />
         </>
@@ -45,11 +47,4 @@ class BirdSightings extends React.Component {
     }
 }
 
-const mapStateToProps = (state) => {
-  return {
-    sightings: state.sightings,
-    user: state.user
-  }
-}
-
-export default connect(mapStateToProps)(BirdSightings)
+export default connect()(BirdSightings)

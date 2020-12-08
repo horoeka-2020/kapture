@@ -15,9 +15,21 @@ router.get('/birds', (req, res) => {
     })
 })
 
+router.get('/birds/name/:birdName', (req, res) => {
+  const birdName = req.params.birdName
+  db.getBirdIdByName(birdName)
+    .then((bird) => {
+      res.status(200).json(bird)
+      return null
+    })
+    .catch(err => {
+      res.status(500).send('SERVER SIDE API ERROR ' + err)
+    })
+})
+
 router.get('/birds/:id', (req, res) => {
   const id = req.params.id
-  db.getBirdsById(id)
+  db.getBirdById(id)
     .then((bird) => {
       res.status(200).json(bird)
       return null
@@ -61,18 +73,6 @@ router.get('/size', (req, res) => {
       res.status(500).send('SERVER SIDE API ERROR ' + err)
     })
 })
-
-// router.get('/sightings/:id', (req, res) => {
-//   const id = req.params.id
-//   user.getBirdsByUserID(id)
-//     .then((sighting) => {
-//       res.status(200).json(sighting)
-//       return null
-//     })
-//     .catch(err => {
-//       res.status(500).send('SERVER SIDE API ERROR ' + err)
-//     })
-// })
 
 router.get('/badges/:id', (req, res) => {
   const id = req.params.id

@@ -1,7 +1,6 @@
 const connection = require('./connection')
 
 function getBirdSightings (userId, db = connection) {
-  console.log('db > userId:', userId)
   return db('bird_sightings')
     .join('users', 'bird_sightings.user_id', 'users.id')
     .join('birds', 'bird_sightings.bird_id', 'birds.id')
@@ -30,6 +29,25 @@ function getBirdSightings (userId, db = connection) {
       'size.height as birdHeight',
       'size.width as birdWidth',
       'birds.size_id as birdSizeId')
+}
+
+function addUserSighting (username, latitude, longitude, birdName, db = connection) {
+  return db('bird_sightings')
+    .insert({
+      user_id: newEvent.gardenId,
+      bird_id: newEvent.title,
+      date: newEvent.date,
+      description: newEvent.description,
+      volunteers_needed: newEvent.volunteersNeeded
+    })
+    .then(ids => getEventById(ids[0], db))
+    .then(event => {
+      return {
+        ...event,
+        gardenId: event.garden_id,
+        volunteersNeeded: event.volunteers_needed
+      }
+    })
 }
 
 module.exports = {

@@ -1,12 +1,26 @@
 const express = require('express')
 const router = express.Router()
 
-const db = require('../db/birdSightings')
+const sightings = require('../db/birdSightings')
 
-router.get('/sightings/:id', (req, res) => {
+router.get('/:id', (req, res) => {
   const userId = req.params.id
-  console.log('userId:', userId)
-  db.getBirdSightings(userId)
+  sightings.getBirdSightings(userId)
+    .then((userSightings) => {
+      res.status(200).json(userSightings)
+      return null
+    })
+    .catch(err => {
+      res.status(500).send('SERVER SIDE API ERROR ' + err)
+    })
+})
+
+router.post('/:username/:latitude/:longitude/:birdName', (req, res) => {
+  const username = req.params.username
+  const latitude = req.params.latitude
+  const longitude = req.params.longitude
+  const birdName = req.params.birdName
+  sightings.addUserSighting(username, latitude, longitude, birdName)
     .then((sighting) => {
       res.status(200).json(sighting)
       return null

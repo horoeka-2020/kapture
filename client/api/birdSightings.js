@@ -1,11 +1,16 @@
 // Create client portion of api functions
 import requestor from './consume'
 
-const apiUrl = '/birds'
+// Bird Sightings APIs
+export function getBirdSightings (userId, consume = requestor) {
+  return consume(`/sightings/${encodeURIComponent(userId)}`, 'get', {})
+    .then((res) => res.body)
+    .catch(errorHandler)
+}
 
 // Bird Sightings APIs
-export function getBirdSightings (consume = requestor) {
-  return consume(apiUrl + '/birds/sightings', 'get', {})
+export function addBirdSighting (username, latitude, longitude, birdName, consume = requestor) {
+  return consume(`/sightings/${encodeURIComponent(username)}/${encodeURIComponent(latitude)}/${encodeURIComponent(longitude)}/${encodeURIComponent(birdName)}`, 'post', {})
     .then((res) => res.body)
     .catch(errorHandler)
 }

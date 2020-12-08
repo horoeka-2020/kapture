@@ -3,20 +3,25 @@ import React from 'react'
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 
 function Map (props) {
+  console.log('Map.jsx > sightings:', props.sightings)
   return (
-    <div className='column'>
+    <div className='map'>
       <MapContainer
-        center={[-36.8666700, 174.7666700]}
-        zoom={11}
+        center={[-36.862413206729904, 174.7755062944385]}
+        zoom={17}
         scrollWheelZoom={true}>
         <TileLayer
           url='https://api.mapbox.com/styles/v1/mapbox/streets-v11/tiles/{z}/{x}/{y}?access_token=pk.eyJ1Ijoic2hlbGx5bXV0dS1ncmlnZyIsImEiOiJja2llYjJzaXExZHdhMnJydGQ4OHBlaTk5In0.ailFKRw65gUy_dTnM7tZnw'/>
-        {props.sightings?.map((location, i) => {
+
+        {props.sightings?.map((sighting, i) => {
           return <Marker key={i}
-            position={[location.latitude, location.longitude]}
+            position={[sighting.birdLat, sighting.birdLong]}
           >
             <Popup>
-              {location.date_of_sighting}
+              {sighting.birdIgnoa}
+              {sighting.date_of_sighting}
+              {sighting.birdDate}
+              {sighting.birdTime}
             </Popup>
           </Marker>
         })}
