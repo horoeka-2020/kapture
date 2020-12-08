@@ -1,9 +1,31 @@
 @import url('https://fonts.googleapis.com/css?family=Abel|Abril+Fatface|Alegreya|Arima+Madurai|Dancing+Script|Dosis|Merriweather|Oleo+Script|Overlock|PT+Serif|Pacifico|Playball|Playfair+Display|Share|Unica+One|Vibur');
 
+
 .logo {
   display: block;
   margin: 0 auto;
 }
+
+.map {
+  box-shadow: none;
+  border: 3px solid border;
+  border-radius: 0;
+  overflow: hidden;
+  margin: 10px;
+}
+
+.leaflet-container {
+  height: 40rem; 
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.rightHeroImage {
+  margin-left: 82px;
+}
+
+
 
 .message-error {
   border: 2px solid red;
@@ -150,7 +172,7 @@ body::before {
   right: 0;
   z-index: -1;
   opacity: 0;
-  background: url(./images/build/focus.png) no-repeat center center;
+  background: url(./images/build/focus_light.png) no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover; 
@@ -183,9 +205,11 @@ body::before {
 /* general card with animation for landing page */
 .box {
   position: absolute;
+  overflow: hidden;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  min-height: 400px;
   width: 800px;
   padding: 40px;
   background: rgba(0, 0, 0, 0.3);
@@ -577,6 +601,7 @@ button:hover {
   color: #fff;
   text-align: center;
 }
+
 .cardTitleQuiz{
     font-size: 2.5rem;
     color: #fff;
@@ -604,7 +629,7 @@ button:hover {
   display: block;
   border: 1px solid #DDD;
   box-sizing: border-box;
-  background: url(./images/build/focus2.png) no-repeat center center;
+  background: url(./images/build/focus_dark.png) no-repeat center center;
   position: relative;
   background-color: #fff;
 }
