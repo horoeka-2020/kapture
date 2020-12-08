@@ -29,20 +29,21 @@ class App extends React.Component {
     return (
       <>
         <div className='app'>
-          <ErrorMessage />
-          <WaitingIndicator />
-          <Route exact path="/">
-            <Redirect to="/welcome"/>
-          </Route>
-          <Route path="/welcome" component={LandingCard}/>
-          <Route exact path='/profile/:username' component={Profile} />
-          <Route exact path="/gallery" component={Gallery}/>
-          <Route exact path="/about" component={About}/>
-          <Route exact path="/quiz" component={QuizCard}/>
-          <Route exact path="/contact" component={Contact}/>
-          <Route exact path="/quiz/result" component={QuizResult}/>
-          <Route exact path="/sightings" component={BirdSightings}/>
-          <Route exact path="/profile" component={Profile} />
+          <main>
+            <WaitingIndicator />
+            <Route exact path="/">
+              <Redirect to="/welcome"/>
+            </Route>
+            <Route path="/welcome" component={LandingCard}/>
+            <Route exact path='/profile/:username' component={Profile} />
+            <Route exact path="/gallery" component={Gallery}/>
+            <Route exact path="/about" component={About}/>
+            <Route exact path="/quiz" component={QuizCard}/>
+            <Route exact path="/contact" component={Contact}/>
+            <Route exact path="/quiz/result" component={QuizResult}/>
+            <Route exact path="/sightings" component={BirdSightings}/>
+            <Route exact path="/profile" component={Profile} />
+          </main>
         </div>
       </>
     )

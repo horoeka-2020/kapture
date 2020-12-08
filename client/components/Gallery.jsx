@@ -41,7 +41,6 @@ class Gallery extends React.Component {
         <div className='box'>
           <ImageSlider birds={this.state.birds}/>
         </div>
-        <Footer />
       </>
     )
   }
