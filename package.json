@@ -11,6 +11,9 @@
     "knex": "knex --knexfile server/db/knexfile.js",
     "webpack:server": "webpack-dev-server --hot --inline --content-base server/public --config client/webpack.config.js",
     "test": "jest --verbose",
+    "test:watch": "jest --watchAll --verbose",
+    "test:e2e": "DEBUG=pw:api NODE_ENV=e2e jest",
+    "test:all": "npm run lint && npm run test && npm run test:e2e",
     "server": "node server",
     "start": "node server",
     "lint": "eslint --ext .js,.jsx client server",
@@ -92,10 +95,11 @@
   "dependencies": {
     "authenticare": "^0.4.7",
     "cors": "^2.8.5",
-    "express": "^4.17.1",
     "dotenv": "^8.2.0",
+    "express": "^4.17.1",
     "knex": "^0.21.12",
     "pg": "^8.5.1",
+    "playwright-cli": "^0.162.1",
     "superagent": "^5.3.1"
   },
   "homepage": "https://github.com/horoeka-2020/kapture"
