@@ -18,7 +18,6 @@ class Profile extends React.Component {
   }
 
   componentDidMount () {
-    console.log(getDecodedToken())
     const id = getDecodedToken().id
     const username = getDecodedToken().username
     this.setState({
@@ -46,7 +45,6 @@ class Profile extends React.Component {
   }
 
   render () {
-    console.log(this.state)
     this.state.bird.map((bird) => console.log(bird.birdName))
     return (
       <>

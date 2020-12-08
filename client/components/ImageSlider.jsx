@@ -2,8 +2,6 @@ import React from 'react'
 import Carousel from 'react-material-ui-carousel'
 
 function ImageSlider (props) {
-  console.log(props)
-  console.log(props.birds.map(bird => console.log(bird.birdImage)))
   // const items = [
   //   {
   //     name: 'bellbird'
