@@ -1,5 +1,17 @@
 @import url('https://fonts.googleapis.com/css?family=Abel|Abril+Fatface|Alegreya|Arima+Madurai|Dancing+Script|Dosis|Merriweather|Oleo+Script|Overlock|PT+Serif|Pacifico|Playball|Playfair+Display|Share|Unica+One|Vibur');
 
+* {
+  box-sizing: border-box;
+}
+
+.colorPick {
+  margin-top: -45px;
+}
+
+.colorSize {
+  margin-top: -45px;
+}
+
 .logo {
   display: block;
   margin: 0 auto;
@@ -90,6 +102,7 @@ button:hover {
 .logo {
   text-align: center;
   color: #fff;
+  padding-top: 10px;
 }
 
 nav ul {
@@ -101,6 +114,10 @@ nav ul {
 }
 
 /* landing page with animation */
+
+body {
+  margin: 0;
+}
 
 body::before {
   content: "";
@@ -223,17 +240,17 @@ body::before {
 
 .box-quiz {
     position: absolute;
-    top: 37rem;
+    top: 35rem;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 800px;
     padding: 40px;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.25);
     box-sizing: border-box;
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 10);
+    /* box-shadow: 0 15px 25px rgba(0, 0, 0, 10); */
     border-radius: 10px;
     backdrop-filter: blur(6px);
-    border: solid white 1px;
+    border: solid rgb(255, 255, 2255, 0.7) 1px;
     opacity: 1;
     animation-name: fadeIn;
     animation-duration: 3s;
@@ -267,15 +284,16 @@ body::before {
     border: none;
     outline: none;
     color: #fff;
-    background: #03a9f4;
-    padding: 10px 20px;
+    background: #0aac2d;
+    padding: 10px 45px;
     cursor: pointer;
     border-radius: 5px;
     font-size: 14px;
+    margin-top: 10px;
   }
   
   .box-quiz input[type="submit"]:hover {
-    background-color: rgba(3, 169, 244, 0.7);
+    background-color: rgba(69, 241, 63, 0.7);
   }
 
   .box-quiz-results {
@@ -476,6 +494,10 @@ button:hover {
 
 /* navigation menu */
 
+header {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
 /*  Mobile first - no media query */
 .navbar {
   width: 100%;
@@ -505,10 +527,11 @@ button:hover {
   text-decoration: none;
   color: #fff;
   display: block;
-  font-size: 1.25em;
+  font-size: 1.4em;
   text-transform: uppercase;
   margin-bottom: 2px;
   padding-bottom: 5px;
+  letter-spacing: 1px;
 }
 
 .navbar a:hover {
@@ -579,13 +602,16 @@ button:hover {
   text-align: center;
 }
 .cardTitleQuiz{
-    font-size: 2.5rem;
+    font-size: 2.25rem;
     color: #fff;
-    text-align: center;
+    text-align: left;
+    letter-spacing: 1px;
   }
 
 .cardText {
   color: #fff;
+  font-size: 1.23rem;
+  text-align: left;
 }
 
 .footer{
