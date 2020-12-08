@@ -1,5 +1,5 @@
 import React from 'react'
-import { addUserSighting } from './helpers/userSightingCardHelper'
+// import { addUserSighting } from './helpers/userSightingCardHelper'
 
 class UserSightingCard extends React.Component {
     state = {
@@ -18,7 +18,7 @@ class UserSightingCard extends React.Component {
 
       handleClick = (e) => {
         e.preventDefault()
-        addUserSighting(this.state, this.props.history.push)
+        // addUserSighting(this.state, this.props.history.push)
       }
 
       render () {
