@@ -2,6 +2,7 @@ import React from 'react'
 import { Route, Redirect } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { setUser } from '../actions/user'
+import AboutUs from './About'
 import { isAuthenticated, getDecodedToken } from '../auth'
 
 // Import components
@@ -12,6 +13,7 @@ import WaitingIndicator from './WaitingIndicator'
 import ErrorMessage from './Error'
 import QuizCard from './QuizCard'
 import QuizResult from './QuizResult'
+import Profile from './Profile'
 
 class App extends React.Component {
   componentDidMount () {
@@ -32,8 +34,10 @@ class App extends React.Component {
           </Route>
           <Route path="/welcome" component={LandingCard}/>
           <Route exact path="/home" component={Home}/>
+          <Route exact path="/about" component={AboutUs}/>
           <Route exact path="/quiz" component={QuizCard}/>
           <Route exact path="/quiz/result" component={QuizResult}/>
+          <Route exact path="/profile" component={Profile} />
         </div>
       </>
     )

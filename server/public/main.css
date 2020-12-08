@@ -4,14 +4,6 @@
   box-sizing: border-box;
 }
 
-.colorPick {
-  margin-top: -45px;
-}
-
-.colorSize {
-  margin-top: -45px;
-}
-
 .logo {
   display: block;
   margin: 0 auto;
@@ -103,14 +95,6 @@ button:hover {
   text-align: center;
   color: #fff;
   padding-top: 10px;
-}
-
-nav ul {
-  display: table;
-  table-layout: fixed;
-  width: 100%;
-  text-align: center;
-  color: #fff;
 }
 
 /* landing page with animation */
@@ -418,6 +402,14 @@ body::before {
   transition: all 300ms ease-out;
 }
 
+.colorPick {
+  margin-top: -45px;
+}
+
+.colorSize {
+  margin-top: -45px;
+}
+
 /* log in  card */
 .log-in {
   float: left;
@@ -508,7 +500,7 @@ header {
 /* Extra large and above */
 @media  (min-width: 1200px) {
   .navbar { 
-    width: calc(100% / 2);
+    width: 70%;
   }
 }
 
@@ -519,7 +511,7 @@ header {
 
 .navbar li {
   display: inline-block;
-  width: calc(100% / 6);
+  width: calc(100% / 7);
   text-align: center;
 }
 

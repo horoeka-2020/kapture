@@ -1,10 +1,10 @@
 import React from 'react'
 
+import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { IfAuthenticated } from './Authenticated'
 import { logOut } from './helpers/navHelper'
-
-export default class Home extends React.Component {
+class Home extends React.Component {
   render () {
     return (
       <header>
@@ -16,6 +16,7 @@ export default class Home extends React.Component {
             <li><Link to="/quiz">Quiz</Link></li>
             <li><Link to="/sightings">Sightings</Link></li>
             <li><Link to="/contact">Contact</Link></li>
+            <li><Link to={`/profile/${this.props.user.username}`}>Profile</Link></li>
             <IfAuthenticated>
               <li><Link to="/" onClick={logOut}><span>Log out</span></Link></li>
             </IfAuthenticated>
@@ -26,3 +27,11 @@ export default class Home extends React.Component {
     )
   }
 }
+
+const mapStateToProps = (state) => {
+  return {
+    user: state.user
+  }
+}
+
+export default connect(mapStateToProps)(Home)
