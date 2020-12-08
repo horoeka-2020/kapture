@@ -37,7 +37,7 @@ class App extends React.Component {
           <Route exact path="/about" component={AboutUs}/>
           <Route exact path="/quiz" component={QuizCard}/>
           <Route exact path="/quiz/result" component={QuizResult}/>
-          <Route exact path="/profile" component={Profile} />
+          <Route exact path='/profile/:username' component={Profile} />
         </div>
       </>
     )

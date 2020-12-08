@@ -2,7 +2,7 @@ import React from 'react'
 
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
-import { IfAuthenticated } from './Authenticated'
+import { IfAuthenticated, IfNotAuthenticated } from './Authenticated'
 import { logOut } from './helpers/navHelper'
 class Home extends React.Component {
   render () {
@@ -20,6 +20,9 @@ class Home extends React.Component {
             <IfAuthenticated>
               <li><Link to="/" onClick={logOut}><span>Log out</span></Link></li>
             </IfAuthenticated>
+            <IfNotAuthenticated>
+              <li><Link to="/" >Log In</Link></li>
+            </IfNotAuthenticated>
           </ul>
         </nav>
         <hr className='nav-underline'/>

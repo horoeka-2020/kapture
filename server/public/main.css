@@ -713,3 +713,9 @@ header {
     transform:rotateX(-1440deg);
   }
 }
+
+/* Profile card */
+.profile-card {
+  color: white;
+  text-align: center;
+}
