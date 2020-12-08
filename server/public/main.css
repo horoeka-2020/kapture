@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Abel|Abril+Fatface|Alegreya|Arima+Madurai|Dancing+Script|Dosis|Merriweather|Oleo+Script|Overlock|PT+Serif|Pacifico|Playball|Playfair+Display|Share|Unica+One|Vibur');
 
+* {
+  box-sizing: border-box;
+}
 
 .logo {
   display: block;
@@ -112,17 +115,14 @@ button:hover {
 .logo {
   text-align: center;
   color: #fff;
-}
-
-nav ul {
-  display: table;
-  table-layout: fixed;
-  width: 100%;
-  text-align: center;
-  color: #fff;
+  padding-top: 10px;
 }
 
 /* landing page with animation */
+
+body {
+  margin: 0;
+}
 
 body::before {
   content: "";
@@ -247,17 +247,17 @@ body::before {
 
 .box-quiz {
     position: absolute;
-    top: 37rem;
+    top: 35rem;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 800px;
     padding: 40px;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.25);
     box-sizing: border-box;
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 10);
+    /* box-shadow: 0 15px 25px rgba(0, 0, 0, 10); */
     border-radius: 10px;
     backdrop-filter: blur(6px);
-    border: solid white 1px;
+    border: solid rgb(255, 255, 2255, 0.7) 1px;
     opacity: 1;
     animation-name: fadeIn;
     animation-duration: 3s;
@@ -291,15 +291,16 @@ body::before {
     border: none;
     outline: none;
     color: #fff;
-    background: #03a9f4;
-    padding: 10px 20px;
+    background: #0aac2d;
+    padding: 10px 45px;
     cursor: pointer;
     border-radius: 5px;
     font-size: 14px;
+    margin-top: 10px;
   }
   
   .box-quiz input[type="submit"]:hover {
-    background-color: rgba(3, 169, 244, 0.7);
+    background-color: rgba(69, 241, 63, 0.7);
   }
 
   .box-quiz-results {
@@ -412,7 +413,7 @@ body::before {
   border: none;
   outline: none;
   color: #fff;
-  background: #03a9f4;
+  background: #0aac2d;
   padding: 10px 20px;
   cursor: pointer;
   border-radius: 5px;
@@ -420,7 +421,16 @@ body::before {
 }
 
 .box input[type="submit"]:hover {
-  background-color: rgba(3, 169, 244, 0.7);
+  background-color: rgba(69, 241, 63, 0.7);
+  transition: all 300ms ease-out;
+}
+
+.colorPick {
+  margin-top: -45px;
+}
+
+.colorSize {
+  margin-top: -45px;
 }
 
 /* log in  card */
@@ -445,6 +455,69 @@ body::before {
   
   margin: 7% auto;
   letter-spacing: 0.05em;
+}
+
+/* Profile card */
+.flex-wrapper {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: static;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.flex-wrapper .col {
+  flex: 1;
+}
+
+.user-card {
+  
+  /* top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+  width: 300px;
+  margin: 2rem;
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 10);
+  border-radius: 10px;
+  backdrop-filter: blur(6px);
+  border: solid white 1px;
+  opacity: 1;
+}
+
+.userTitle{
+  font-size: 2rem;
+  color: #fff;
+  text-align: center;
+  overflow-wrap: break-word;
+}
+
+.userText{
+  color: white;
+  display: inline-block;
+  text-align: center;
+}
+
+.mapText{
+  color: white;
+  display: inline-block;
+  text-align: center;
+  padding: 10px;
+}
+
+.userText{
+  width: 90%;
+  text-align: center;
+  /* padding-bottom: 2em; */
+}
+
+.profile-card {
+  color: white;
+  text-align: center;
+  width: 100%;
 }
 
 /* buttons hover Animation */
@@ -499,6 +572,10 @@ button:hover {
 
 /* navigation menu */
 
+header {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
 /*  Mobile first - no media query */
 .navbar {
   width: 100%;
@@ -509,7 +586,7 @@ button:hover {
 /* Extra large and above */
 @media  (min-width: 1200px) {
   .navbar { 
-    width: calc(100% / 2);
+    width: 70%;
   }
 }
 
@@ -528,10 +605,11 @@ button:hover {
   text-decoration: none;
   color: #fff;
   display: block;
-  font-size: 1.25em;
+  font-size: 1.4em;
   text-transform: uppercase;
   margin-bottom: 2px;
   padding-bottom: 5px;
+  letter-spacing: 1px;
 }
 
 .navbar a:hover {
@@ -603,22 +681,25 @@ button:hover {
 }
 
 .cardTitleQuiz{
-    font-size: 2.5rem;
+    font-size: 2.25rem;
     color: #fff;
-    text-align: center;
+    text-align: left;
+    letter-spacing: 1px;
   }
 
 .cardText {
   color: #fff;
+  font-size: 1.23rem;
+  text-align: left;
 }
 
 .footer{
   color: white;
   text-align: center;
-  position: absolute;
+  /* position: absolute; */
   bottom: 0px;
   right: 10px;
-  background: rgba(0, 0, 0, 0.3);
+  /* background: rgba(0, 0, 0, 0.3); */
 }
 
 /* Image Slider */
@@ -720,8 +801,4 @@ button:hover {
   }
 }
 
-/* Profile card */
-.profile-card {
-  color: white;
-  text-align: center;
-}
+

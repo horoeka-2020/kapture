@@ -7,17 +7,17 @@ import { logOut } from './helpers/navHelper'
 class Home extends React.Component {
   render () {
     return (
-      <>
+      <header>
         <nav className="navbar">
           <ul>
             <li><Link to="/home">Home</Link></li>
-            <li><Link to={`/profile/${this.props.user.username}`}>Profile</Link></li>
+            <li><Link to="/about">About</Link></li>
             <li><Link to="/quiz">Quiz</Link></li>
             <li><Link to="/sightings">Sightings</Link></li>
-            <li><Link to="/about">About</Link></li>
-            <li><Link to="/contact">Contact Us</Link></li>
+            <li><Link to="/contact">Contact</Link></li>
+            <li><Link to={`/profile/${this.props.user.username}`}>Profile</Link></li>
             <IfAuthenticated>
-              <li><Link to="/" onClick={logOut}>Log out</Link></li>
+              <li><Link to="/" onClick={logOut}><span>Log out</span></Link></li>
             </IfAuthenticated>
             <IfNotAuthenticated>
               <li><Link to="/" >Log In</Link></li>
@@ -25,7 +25,7 @@ class Home extends React.Component {
           </ul>
         </nav>
         <hr className='nav-underline'/>
-      </>
+      </header>
     )
   }
 }
