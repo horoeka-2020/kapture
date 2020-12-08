@@ -859,4 +859,10 @@ header {
   }
 }
 
+/* Password link */
+.password-forgot {
+  color: white;
+  float: left;
+  display: inline;
+}
 
