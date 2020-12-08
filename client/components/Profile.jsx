@@ -5,6 +5,7 @@ import { dispatch } from '../store'
 import { showError } from '../actions/error'
 import { getUserSightings } from '../api/user.js'
 import { getUserBadges } from '../api/badges'
+import { setUserLocation } from '../actions/user'
 
 import Header from './Header'
 import Footer from './Footer'
@@ -13,8 +14,9 @@ class Profile extends React.Component {
   state = {
     username: '',
     id: '',
-    bird: [],
-    badges: []
+    sightings: [],
+    badges: [],
+    userCoordinates: []
   }
 
   componentDidMount () {
@@ -25,9 +27,9 @@ class Profile extends React.Component {
       id
     })
     getUserSightings(5)
-      .then((user) => {
+      .then((sightings) => {
         return this.setState({
-          bird: user
+          sightings: sightings
         })
       })
       .catch((error) => {
@@ -42,10 +44,23 @@ class Profile extends React.Component {
       .catch((error) => {
         dispatch(showError(error.message))
       })
+
+    const setLocation = (location) => {
+      this.props.dispatch(setUserLocation(location))
+      this.setState({ userCoordinates: [{ lat: location.latitude, lon: location.longitude }] })
+    }
+
+    if ('geolocation' in navigator) {
+      navigator.geolocation.getCurrentPosition(function (position) {
+        const { latitude, longitude } = position.coords
+        setLocation({ latitude, longitude })
+      })
+    }
   }
 
   render () {
-    this.state.bird.map((bird) => console.log(bird.birdName))
+    console.log('Profile.jsx > user cords: ', this.state.userCoordinates)
+    this.state.sightings.map((sighting) => console.log(sighting.birdName))
     return (
       <>
         <Header />
@@ -54,8 +69,8 @@ class Profile extends React.Component {
           {/* Bird Sightings Card */}
           <div className='user-card col'>
             <h1 className='userTitle'>Birds you have found!</h1>
-            <p className='userText'>You have had {this.state.bird.length} bird sightings!</p>
-            {this.state.bird.map((bird) => (
+            <p className='userText'>You have had {this.state.sightings.length} bird sightings!</p>
+            {this.state.sightings.map((bird) => (
               <div key={bird.birdId}>
                 <span className="userText">{bird.birdName}</span>
                 <span className="userText">{bird.birdIgnoa}</span>
@@ -89,7 +104,8 @@ class Profile extends React.Component {
 
 const mapStateToProps = (state) => {
   return {
-    user: state.user
+    user: state.user,
+    userCoordinates: state.userCoordinates
   }
 }
 
