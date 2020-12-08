@@ -6,7 +6,7 @@ function Map (props) {
   return (
     <div className='map'>
       <MapContainer
-        center={[-36.862413206729904, 174.7755062944385]}
+        center={[-36.8613163364828, 174.77405422451895]}
         zoom={17}
         scrollWheelZoom={true}>
         <TileLayer
