@@ -423,6 +423,69 @@ body::before {
   letter-spacing: 0.05em;
 }
 
+/* Profile card */
+.flex-wrapper {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: static;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.flex-wrapper .col {
+  flex: 1;
+}
+
+.user-card {
+  
+  /* top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+  width: 300px;
+  margin: 2rem;
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 10);
+  border-radius: 10px;
+  backdrop-filter: blur(6px);
+  border: solid white 1px;
+  opacity: 1;
+}
+
+.userTitle{
+  font-size: 2rem;
+  color: #fff;
+  text-align: center;
+  overflow-wrap: break-word;
+}
+
+.userText{
+  color: white;
+  display: inline-block;
+  text-align: center;
+}
+
+.mapText{
+  color: white;
+  display: inline-block;
+  text-align: center;
+  padding: 10px;
+}
+
+.userText{
+  width: 90%;
+  text-align: center;
+  /* padding-bottom: 2em; */
+}
+
+.profile-card {
+  color: white;
+  text-align: center;
+  width: 100%;
+}
+
 /* buttons hover Animation */
 button:hover {
   animation: ani9 0.4s ease-in-out infinite alternate;
@@ -695,8 +758,4 @@ button:hover {
   }
 }
 
-/* Profile card */
-.profile-card {
-  color: white;
-  text-align: center;
-}
+

@@ -1,9 +1,6 @@
 import { getDecodedToken } from 'authenticare/client/auth'
 import React from 'react'
 import { connect } from 'react-redux'
-// import { getUserDetails } from '../api/user'
-// import { dispatch } from '../store'
-// import { getBirdByID } from '../api/birds.js'
 import { dispatch } from '../store'
 import { showError } from '../actions/error'
 import { getUserSightings } from '../api/user.js'
@@ -11,17 +8,21 @@ import { getUserBadges } from '../api/badges'
 
 class Profile extends React.Component {
   state = {
+    username: '',
     id: '',
-    bird: [{}],
-    badges: [{}]
+    bird: [],
+    badges: []
   }
 
   componentDidMount () {
+    console.log(getDecodedToken())
     const id = getDecodedToken().id
+    const username = getDecodedToken().username
     this.setState({
-      id: id
+      username,
+      id
     })
-    getUserSightings(2)
+    getUserSightings(5)
       .then((user) => {
         return this.setState({
           bird: user
@@ -30,7 +31,7 @@ class Profile extends React.Component {
       .catch((error) => {
         dispatch(showError(error.message))
       })
-    getUserBadges(2)
+    getUserBadges(5)
       .then((badges) => {
         console.log(badges)
         return this.setState({
@@ -43,20 +44,41 @@ class Profile extends React.Component {
   }
 
   render () {
-    // console.log(this.state.id)
-    // console.log(this.state.bird)
     console.log(this.state)
+    this.state.bird.map((bird) => console.log(bird.birdName))
     return (
       <>
-        <div className="profile-card">
-          <h1>Hello {this.state.bird[0].birdUser}!</h1>
-          <h1>{this.state.bird[0].birdUser}</h1>
-          <h2>You have had {this.state.bird.length} bird sightings!</h2>
-          <h2>You have earnt {this.state.badges.length} badges</h2>
-        </div>
-        <div className='user-card'>
-          <h1 className='cardTitle'>Join the Flock</h1>
-          <p className='cardText'>This is the beginning of your journey to learn about birds of Aotearoa, make sure you go out and look for all our feathered little friends!</p>
+        <div className="flex-wrapper">
+
+          {/* Username Card */}
+          <div className='user-card col'>
+            <h1 className='userTitle'>{this.state.username}</h1>
+          </div>
+
+          {/* Bird Sightings Card */}
+          <div className='user-card col'>
+            <h1 className='userTitle'>Birds you have found!</h1>
+            <p className='userText'>You have had {this.state.bird.length} bird sightings!</p>
+            {this.state.bird.map((bird) => (
+              <div key={bird.birdId}>
+                <span className="userText">{bird.birdName}</span>
+                <span className="userText">{bird.birdIgnoa}</span>
+                <span className="mapText">Kaptured on the {bird.birdDate}</span>
+                <span className="mapText">Conservation status: {bird.birdCons}</span>
+                <span className="mapText">Found in {bird.birdFoundIn}</span>
+              </div>
+            ))}
+          </div>
+
+          {/* Badges Card */}
+          <div className='user-card col'>
+            <h1 className='userTitle'>Badges you have collected!</h1>
+            <p className='userText'>You have earnt {this.state.badges.length} badges</p>
+            {this.state.badges.map((badge) => (
+              <span className="userText" key={badge.name}>{badge.name}</span>
+            ))}
+          </div>
+
         </div>
       </>
     )
