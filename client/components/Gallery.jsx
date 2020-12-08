@@ -12,7 +12,7 @@ class Gallery extends React.Component {
   state = {
     username: '',
     id: '',
-    bird: []
+    birds: []
   }
 
   componentDidMount () {
@@ -25,7 +25,7 @@ class Gallery extends React.Component {
     getUserSightings(2)
       .then((sightings) => {
         return this.setState({
-          bird: sightings
+          birds: sightings
         })
       })
       .catch((error) => {
@@ -37,7 +37,10 @@ class Gallery extends React.Component {
     return (
       <>
         <Header />
-        <ImageSlider birds={this.state.bird}/>
+        <div className='wraper'></div>
+        <div className='box'>
+          <ImageSlider birds={this.state.birds}/>
+        </div>
         <Footer />
       </>
     )

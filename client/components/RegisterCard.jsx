@@ -23,30 +23,37 @@ class RegisterCard extends React.Component {
     return (
       <>
         <div className="inputBox">
+          <form>
+            <input
+              className="input"
+              id="username"
+              type="text"
+              autoComplete="username"
+              name="username"
+              value={this.state.username}
+              placeholder="email address"
+              onChange={this.handleChange}
+            ></input>
 
-          <input
-            className="input"
-            id="username"
-            name="username"
-            type="text"
-            value={this.state.email}
-            placeholder="email address"
-            onChange={this.handleChange}
-          ></input>
+            <input
+              className="input"
+              id="password"
+              name="password"
+              type="password"
+              autoComplete="current-password"
+              value={this.state.password}
+              placeholder="password"
+              onChange={this.handleChange}
+            ></input>
+          </form>
         </div>
-        <div className="inputBox">
-
-          <input
-            className="input"
-            id="password"
-            name="password"
-            type="password"
-            value={this.state.password}
-            placeholder="password"
-            onChange={this.handleChange}
-          ></input>
-        </div>
-        <input className="btn-submit" name="btn-submit" onClick={this.handleClick} type="submit" value="Submit" />
+        <input
+          className="btn-submit"
+          type="submit"
+          data-testid="submit-button"
+          name="login-submit"
+          value="Submit"
+          onClick={this.handleClick}/>
       </>
     )
   }

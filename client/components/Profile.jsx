@@ -59,7 +59,6 @@ class Profile extends React.Component {
   }
 
   render () {
-    console.log('Profile.jsx > user cords: ', this.state.userCoordinates)
     this.state.sightings.map((sighting) => console.log(sighting.birdName))
     return (
       <>

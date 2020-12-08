@@ -23,25 +23,29 @@ class LoginCard extends React.Component {
         return (
           <>
             <div className="inputBox">
-              <input
-                className="input"
-                id="username"
-                type="text"
-                name="username"
-                value={this.state.username}
-                placeholder="email address"
-                onChange={this.handleChange}
-              ></input>
+              <form>
+                <input
+                  className="input"
+                  id="username"
+                  type="text"
+                  autoComplete="username"
+                  name="username"
+                  value={this.state.username}
+                  placeholder="email address"
+                  onChange={this.handleChange}
+                ></input>
 
-              <input
-                className="input"
-                id="password"
-                name="password"
-                type="password"
-                value={this.state.password}
-                placeholder="password"
-                onChange={this.handleChange}
-              ></input>
+                <input
+                  className="input"
+                  id="password"
+                  name="password"
+                  type="password"
+                  autoComplete="current-password"
+                  value={this.state.password}
+                  placeholder="password"
+                  onChange={this.handleChange}
+                ></input>
+              </form>
             </div>
             <input
               className="btn-submit"

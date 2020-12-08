@@ -722,12 +722,16 @@ header {
   position: relative;
 }
 
-.bg-slider-img-bellbird {
-  background-image: url('./images/birds/bellbird.jpg');
+.bg-slider-img-tui {
+  background-image: url('./images/birds/tui.png');
 }
 
-.bg-slider-img-brown-kiwi {
-  background-image: url('./images/birds/brown-kiwi.jpg');
+.bg-slider-img-korimako {
+  background-image: url('./images/birds/korimako.jpg');
+}
+
+.bg-slider-img-kiwi {
+  background-image: url('./images/birds/kiwi.jpg');
 }
 
 .bg-slider-img-kaka {
@@ -738,12 +742,68 @@ header {
   background-image: url('./images/birds/kakapo.jpg');
 }
 
+.bg-slider-img-moa {
+  background-image: url('./images/birds/moa.png');
+}
+
 .bg-slider-img-ruru {
   background-image: url('./images/birds/ruru.jpg');
 }
 
-.bg-slider-img-tui {
-  background-image: url('./images/birds/tui.jpg');
+.bg-slider-img-piwakawaka {
+  background-image: url('./images/birds/piwakawaka.png');
+}
+
+.bg-slider-img-riroriro {
+  background-image: url('./images/birds/riroriro.png');
+}
+
+.bg-slider-img-hihi {
+  background-image: url('./images/birds/hihi.png');
+}
+
+.bg-slider-img-common-redpoll {
+  background-image: url('./images/birds/common-redpoll.png');
+}
+
+.bg-slider-img-kotare {
+  background-image: url('./images/birds/kotare.png');
+}
+
+.bg-slider-img-moho_pereru {
+  background-image: url('./images/birds/moho_pereru.png');
+}
+
+.bg-slider-img-toroa_ingoingo {
+  background-image: url('./images/birds/toroa_ingoingo.png');
+}
+
+.bg-slider-img-tarapirohe {
+  background-image: url('./images/birds/tarapirohe.png');
+}
+
+.bg-slider-img-kakaruia {
+  background-image: url('./images/birds/kakaruia.png');
+}
+
+.bg-slider-img-tuturiwhatu {
+  background-image: url('./images/birds/tuturiwhatu.png');
+}
+
+.bg-slider-img-pahirini {
+  background-image: url('./images/birds/pahirini.png');
+}
+
+.bg-slider-img-kakariki {
+  background-image: url('./images/birds/kakariki.png');
+}
+
+.bg-slider-img-kaikoura_titi {
+  background-image: url('./images/birds/kaikoura_titi.png');
+}
+
+.bg-slider-img-kahu {
+  background-image: url('./images/birds/kahu.png');
 }
 
 
