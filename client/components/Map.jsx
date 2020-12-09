@@ -17,8 +17,9 @@ function Map (props) {
         zoom={15}
         scrollWheelZoom={true}>
         <TileLayer
+          tileSize={512}
+          zoomOffset={-1}
           url='https://api.mapbox.com/styles/v1/mapbox/streets-v11/tiles/{z}/{x}/{y}?access_token=pk.eyJ1Ijoic2hlbGx5bXV0dS1ncmlnZyIsImEiOiJja2llYjJzaXExZHdhMnJydGQ4OHBlaTk5In0.ailFKRw65gUy_dTnM7tZnw'/>
-
         {props.sightings?.map((sighting, i) => {
           return <Marker key={i} icon ={newIcon}
             position={[sighting.birdLat, sighting.birdLong]}

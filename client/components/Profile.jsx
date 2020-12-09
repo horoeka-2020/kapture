@@ -69,8 +69,8 @@ class Profile extends React.Component {
           <div className='user-card col'>
             <h1 className='userCardTitle'>Birds you have found!</h1>
             <p className='userText'>You have had {this.state.sightings.length} bird sightings!</p>
-            {this.state.sightings.map((bird) => (
-              <div key={bird.birdId}>
+            {this.state.sightings.map((bird, i) => (
+              <div key={i}>
                 <span className="mapText">{bird.birdName}</span>
                 <span className="mapText">{bird.birdIgnoa}</span>
                 <span className="mapText">Kaptured on the {bird.birdDate}</span>
@@ -83,8 +83,8 @@ class Profile extends React.Component {
           <div className='user-card col'>
             <h1 className='userCardTitle'>Badges you have collected!</h1>
             <p className='user-heading'>You have earnt {this.state.badges.length} badges</p>
-            {this.state.badges.map((badge) => (
-              <div className="badge-container" key={badge.id}>
+            {this.state.badges.map((badge, i) => (
+              <div className="badge-container" key={i}>
                 <img className="badge" src={badge.image} alt=""/>
                 <p className="badge-description">Congratulations you have earned the {badge.name}!</p>
               </div>
