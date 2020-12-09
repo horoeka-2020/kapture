@@ -66,6 +66,7 @@ class RegisterCard extends React.Component {
             name="login-submit"
             value="Submit"
             onClick={this.handleClick}/>
+
         </div>
       </>
     )
