@@ -16,6 +16,7 @@ import BirdSightings from './BirdSightings'
 import Profile from './Profile'
 import Gallery from './Gallery'
 import BadgeForm from './BadgeForm'
+import Footer from './Footer'
 
 class App extends React.Component {
   componentDidMount () {

@@ -35,7 +35,7 @@ class BirdSightings extends React.Component {
       return (
         <>
           <Header />
-          <div className='about-contrainer'>
+          <div className='map-container'>
             <Map sightings={sightings} handleClick={this.handleClick} />
             <UserSightingCard />
           </div>
