@@ -9,6 +9,14 @@
   margin: 0 auto;
 }
 
+textarea {
+  width: 100%;
+  height: 13.6rem;
+  min-height: 136px;
+  min-height: 13.6rem;
+  padding: 15px;
+}
+
 .map {
   box-shadow: none;
   border: 3px solid border;
@@ -75,7 +83,7 @@ p span {
   border: 1px solid #DDD;
   border-radius: 5px;
   box-sizing: border-box;
-  
+  background-color: white;
 }
 
 .about-flock img {
@@ -281,6 +289,15 @@ body::before {
 }
 
 /* general card with animation for landing page */
+.box-wrapper .box {
+  position: relative;
+      top: unset;
+    left: unset;
+    transform: translate(0, 0);
+    display: block;
+    margin: 0 auto;
+}
+
 .box {
   position: absolute;
   overflow: hidden;
@@ -772,10 +789,15 @@ header {
 .footer{
   color: white;
   text-align: center;
-  /* position: absolute; */
+  position: absolute;
   bottom: 0px;
-  right: 10px;
+  right: 0;
+  left: 0;
   /* background: rgba(0, 0, 0, 0.3); */
+}
+
+.footer-about {
+  position: relative;
 }
 
 /* Image Slider */
