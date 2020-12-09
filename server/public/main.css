@@ -519,8 +519,8 @@ body::before {
 
 .userTitle{
   font-size: 2rem;
-  color: #fff;
-  background-color: rgba(0, 71, 0, 0.5);
+  color: rgba(0, 71, 0, 0.9);
+  background-color: white;
   text-align: center;
 }
 
@@ -535,7 +535,6 @@ body::before {
 
 .userText{
   color: white;
-  display: inline-block;
   text-align: center;
 }
 
@@ -546,10 +545,9 @@ body::before {
   padding: 10px;
 }
 
-.userText{
-  width: 90%;
+.user-heading {
   text-align: center;
-  /* padding-bottom: 2em; */
+  color: white;
 }
 
 .profile-card {
@@ -908,5 +906,26 @@ header {
 
 .badge {
   width: 20%;
-  float: center;
+  position: relative;
+  display: inline-block;
+}
+
+.badge-description {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+
+  /* transition effect. not necessary */
+  transition: opacity .2s
+}
+
+.badge:hover + .badge-description {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: none;
 }
