@@ -7,8 +7,8 @@ export default class Contact extends React.Component {
     return (
       <>
         <Header />
-        <div className='wraper'></div>
-        <div className='box'>
+        <div className='wraper-nonLanding'></div>
+        <div className='box-nonLanding'>
           <h1 className='cardTitle'>Contact the Flock</h1>
         </div>
         <Footer />
