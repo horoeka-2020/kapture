@@ -70,28 +70,56 @@ p span {
 }
 
 .about-flock {
-  background-color:#3c5838ad;
-  padding: 30px;
-  border: #222 ;
-  border: 1px solid #ffffff73;
+  margin: 50px auto;
+  padding: 20px 20px;
+  border: 1px solid #DDD;
   border-radius: 5px;
+  box-sizing: border-box;
+  
 }
 
-.about-bird {
-  background-color:#f1672e30;
+.about-flock img {
+  width: 100%;
+}
+.about-shelly {
+  background-color:#4c4668d9;
   padding: 30px;
   border: #222 ;
   border: 1px solid #ddeeff7a;
   border-radius: 5px;
 }
 
-.about-contrainer {
+.about-dave {
+  background-color:#0378a4c2;
+  padding: 30px;
+  border: #222 ;
+  border: 1px solid #ddeeff7a;
+  border-radius: 5px;
+}
+
+.about-rod {
+  background-color:#029e73bd;
+  padding: 30px;
+  border: #222 ;
+  border: 1px solid #ddeeff7a;
+  border-radius: 5px;
+}
+
+.about-kitti {
+  background-color:#e2723abf;
+  padding: 30px;
+  border: #222 ;
+  border: 1px solid #ddeeff7a;
+  border-radius: 5px;
+}
+
+.about-container {
   width: 70%;
   margin: 0px auto;
   padding: 20px 20px;
   display: block;
   position: relative;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
 }
 
 /* Contact page */
@@ -108,9 +136,6 @@ p span {
 form {
   float: center;
 }
-
-
-
 
 /* buttons hover Animation */
 button:hover {
