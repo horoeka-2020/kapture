@@ -8,6 +8,11 @@ export default class LandingCard extends React.Component {
   render () {
     return (
       <>
+        <header>
+          <div className="logo-wrapper">
+            <a href="/"><img className="logo" src="/images/build/kapture.png" alt='logo'></img></a>
+          </div>
+        </header>
         <div className='wraper'></div>
         <div className='box'>
           <h1 className='cardTitle'>Join the Flock</h1>

@@ -5,10 +5,8 @@ const sightings = require('../db/birdSightings')
 
 router.get('/:id', (req, res) => {
   const userId = Number(req.params.id)
-  console.log('routes/birdSightings.js > getBirdSightings > userSightings:', userId)
   sightings.getBirdSightings(userId)
     .then((userSightings) => {
-      console.log('routes/birdSightings.js > getBirdSightings > userSightings:', userSightings)
       res.status(200).json(userSightings)
       return null
     })
