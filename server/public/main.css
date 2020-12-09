@@ -1,5 +1,47 @@
 @import url('https://fonts.googleapis.com/css?family=Abel|Abril+Fatface|Alegreya|Arima+Madurai|Dancing+Script|Dosis|Merriweather|Oleo+Script|Overlock|PT+Serif|Pacifico|Playball|Playfair+Display|Share|Unica+One|Vibur');
 
+/* Map page */
+.cardTitle-bird {
+  padding-bottom: 1em;
+  color: white;
+  text-align: center;
+}
+
+.input-wrapper {
+  text-align: center;
+}
+
+.input-wrapper input[type="submit"] {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #0aac2d;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+  display: block;
+}
+
+.input-wrapper input[type="submit"]:hover {
+  background-color: rgba(69, 241, 63, 0.7);
+  transition: all 300ms ease-out;
+}
+.input-map {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+/* Main stuff */
+
 .app {
   display: flex;
   flex-direction: column;
