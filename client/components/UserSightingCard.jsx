@@ -24,45 +24,50 @@ class UserSightingCard extends React.Component {
       render () {
         return (
           <>
-            <div className="input-wrapper">
+            <div className='wraper-sightings'></div>
+            <div className='box-singthings'>
+              <div className="inputBox">
+                <div className="input-wrapper">
 
-              <input
-                className="input-map"
-                id="latitude"
-                type="text"
-                name="latitude"
-                value={this.state.latitude}
-                placeholder="latitude"
-                onChange={this.handleChange}
-              ></input>
+                  <input
+                    className="input-map"
+                    id="latitude"
+                    type="text"
+                    name="latitude"
+                    value={this.state.latitude}
+                    placeholder="latitude"
+                    onChange={this.handleChange}
+                  ></input>
 
-              <input
-                className="input-map"
-                id="longitude"
-                name="longitude"
-                type="text"
-                value={this.state.longitude}
-                placeholder="longitude"
-                onChange={this.handleChange}
-              ></input>
+                  <input
+                    className="input-map"
+                    id="longitude"
+                    name="longitude"
+                    type="text"
+                    value={this.state.longitude}
+                    placeholder="longitude"
+                    onChange={this.handleChange}
+                  ></input>
 
-              <input
-                className="input-map"
-                id="birdName"
-                name="birdName"
-                type="text"
-                value={this.state.birdName}
-                placeholder='bird name'
-                onChange={this.handleChange}
-              ></input>
+                  <input
+                    className="input-map"
+                    id="birdName"
+                    name="birdName"
+                    type="text"
+                    value={this.state.birdName}
+                    placeholder='bird name'
+                    onChange={this.handleChange}
+                  ></input>
 
-              <input
-                className="btn-submit"
-                type="submit"
-                data-testid="submit-button"
-                name="login-submit"
-                value="Submit"
-                onClick={this.handleClick}/>
+                  <input
+                    className="btn-submit"
+                    type="submit"
+                    data-testid="submit-button"
+                    name="login-submit"
+                    value="Submit"
+                    onClick={this.handleClick}/>
+                </div>
+              </div>
             </div>
           </>
         )

@@ -62,7 +62,7 @@ class Profile extends React.Component {
     return (
       <>
         <Header />
-        <h1 className='userTitle'>Welcome {this.state.username}!</h1>
+        <h1 className='cardTitleProfile'>Welcome {this.state.username}!</h1>
         <div className="flex-wrapper">
 
           {/* Bird Sightings Card */}
