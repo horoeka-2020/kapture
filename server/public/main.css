@@ -28,8 +28,6 @@
   margin-left: 82px;
 }
 
-
-
 .message-error {
   border: 2px solid red;
   padding: 0.5rem;
@@ -58,6 +56,61 @@
   margin: 7% auto;
   letter-spacing: 0.05em;
 }
+
+/* About page */
+h1 span {
+  font-size: 40px;
+  color: white;
+  text-align: center;
+  display: block;
+}
+
+p span {
+  color: white;
+}
+
+.about-flock {
+  background-color:#3c5838ad;
+  padding: 30px;
+  border: #222 ;
+  border: 1px solid #ffffff73;
+  border-radius: 5px;
+}
+
+.about-bird {
+  background-color:#f1672e30;
+  padding: 30px;
+  border: #222 ;
+  border: 1px solid #ddeeff7a;
+  border-radius: 5px;
+}
+
+.about-contrainer {
+  width: 70%;
+  margin: 0px auto;
+  padding: 20px 20px;
+  display: block;
+  position: relative;
+  letter-spacing: 1px;
+}
+
+/* Contact page */
+.contact-bg {
+  background-color:#ffffff33;
+  padding: 30px;
+  border: #222 ;
+  border: 1px solid #ffffff73;
+  border-radius: 5px;
+  float: centre;
+  /* width: 50%; */
+}
+
+form {
+  float: center;
+}
+
+
+
 
 /* buttons hover Animation */
 button:hover {

@@ -16,7 +16,7 @@ class QuizCard extends React.Component {
     return (
       <>
         <Header />
-        <div> <Questions handleClick={this.handleClick} /> </div>
+        <div> <Questions handleClick={this.handleClick} /></div>
         <Footer />
       </>
     )
