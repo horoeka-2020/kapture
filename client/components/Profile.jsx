@@ -26,7 +26,7 @@ class Profile extends React.Component {
       username,
       id
     })
-    getUserSightings(5)
+    getUserSightings(id)
       .then((sightings) => {
         return this.setState({
           sightings: sightings
@@ -35,7 +35,7 @@ class Profile extends React.Component {
       .catch((error) => {
         dispatch(showError(error.message))
       })
-    getUserBadges(5)
+    getUserBadges(id)
       .then((badges) => {
         return this.setState({
           badges: badges
@@ -59,38 +59,35 @@ class Profile extends React.Component {
   }
 
   render () {
-    this.state.sightings.map((sighting) => console.log(sighting.birdName))
     return (
       <>
         <Header />
+        <h1 className='cardTitleProfile'>Welcome {this.state.username}!</h1>
         <div className="flex-wrapper">
 
           {/* Bird Sightings Card */}
           <div className='user-card col'>
-            <h1 className='userTitle'>Birds you have found!</h1>
+            <h1 className='userCardTitle'>Birds you have found!</h1>
             <p className='userText'>You have had {this.state.sightings.length} bird sightings!</p>
             {this.state.sightings.map((bird) => (
               <div key={bird.birdId}>
-                <span className="userText">{bird.birdName}</span>
-                <span className="userText">{bird.birdIgnoa}</span>
+                <span className="mapText">{bird.birdName}</span>
+                <span className="mapText">{bird.birdIgnoa}</span>
                 <span className="mapText">Kaptured on the {bird.birdDate}</span>
-                <span className="mapText">Conservation status: {bird.birdCons}</span>
                 <span className="mapText">Found in {bird.birdFoundIn}</span>
               </div>
             ))}
           </div>
 
-          {/* Username Card */}
-          <div className='user-card col'>
-            <h1 className='userTitle'>Welcome {this.state.username}!</h1>
-          </div>
-
           {/* Badges Card */}
           <div className='user-card col'>
-            <h1 className='userTitle'>Badges you have collected!</h1>
-            <p className='userText'>You have earnt {this.state.badges.length} badges</p>
+            <h1 className='userCardTitle'>Badges you have collected!</h1>
+            <p className='user-heading'>You have earnt {this.state.badges.length} badges</p>
             {this.state.badges.map((badge) => (
-              <span className="userText" key={badge.name}>{badge.name}</span>
+              <div className="badge-container" key={badge.id}>
+                <img className="badge" src={badge.image} alt=""/>
+                <p className="badge-description">Congratulations you have earned the {badge.name}!</p>
+              </div>
             ))}
           </div>
 

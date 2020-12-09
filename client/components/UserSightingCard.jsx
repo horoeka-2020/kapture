@@ -24,9 +24,10 @@ class UserSightingCard extends React.Component {
       render () {
         return (
           <>
-            <div className="inputBox">
+            <div className="input-wrapper">
+
               <input
-                className="input"
+                className="input-map"
                 id="latitude"
                 type="text"
                 name="latitude"
@@ -36,7 +37,7 @@ class UserSightingCard extends React.Component {
               ></input>
 
               <input
-                className="input"
+                className="input-map"
                 id="longitude"
                 name="longitude"
                 type="text"
@@ -46,7 +47,7 @@ class UserSightingCard extends React.Component {
               ></input>
 
               <input
-                className="input"
+                className="input-map"
                 id="birdName"
                 name="birdName"
                 type="text"
@@ -54,14 +55,15 @@ class UserSightingCard extends React.Component {
                 placeholder='bird name'
                 onChange={this.handleChange}
               ></input>
+
+              <input
+                className="btn-submit"
+                type="submit"
+                data-testid="submit-button"
+                name="login-submit"
+                value="Submit"
+                onClick={this.handleClick}/>
             </div>
-            <input
-              className="btn-submit"
-              type="submit"
-              data-testid="submit-button"
-              name="login-submit"
-              value="Submit"
-              onClick={this.handleClick}/>
           </>
         )
       }

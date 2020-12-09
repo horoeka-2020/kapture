@@ -1,12 +1,79 @@
 @import url('https://fonts.googleapis.com/css?family=Abel|Abril+Fatface|Alegreya|Arima+Madurai|Dancing+Script|Dosis|Merriweather|Oleo+Script|Overlock|PT+Serif|Pacifico|Playball|Playfair+Display|Share|Unica+One|Vibur');
 
+/* Map page */
+.cardTitle-bird {
+  padding-bottom: 1em;
+  color: white;
+  text-align: center;
+}
+
+.input-wrapper {
+  text-align: center;
+}
+
+.input-wrapper input[type="submit"] {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #0aac2d;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+  display: block;
+}
+
+.input-wrapper input[type="submit"]:hover {
+  background-color: rgba(69, 241, 63, 0.7);
+  transition: all 300ms ease-out;
+}
+.input-map {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+/* Main stuff */
+
+.app {
+  display: flex;
+  flex-direction: column;
+}
+.main {
+  flex: 1;
+}
+
 * {
   box-sizing: border-box;
 }
 
+.logo-wrapper {
+  text-align: center;
+}
+
 .logo {
-  display: block;
+  display: inline-block;
   margin: 0 auto;
+  width:15%
+}
+
+/* Smaller logo */
+
+.small-logo-wrapper {
+  text-align: left;
+}
+
+.small-logo {
+  display: inline-block;
+  margin: 10px 10px auto;
+  width:10%
 }
 
 textarea {
@@ -208,6 +275,9 @@ button:hover {
 
 body {
   margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 body::before {
@@ -340,6 +410,72 @@ body::before {
   }
 }
 
+.wraper-nonLanding{
+  width: 90%;
+  height: 90%;
+  display: block;
+  margin: 0 auto;
+  content: "";
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  opacity: 0;
+}
+
+.box-nonLanding{
+  position: absolute;
+  overflow: hidden;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-height: 400px;
+  width: 80%;
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 10);
+  border-radius: 10px;
+  backdrop-filter: blur(6px);
+  border: solid white 1px;
+  opacity: 1;
+}
+
+.wraper-sightings{
+  width: 90%;
+  height: 90%;
+  display: block;
+  margin: 50px auto;
+  content: "";
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  opacity: 0;
+}
+
+.box-sightings{
+  position: absolute;
+  overflow: hidden;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-height: 400px;
+  width: 80%;
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 10);
+  border-radius: 10px;
+  backdrop-filter: blur(6px);
+  border: solid white 1px;
+  opacity: 1;
+}
+
 .box-quiz {
     position: absolute;
     top: 35rem;
@@ -354,29 +490,6 @@ body::before {
     backdrop-filter: blur(6px);
     border: solid rgb(255, 255, 2255, 0.7) 1px;
     opacity: 1;
-  }
-  
-  @keyframes fadeIn {
-    0% {
-     opacity: 0;
-    }
-    75% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  @-moz-keyframes fadeIn {
-    0% {
-      opacity: 0;
-     }
-     75% {
-       opacity: 0;
-     }
-     100% {
-      opacity: 1;
-    }
   }
 
   .box-quiz input[type="submit"] {
@@ -396,13 +509,17 @@ body::before {
     background-color: rgba(69, 241, 63, 0.7);
   }
 
+  .box-quiz-wraper{
+    position: relative;
+  }
+
   .box-quiz-results {
     position: absolute;
-    top: 55rem;
+    top: 0;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, 0%);
     width: 800px;
-    padding: 40px;
+    padding-top: 40px;
     background: rgba(0, 0, 0, 0.3);
     box-sizing: border-box;
     box-shadow: 0 15px 25px rgba(0, 0, 0, 10);
@@ -410,31 +527,6 @@ body::before {
     backdrop-filter: blur(6px);
     border: solid white 1px;
     opacity: 1;
-    animation-name: fadeIn;
-    animation-duration: 2s;
-  }
-  
-  @keyframes fadeIn {
-    0% {
-     opacity: 0;
-    }
-    75% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  @-moz-keyframes fadeIn {
-    0% {
-      opacity: 0;
-     }
-     75% {
-       opacity: 0;
-     }
-     100% {
-      opacity: 1;
-    }
   }
 
   .box-quiz-results input[type="submit"] {
@@ -442,15 +534,16 @@ body::before {
     border: none;
     outline: none;
     color: #fff;
-    background: #03a9f4;
+    background: rgba(69, 241, 63, 0.7);
     padding: 10px 20px;
     cursor: pointer;
     border-radius: 5px;
     font-size: 14px;
+    margin: 10px;
   }
   
   .box-quiz-results input[type="submit"]:hover {
-    background-color: rgba(3, 169, 244, 0.7);
+    background-color:  rgba(69, 241, 63, 0.7)(3, 169, 244, 0.7);
   }
 .box h2 {
   margin: 0 0 30px;
@@ -518,6 +611,7 @@ body::before {
   transition: all 300ms ease-out;
 }
 
+
 .colorPick {
   margin-top: -45px;
 }
@@ -558,6 +652,7 @@ body::before {
   position: static;
   justify-content: center;
   overflow: hidden;
+  text-align: center;
 }
 
 .flex-wrapper .col {
@@ -581,16 +676,26 @@ body::before {
   opacity: 1;
 }
 
+
+
 .userTitle{
+  font-size: 2rem;
+  color: rgba(0, 71, 0, 0.9);
+  background-color: white;
+  text-align: center;
+}
+
+.userCardTitle{
   font-size: 2rem;
   color: #fff;
   text-align: center;
-  overflow-wrap: break-word;
+  text-decoration: underline;
+  
 }
+
 
 .userText{
   color: white;
-  display: inline-block;
   text-align: center;
 }
 
@@ -601,10 +706,9 @@ body::before {
   padding: 10px;
 }
 
-.userText{
-  width: 90%;
+.user-heading {
   text-align: center;
-  /* padding-bottom: 2em; */
+  color: white;
 }
 
 .profile-card {
@@ -780,6 +884,20 @@ header {
     letter-spacing: 1px;
   }
 
+  .cardTitleMid{
+    font-size: 2.0rem;
+    color: #fff;
+    text-align: left;
+    letter-spacing: 1px;
+  }
+  .cardTitleProfile{
+    font-size: 2.25rem;
+    color: #fff;
+    text-align: left;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+
 .cardText {
   color: #fff;
   font-size: 1.23rem;
@@ -802,15 +920,17 @@ header {
 
 /* Image Slider */
 .carousel-wrapper {
-  width: 60%;
-  margin: 50px auto;
+  position: relative;
+  width: 95%;
+  height: 75%;
+  margin: 0 auto 20px auto;
   padding: 20px 20px;
   display: block;
   border: 1px solid #DDD;
   box-sizing: border-box;
   background: url(./images/build/focus_dark.png) no-repeat center center;
-  position: relative;
   background-color: #fff;
+  background-size: 80%;
 }
 
 
@@ -966,3 +1086,32 @@ header {
   display: inline;
 }
 
+.badge {
+  width: 20%;
+  position: relative;
+  display: inline-block;
+}
+
+.badge-description {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+
+  /* transition effect. not necessary */
+  transition: opacity .2s
+}
+
+.badge:hover + .badge-description {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: none;
+}
+
+.badge-container {
+  display:inline
+}
