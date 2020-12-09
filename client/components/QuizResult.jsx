@@ -35,14 +35,14 @@ class QuizResult extends React.Component {
             <h2 className='cardTitle'>Congratulations! You probably saw:</h2>
             {birds.map((bird, i) =>
               <Bird key={i} bird={bird} handleClick={this.handleClick} />
-            )}
-            <a className="password-forgot" href="/quiz">Return to quiz</a> */}
+            )} */}
           <div className='box-quiz-wraper'>
             <div className='box-quiz-results'>
               <h2 className='cardTitle'>Congratulations! You probably saw:</h2>
               {birds.map((bird, i) =>
                 <Bird key={i} bird={bird} handleClick={this.handleClick} />
               )}
+              <a className="password-forgot" href="/quiz">Return to quiz</a>
             </div>
           </div>
           <Footer />
