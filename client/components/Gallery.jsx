@@ -22,7 +22,7 @@ class Gallery extends React.Component {
       username,
       id
     })
-    getUserSightings(2)
+    getUserSightings(id)
       .then((sightings) => {
         return this.setState({
           birds: sightings
