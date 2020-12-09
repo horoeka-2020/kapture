@@ -57,8 +57,8 @@ describe('GET /birds/name/:birdName', () => {
   })
 })
 
-// describe('GET /birds/:id', () => {
-//   it('Responds with bird by id', () => {
+// dxescribe('GET /birds/:id', () => {
+//   ixt('Responds with bird by id', () => {
 //     db.getBirdById.mockImplementation((id) => {
 //       expect(id).toBe(2)
 //       return Promise.resolve(mockBirdsUser)
@@ -75,8 +75,8 @@ describe('GET /birds/name/:birdName', () => {
 //   })
 // })
 
-// describe('GET /birds/:id returns a error', () => {
-//   it('responds with 500 and correct error object on DB error', () => {
+// dxescribe('GET /birds/:id returns a error', () => {
+//   ixt('responds with 500 and correct error object on DB error', () => {
 //     db.getBirdById.mockImplementation(() => Promise.reject(
 //       new Error('mock DB error')
 //     ))
