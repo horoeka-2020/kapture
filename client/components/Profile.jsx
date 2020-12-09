@@ -88,7 +88,7 @@ class Profile extends React.Component {
             {this.state.badges.map((badge) => (
               <>
                 <img className="badge" key={badge.badges_id} src={badge.image} alt=""/>
-                <p className="badge-description">Congratulations you have earned the {badge.name} badge!</p>
+                <p className="badge-description">Congratulations you have earned the {badge.name}!</p>
               </>
             ))}
           </div>
