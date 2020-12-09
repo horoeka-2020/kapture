@@ -593,6 +593,19 @@ body::before {
   background: transparent;
 }
 
+.box .inputBox input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+
 .box .inputBox label {
   position: absolute;
   top: 0;

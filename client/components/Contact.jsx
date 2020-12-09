@@ -48,6 +48,10 @@ export default class About extends React.Component {
                 onChange={this.handleChange}
               ></textarea>
             </form>
+
+            {/* </section> */}
+          </div>
+          <div className="input-wrapper">
             <input
               className="btn-submit"
               type="submit"
@@ -55,7 +59,6 @@ export default class About extends React.Component {
               name="login-submit"
               value="Submit"
               onClick={this.handleClick}/>
-            {/* </section> */}
           </div>
           {/* </div> */}
         </div>
