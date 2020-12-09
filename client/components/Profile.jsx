@@ -59,8 +59,6 @@ class Profile extends React.Component {
   }
 
   render () {
-    this.state.sightings.map((sighting) => console.log(sighting.birdName))
-    console.log(this.state.badges)
     return (
       <>
         <Header />
@@ -86,10 +84,10 @@ class Profile extends React.Component {
             <h1 className='userCardTitle'>Badges you have collected!</h1>
             <p className='user-heading'>You have earnt {this.state.badges.length} badges</p>
             {this.state.badges.map((badge) => (
-              <>
-                <img className="badge" key={badge.badges_id} src={badge.image} alt=""/>
+              <div className="badge-container" key={badge.id}>
+                <img className="badge" src={badge.image} alt=""/>
                 <p className="badge-description">Congratulations you have earned the {badge.name}!</p>
-              </>
+              </div>
             ))}
           </div>
 

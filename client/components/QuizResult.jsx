@@ -36,6 +36,7 @@ class QuizResult extends React.Component {
             {birds.map((bird, i) =>
               <Bird key={i} bird={bird} handleClick={this.handleClick} />
             )}
+            <a className="password-forgot" href="/quiz">Return to quiz</a>
           </div>
           <Footer />
         </>

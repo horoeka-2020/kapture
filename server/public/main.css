@@ -1024,3 +1024,7 @@ header {
   opacity: 1;
   pointer-events: none;
 }
+
+.badge-container {
+  display:inline
+}
