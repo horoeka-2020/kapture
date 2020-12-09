@@ -5,7 +5,6 @@ import requestor from './consume'
 export function getBirdSightings (userId, consume = requestor) {
   return consume(`/sightings/${encodeURIComponent(userId)}`, 'get', {})
     .then((res) => {
-      console.log('api/birdSightings.js > res.body:', res.body)
       return res.body
     })
     .catch(errorHandler)

@@ -37,10 +37,10 @@ class Gallery extends React.Component {
     return (
       <>
         <Header />
-        <div className='wraper'></div>
-        <div className='box'>
-          <ImageSlider birds={this.state.birds}/>
-        </div>
+
+        <ImageSlider birds={this.state.birds}/>
+
+        <Footer />
       </>
     )
   }
