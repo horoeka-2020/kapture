@@ -16,6 +16,7 @@ import BirdSightings from './BirdSightings'
 import Profile from './Profile'
 import Gallery from './Gallery'
 import BadgeForm from './BadgeForm'
+import UserSightingCard from './UserSightingCard'
 
 class App extends React.Component {
   componentDidMount () {
@@ -44,6 +45,7 @@ class App extends React.Component {
             <Route exact path="/sightings" component={BirdSightings}/>
             <Route exact path="/profile" component={Profile} />
             <Route exact path="/badgeform" component={BadgeForm}/>
+            <Route exact path="/usersightingform" component={UserSightingCard}/>
           </main>
         </div>
       </>

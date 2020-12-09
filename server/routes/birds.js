@@ -78,10 +78,8 @@ router.get('/size', (req, res) => {
 
 router.get('/sightings/:id', (req, res) => {
   const id = Number(req.params.id)
-  console.log(id)
   user.getBirdsByUserID(id)
     .then((sighting) => {
-      console.log(sighting)
       res.status(200).json(sighting)
       return null
     })
@@ -92,10 +90,8 @@ router.get('/sightings/:id', (req, res) => {
 
 router.get('/badges/:id', (req, res) => {
   const id = Number(req.params.id)
-  console.log(id)
   user.getUserBadges(id)
     .then((badges) => {
-      console.log(badges)
       res.status(200).json(badges)
       return null
     })
