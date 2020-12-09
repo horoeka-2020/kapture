@@ -6,6 +6,12 @@ export function getUserBadges (id, consume = requestor) {
     .catch(errorHandler)
 }
 
+export function postUserBadges (userId, badgeId, consume = requestor) {
+  return consume(`/birds/badges/${userId}/${badgeId}`, 'post')
+    .then((res) => res.body)
+    .catch(errorHandler)
+}
+
 function errorHandler (method, route) {
   return (err) => {
     if (err.message === 'Not Found') {

@@ -4,6 +4,7 @@ const router = express.Router()
 
 const db = require('../db/birds')
 const user = require('../db/users')
+const badge = require('../db/badges')
 
 router.get('/birds', (req, res) => {
   db.getBirds()
@@ -116,16 +117,17 @@ router.get('/user/:username', (req, res) => {
 })
 
 // Route needs a bit of work to post
-// router.post('/badges/:id', (req, res) => {
-//   const id = req.params.id
-//   user.addBadgeToUser(id)
-//     .then((badges) => {
-//       res.status(200).json(badges)
-//       return null
-//     })
-//     .catch(err => {
-//       res.status(500).send('SERVER SIDE API ERROR ' + err)
-//     })
-// })
+router.post('/badges/:userid/:badgeid', (req, res) => {
+  const userid = req.params.userid
+  const badgeid = req.params.badgeid
+  badge.addUserBadges(userid, badgeid)
+    .then((badges) => {
+      res.status(200).json(badges)
+      return null
+    })
+    .catch(err => {
+      res.status(500).send('SERVER SIDE API ERROR ' + err)
+    })
+})
 
 module.exports = router
