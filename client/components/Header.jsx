@@ -4,7 +4,23 @@ import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { IfAuthenticated, IfNotAuthenticated } from './Authenticated'
 import { logOut } from './helpers/navHelper'
+import { setUserLocation } from '../actions/user'
+
 class Home extends React.Component {
+  componentDidMount () {
+    const setLocation = (location) => {
+      this.props.dispatch(setUserLocation(location))
+      this.setState({ userCoordinates: [{ lat: location.latitude, lon: location.longitude }] })
+    }
+
+    if ('geolocation' in navigator) {
+      navigator.geolocation.getCurrentPosition(function (position) {
+        const { latitude, longitude } = position.coords
+        setLocation({ latitude, longitude })
+      })
+    }
+  }
+
   render () {
     return (
       <header>
