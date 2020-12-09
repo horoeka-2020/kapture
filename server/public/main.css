@@ -647,8 +647,7 @@ body::before {
   font-size: 2rem;
   color: #fff;
   text-align: center;
-  text-decoration: underline;
-  
+
 }
 
 
@@ -789,6 +788,12 @@ header {
   padding-bottom: 2em;
 }
 
+.landingText{
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+
 .birdImg{
     height: 200px;
     width: auto;
@@ -831,7 +836,7 @@ header {
 
 .cardTitle{
   font-size: 3.3rem;
-  color: #fff;
+  color: white;
   text-align: center;
 }
 
@@ -1066,4 +1071,30 @@ header {
 
 .badge-container {
   display:inline
+}
+
+::-webkit-input-placeholder {
+  text-align: left;
+  color: white;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  text-align: left;  
+  color: white;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+  text-align: left; 
+  color: white; 
+}
+
+:-ms-input-placeholder {  
+  text-align: left; 
+  color: white;
+}
+
+.proud {
+  font-size: 4rem;
+  color: rgb(0, 187, 0);
+  padding: 0px;
 }

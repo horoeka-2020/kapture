@@ -32,7 +32,7 @@ class RegisterCard extends React.Component {
               autoComplete="username"
               name="username"
               value={this.state.username}
-              placeholder="email address"
+              placeholder="please enter your email address"
               onChange={this.handleChange}
             ></input>
 
@@ -43,7 +43,7 @@ class RegisterCard extends React.Component {
               type="password"
               autoComplete="current-password"
               value={this.state.password}
-              placeholder="password"
+              placeholder="enter your password"
               onChange={this.handleChange}
             ></input>
             <input
@@ -53,7 +53,7 @@ class RegisterCard extends React.Component {
               type="password"
               autoComplete="current-password"
               value={this.state.confirm}
-              placeholder="confirm password"
+              placeholder="confirm your password"
               onChange={this.handleChange}
             ></input>
           </form>
