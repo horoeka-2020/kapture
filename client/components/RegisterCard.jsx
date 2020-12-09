@@ -58,13 +58,15 @@ class RegisterCard extends React.Component {
             ></input>
           </form>
         </div>
-        <input
-          className="btn-submit"
-          type="submit"
-          data-testid="submit-button"
-          name="login-submit"
-          value="Submit"
-          onClick={this.handleClick}/>
+        <div className="input-wrapper">
+          <input
+            className="btn-submit"
+            type="submit"
+            data-testid="submit-button"
+            name="login-submit"
+            value="Submit"
+            onClick={this.handleClick}/>
+        </div>
       </>
     )
   }
