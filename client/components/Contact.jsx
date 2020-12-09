@@ -8,33 +8,11 @@ export default class About extends React.Component {
       <>
         <Header />
         <div className='wraper-nonLanding'></div>
-        <div className='box-nonLanding'>
-          <h1 className='cardTitle'>Contact the Flock</h1>
+        {/* <div className='box-nonLanding'> */}
+        <div className='boxContact'>
           {/* <div className='about-contrainer'> */}
           <div className="inputBox">
             <h1><span>Contact Us</span></h1>
-            {/* <p className='about-flock'><span>Lorem ipsum  officia deserunt mollit anim id est laborum.</span></p> */}
-            {/* <section className="contact-bg"> */}
-            {/* <form action="#" method="post" noValidate>
-              <div className="notification"></div>
-              <p>
-                <label htmlFor="name">Your Name</label>
-                <input type="text" id="name" name="contact_name" value="" />
-              </p>
-              <p>
-                <label htmlFor="email">Your Email</label>
-                <input type="email" id="email" name="contact_email" value="" />
-              </p>
-              <p>
-                <label htmlFor="message">Your Message</label>
-                <textarea id="message" name="contact_message" cols="20" rows="4"></textarea>
-              </p>
-              <p className="send">
-                <label htmlFor="check">Please leave this field blank</label>
-                <input id="check" name="contact_check" type="text" value="" />
-                <input id="submit" name="send_contact_form" type="submit" value="Send" />
-              </p>
-            </form> */}
             <form>
               <input
                 className="input"
@@ -59,7 +37,8 @@ export default class About extends React.Component {
               ></input>
 
               <textarea
-                className="input"
+                //   className="input"
+                maxLength="500"
                 id="message"
                 type="text"
                 autoComplete="message"
@@ -69,6 +48,10 @@ export default class About extends React.Component {
                 onChange={this.handleChange}
               ></textarea>
             </form>
+
+            {/* </section> */}
+          </div>
+          <div className="input-wrapper">
             <input
               className="btn-submit"
               type="submit"
@@ -76,11 +59,10 @@ export default class About extends React.Component {
               name="login-submit"
               value="Submit"
               onClick={this.handleClick}/>
-            {/* </section> */}
           </div>
+          {/* </div> */}
         </div>
         <Footer />
-
       </>
     )
   }

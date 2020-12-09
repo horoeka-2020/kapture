@@ -5,7 +5,6 @@ import { dispatch } from '../store'
 import { showError } from '../actions/error'
 import { getUserSightings } from '../api/user.js'
 import { getUserBadges } from '../api/badges'
-import { setUserLocation } from '../actions/user'
 
 import Header from './Header'
 import Footer from './Footer'
@@ -15,8 +14,7 @@ class Profile extends React.Component {
     username: '',
     id: '',
     sightings: [],
-    badges: [],
-    userCoordinates: []
+    badges: []
   }
 
   componentDidMount () {
@@ -44,18 +42,6 @@ class Profile extends React.Component {
       .catch((error) => {
         dispatch(showError(error.message))
       })
-
-    const setLocation = (location) => {
-      this.props.dispatch(setUserLocation(location))
-      this.setState({ userCoordinates: [{ lat: location.latitude, lon: location.longitude }] })
-    }
-
-    if ('geolocation' in navigator) {
-      navigator.geolocation.getCurrentPosition(function (position) {
-        const { latitude, longitude } = position.coords
-        setLocation({ latitude, longitude })
-      })
-    }
   }
 
   render () {

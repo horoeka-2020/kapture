@@ -3,10 +3,10 @@ import { addUserSighting } from './helpers/userSightingCardHelper'
 
 class UserSightingCard extends React.Component {
     state = {
-      username: 2,
+      userId: '',
       latitude: '',
       longitude: '',
-      birdName: ''
+      birdId: ''
     }
 
       handleChange = (e) => {
@@ -25,6 +25,15 @@ class UserSightingCard extends React.Component {
         return (
           <>
             <div className="input-wrapper">
+              <input
+                className="input-map"
+                id="userId"
+                type="text"
+                name="userId"
+                value={this.state.userId}
+                placeholder="userId"
+                onChange={this.handleChange}
+              ></input>
 
               <input
                 className="input-map"
@@ -48,11 +57,11 @@ class UserSightingCard extends React.Component {
 
               <input
                 className="input-map"
-                id="birdName"
-                name="birdName"
+                id="birdId"
+                name="birdId"
                 type="text"
-                value={this.state.birdName}
-                placeholder='bird name'
+                value={this.state.birdId}
+                placeholder='bird birdId'
                 onChange={this.handleChange}
               ></input>
 

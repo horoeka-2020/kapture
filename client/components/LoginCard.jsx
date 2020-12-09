@@ -48,13 +48,15 @@ class LoginCard extends React.Component {
               </form>
               <a className="password-forgot" href="#">Have you forgotten your password?</a>
             </div>
-            <input
-              className="btn-submit"
-              type="submit"
-              data-testid="submit-button"
-              name="login-submit"
-              value="Submit"
-              onClick={this.handleClick}/>
+            <div className="input-wrapper">
+              <input
+                className="btn-submit"
+                type="submit"
+                data-testid="submit-button"
+                name="login-submit"
+                value="Submit"
+                onClick={this.handleClick}/>
+            </div>
           </>
         )
       }
