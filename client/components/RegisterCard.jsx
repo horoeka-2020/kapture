@@ -1,7 +1,5 @@
 import React from 'react'
-import { Link, Route } from 'react-router-dom'
 import { registerUser } from './helpers/registerHelper'
-
 class RegisterCard extends React.Component {
   state = {
     username: '',
@@ -59,7 +57,6 @@ class RegisterCard extends React.Component {
               onChange={this.handleChange}
             ></input>
           </form>
-          <Link to="/welcome"> <a className="password-forgot" href="/welcome">Click here to go back</a></Link>
         </div>
         <input
           className="btn-submit"
