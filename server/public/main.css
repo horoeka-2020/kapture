@@ -304,7 +304,7 @@ body::before {
   -o-background-size: cover; 
   background-size: cover;
   animation-name: blur;
-  animation-duration: 1.5s;
+  animation-duration: 4.5s;
 }
 
 @keyframes blur {
@@ -343,7 +343,7 @@ body::before {
   -o-background-size: cover; 
   background-size: cover;
   animation-name: fadeOut;
-  animation-duration: 1.5s;
+  animation-duration: 4.5s;
 }
 @keyframes fadeOut {
   0% {
@@ -394,13 +394,13 @@ body::before {
   border: solid white 1px;
   opacity: 1;
   animation-name: fadeIn;
-  animation-duration: 3s;
+  animation-duration: 4.5s;
 }
 @keyframes fadeIn {
   0% {
    opacity: 0;
   }
-  75% {
+  80% {
     opacity: 0;
   }
   100% {
@@ -411,7 +411,7 @@ body::before {
   0% {
     opacity: 0;
    }
-   75% {
+   80% {
      opacity: 0;
    }
    100% {
