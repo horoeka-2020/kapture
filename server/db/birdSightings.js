@@ -1,12 +1,13 @@
 const connection = require('./connection')
 
 function getBirdSightings (userId, db = connection) {
+  console.log('db/birdSightings.js > userId:', userId)
   return db('bird_sightings')
-    .join('users', 'bird_sightings.user_id', 'users.id')
+    .join('users', 'user_id', 'users.id')
     .join('birds', 'bird_sightings.bird_id', 'birds.id')
     .join('colour', 'birds.colour_id', 'colour.id')
     .join('size', 'birds.size_id', 'size.id')
-    .where('users.id', userId)
+    .where('user_id', userId)
     .select('bird_sightings.user_id as birdUserID',
       'users.username as birdUser',
       'bird_sightings.bird_id as birdSightingID',

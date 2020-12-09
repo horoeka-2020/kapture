@@ -4,7 +4,10 @@ import requestor from './consume'
 // Bird Sightings APIs
 export function getBirdSightings (userId, consume = requestor) {
   return consume(`/sightings/${encodeURIComponent(userId)}`, 'get', {})
-    .then((res) => res.body)
+    .then((res) => {
+      console.log('api/birdSightings.js > res.body:', res.body)
+      return res.body
+    })
     .catch(errorHandler)
 }
 

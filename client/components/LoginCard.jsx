@@ -46,6 +46,7 @@ class LoginCard extends React.Component {
                   onChange={this.handleChange}
                 ></input>
               </form>
+              <a className="password-forgot" href="#">Have you forgotten your password?</a>
             </div>
             <input
               className="btn-submit"
