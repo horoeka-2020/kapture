@@ -38,8 +38,10 @@ class BirdSightings extends React.Component {
           <div className='wraper'></div>
           <div className='box'>
             <h3 className='cardTitle'>Bird Sightings</h3>
-            <Map sightings={sightings} handleClick={this.handleClick} />
-            <UserSightingCard />
+            <div className='about-contrainer'>
+              <Map sightings={sightings} handleClick={this.handleClick} />
+              <UserSightingCard />
+            </div>
           </div>
           <Footer />
         </>
