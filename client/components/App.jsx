@@ -15,6 +15,7 @@ import QuizResult from './QuizResult'
 import BirdSightings from './BirdSightings'
 import Profile from './Profile'
 import Gallery from './Gallery'
+import BadgeForm from './BadgeForm'
 
 class App extends React.Component {
   componentDidMount () {
@@ -42,6 +43,7 @@ class App extends React.Component {
             <Route exact path="/quiz/result" component={QuizResult}/>
             <Route exact path="/sightings" component={BirdSightings}/>
             <Route exact path="/profile" component={Profile} />
+            <Route exact path="/badgeform" component={BadgeForm}/>
           </main>
         </div>
       </>
