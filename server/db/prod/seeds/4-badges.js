@@ -8,9 +8,9 @@ exports.seed = function (knex) {
     { id: 5, name: 'Threatened Badge', image: '/images/badges/threatenedBadge.png' },
     { id: 6, name: 'Kiwi Badge', image: '/images/badges/kiwiBadge.png' },
     { id: 7, name: 'Large Badge', image: '/images/badges/largeBadge.png' },
-    { id: 8, name: 'Medium Badge', image: '/images/badges/largeBadge.png' },
-    { id: 9, name: 'Small Badge', image: '/images/badges/largeBadge.png' },
-    { id: 10, name: 'Moa Badge', image: '/images/badges/largeBadge.png' },
-    { id: 11, name: 'Singing Badge', image: '/images/badges/largeBadge.png' }
+    { id: 8, name: 'Medium Badge', image: '/images/badges/mediumBadge.png' },
+    { id: 9, name: 'Small Badge', image: '/images/badges/smallBadge.png' },
+    { id: 10, name: 'Moa Badge', image: '/images/badges/moaBadge.png' },
+    { id: 11, name: 'Singing Badge', image: '/images/badges/singingBadge.png' }
   ])
 }
