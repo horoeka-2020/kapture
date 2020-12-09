@@ -23,14 +23,13 @@ class BirdSightings extends React.Component {
       this.props.dispatch(setUserLocation(location))
       this.setState({ userCoordinates: [{ latitude: location.latitude, longitude: location.longitude }] })
     }
-    const id = getDecodedToken().id
     if ('geolocation' in navigator) {
       navigator.geolocation.getCurrentPosition(function (position) {
         const { latitude, longitude } = position.coords
         setLocation({ latitude, longitude })
       })
     }
-
+    const id = getDecodedToken().id
     return getAllBirdSightings(id)
       .then(sightings => {
         this.setState({ sightings: sightings })

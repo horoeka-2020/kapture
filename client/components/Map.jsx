@@ -13,8 +13,8 @@ function Map (props) {
   return (
     <div className='map'>
       <MapContainer
-        center={[-36.8613163364828, 174.77405422451895]}
-        zoom={15}
+        center={[-36.8705536, 174.78123520000003]}
+        zoom={14}
         scrollWheelZoom={true}>
         <TileLayer
           tileSize={512}
@@ -32,15 +32,15 @@ function Map (props) {
             </Popup>
           </Marker>
         })}
-        {/* {props.userCoordinates?.map(location => {
+        {props.userCoordinates?.map(location => {
           return <Marker key={props.userCoordinates.indexOf(location)}
-            position={[location.lat, location.lon]}
+            position={[location.latitude, location.longitude]}
           >
             <Popup>
               Your Location
             </Popup>
           </Marker>
-        })} */}
+        })}
       </MapContainer>
     </div>
   )
