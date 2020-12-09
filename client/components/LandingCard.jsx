@@ -16,7 +16,7 @@ export default class LandingCard extends React.Component {
         <div className='wraper'></div>
         <div className='box'>
           <h1 className='cardTitle'>Join the Flock</h1>
-          <p className='landingText'>Welcoming all nature lovers, come join us as we look and kapture (take photos) of birds around NZ...</p>
+          <p className='landingText'>Welcoming all nature lovers, come join us as we look and kapture (take photos) of birds around NZ..</p>
           <p className='landingText'>This is the beginning of your journey to learn about birds of Aotearoa, make sure you go out and look for all our feathered little friends!</p>
           <p className='landingText'>The more birds you discover the more badges you unlock!</p>
           <ErrorMessage />
