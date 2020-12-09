@@ -7,7 +7,9 @@ export default class About extends React.Component {
     return (
       <>
         <Header />
-        <div className='box'>
+        <div className='wraper-nonLanding'></div>
+        <div className='box-nonLanding'>
+          <h1 className='cardTitle'>Contact the Flock</h1>
           {/* <div className='about-contrainer'> */}
           <div className="inputBox">
             <h1><span>Contact Us</span></h1>
