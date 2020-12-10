@@ -63,7 +63,7 @@ test('getBirdsByUserID brings back the bird sightings', () => {
 test('getUserBadges returns all user badges', () => {
   return users.getUserBadges(2, testDb)
     .then((badges) => {
-      expect(badges).toHaveLength(2)
+      expect(badges).toHaveLength(6)
       return null
     })
 })
@@ -77,7 +77,7 @@ test('addBadgeToUser adds a badge to the db', () => {
     .then(() => {
       return users.getUserBadges(2, testDb)
     }).then((badges) => {
-      expect(badges).toHaveLength(3)
+      expect(badges).toHaveLength(7)
       return null
     })
 })
