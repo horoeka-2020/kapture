@@ -11,8 +11,8 @@ export function signInUser (user, navigateTo) {
     .then(() => {
       console.log('helpers/loginCardHelper.js > signInUser > username:', username)
       if (isAuthenticated()) {
-        console.log('helpers/loginCardHelper.js > signInUser > isAuthenticated:', username)
         const { username, isAdmin } = getDecodedToken()
+        console.log('helpers/loginCardHelper.js > signInUser > isAuthenticated:', username)
         dispatch(setUser({ username, isAdmin }))
         navigateTo('/profile')
       } else {
