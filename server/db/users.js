@@ -48,6 +48,7 @@ function userExists (username, db = connection) {
 }
 
 function getUserInfoByName (username, db = connection) {
+  console.log('db/users.js > getUserInfoByName > username:', username)
   return db('users')
     .select('username', 'is_admin as isAdmin', 'id', 'hash')
     .where('username', username)
@@ -55,6 +56,7 @@ function getUserInfoByName (username, db = connection) {
 }
 
 function getUserByName (username, db = connection) {
+  console.log('db/users.js > getUserByName > username:', username)
   return db('users')
     .select('username', 'is_admin as isAdmin', 'id', 'hash')
     .where('username', username)

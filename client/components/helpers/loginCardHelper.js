@@ -9,7 +9,9 @@ export function signInUser (user, navigateTo) {
   dispatch(setWaiting())
   return signIn({ username, password }, { baseUrl: '/api/v1' })
     .then(() => {
+      console.log('helpers/loginCardHelper.js > signInUser > username:', username)
       if (isAuthenticated()) {
+        console.log('helpers/loginCardHelper.js > signInUser > isAuthenticated:', username)
         const { username, isAdmin } = getDecodedToken()
         dispatch(setUser({ username, isAdmin }))
         navigateTo('/profile')
