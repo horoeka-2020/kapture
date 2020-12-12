@@ -21,7 +21,7 @@ export function signInUser (user, navigateTo) {
       return null
     })
     .catch((error) => {
-      console.log(error)
+      console.log(error.message)
       dispatch(showError(error.message))
     })
 }
