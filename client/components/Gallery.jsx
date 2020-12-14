@@ -16,7 +16,7 @@ class Gallery extends React.Component {
   }
 
   componentDidMount () {
-    const id = 2
+    const id = 1
     const username = 'kakaruia@kapture.com'
     // const id = getDecodedToken().id
     // const username = getDecodedToken().username

@@ -29,7 +29,7 @@ class BirdSightings extends React.Component {
         setLocation({ latitude, longitude })
       })
     }
-    const id = 2
+    const id = 1
     // const id = getDecodedToken().id
     return getAllBirdSightings(id)
       .then(sightings => {
