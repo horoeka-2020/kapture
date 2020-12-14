@@ -1,4 +1,4 @@
-import { getDecodedToken } from 'authenticare/client/auth'
+// import { getDecodedToken } from 'authenticare/client/auth'
 import React from 'react'
 import { connect } from 'react-redux'
 
@@ -29,7 +29,8 @@ class BirdSightings extends React.Component {
         setLocation({ latitude, longitude })
       })
     }
-    const id = getDecodedToken().id
+    const id = 2
+    // const id = getDecodedToken().id
     return getAllBirdSightings(id)
       .then(sightings => {
         this.setState({ sightings: sightings })

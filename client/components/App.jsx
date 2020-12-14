@@ -5,7 +5,7 @@ import { setUser } from '../actions/user'
 import { isAuthenticated, getDecodedToken } from '../auth'
 
 // Import components
-import LandingCard from './LandingCard'
+// import LandingCard from './LandingCard'
 // import WaitingIcon from './WaitingIcon'
 import WaitingIndicator from './WaitingIndicator'
 import About from './About'
@@ -35,7 +35,7 @@ class App extends React.Component {
             <Route exact path="/">
               <Redirect to="/welcome"/>
             </Route>
-            <Route path="/welcome" component={LandingCard}/>
+            <Route path="/welcome" component={Profile}/> {/* {LandingCard} */}
             <Route exact path='/profile/:username' component={Profile} />
             <Route exact path="/gallery" component={Gallery}/>
             <Route exact path="/about" component={About}/>

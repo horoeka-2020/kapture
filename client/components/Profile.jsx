@@ -1,4 +1,4 @@
-import { getDecodedToken } from 'authenticare/client/auth'
+// import { getDecodedToken } from 'authenticare/client/auth'
 import React from 'react'
 import { connect } from 'react-redux'
 import { dispatch } from '../store'
@@ -18,8 +18,10 @@ class Profile extends React.Component {
   }
 
   componentDidMount () {
-    const id = getDecodedToken().id
-    const username = getDecodedToken().username
+    const id = 2
+    const username = 'kakaruia@kapture.com'
+    // const id = getDecodedToken().id
+    // const username = getDecodedToken().username
     this.setState({
       username,
       id

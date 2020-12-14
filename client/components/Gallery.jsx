@@ -1,5 +1,5 @@
 import React from 'react'
-import { getDecodedToken } from 'authenticare/client/auth'
+// import { getDecodedToken } from 'authenticare/client/auth'
 import { dispatch } from '../store'
 import { showError } from '../actions/error'
 import { getUserSightings } from '../api/user.js'
@@ -16,8 +16,10 @@ class Gallery extends React.Component {
   }
 
   componentDidMount () {
-    const id = getDecodedToken().id
-    const username = getDecodedToken().username
+    const id = 2
+    const username = 'kakaruia@kapture.com'
+    // const id = getDecodedToken().id
+    // const username = getDecodedToken().username
     this.setState({
       username,
       id

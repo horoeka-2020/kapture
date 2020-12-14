@@ -16,22 +16,20 @@ export default class About extends React.Component {
           </div>
           <div className='about-container'>
             <h1><span>Shelly (Michelle) Mutu-Grigg | Kākā</span></h1>
-            <p className='about-shelly'><span><strong>Kākā</strong> Make lots of noise....
-              <br></br>
-
-            </span></p>
+            <p className='about-shelly'><span><strong>Kākā</strong>  - Hardworking and strong character that is happy with noise</span></p>
+            <br></br>
           </div>
           <div className='about-container'>
             <h1><span>David Steel | Rifleman</span></h1>
-            <p className='about-dave'><span><strong>Rifleman</strong> Strong and persistent</span></p>
+            <p className='about-dave'><span><strong>Raiwhara</strong> - Dedicated, hardworking and strong character</span></p>
           </div>
           <div className='about-container'>
             <h1><span>Rodrigo Diaz | Kea</span></h1>
-            <p className='about-rod'><span><strong>Kea</strong> The endangered kea is the world&apos;s only alpine parrot, and one of the most intelligent birds. The kea was crowned Bird of the Year in 2017.</span></p>
+            <p className='about-rod'><span><strong>Kea</strong> - Endangered, intelligent and cheeky character.</span></p>
           </div>
           <div className='about-container'>
             <h1><span>Kittisan P. | Chatham Islands black robin</span></h1>
-            <p className='about-kitti'><span><strong>Chatham Islands black robin</strong> All of today&apos;s black robins are descended from the last breeding female, Old Blue. She was one of the longest-lived robins known, reaching 14 years old.</span></p>
+            <p className='about-kitti'><span><strong>Kakaruia</strong> - Small, strong, fun and full of personality.</span></p>
           </div>
         </div>
         <Footer />

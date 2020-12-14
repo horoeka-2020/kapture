@@ -4,6 +4,11 @@
 # kapture
 AIM: To encourage interaction with nature by capturing images/descriptions of native birds
 
+## Known issue
+There is currently a known issue with the login and logout functionality through authenticare.  This prevents existing users being able to login once they have logged out.  This issue is being worked on under https://github.com/horoeka-2020/kapture/issues/160
+
+A workaround has been put in place to hardcode user details to allow exposure to application functionality.
+
 ## User Stories 
 
 | Description | Must / Should / Could | Priority | 
@@ -22,7 +27,7 @@ AIM: To encourage interaction with nature by capturing images/descriptions of na
 | As a user I want to be able to have a bird identified from a photo | COULD | TBC |
 | As a user I want to be able to record a photo of a bird  | COULD | TBC |
 | As a user I want to be able to record a description of a bird  |  COULD | TBC |
-| As a user I want to be able to record a video of a bird | SHOULD | TBC |
+| As a user I want to be able to record a video of a bird | COULD | TBC |
 | As a user I want to be able to download and print a photo of a bird |COULD | TBC |
 | As a user I want to see a video of a flying bird as a backgound to the login/register screen |  COULD | TBC |
 | As a user I want to be able to organise an event to look for birds | COULD | TBC |
