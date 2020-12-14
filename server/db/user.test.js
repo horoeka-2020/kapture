@@ -52,13 +52,13 @@ test('createUser creates a new user', () => {
     })
 })
 
-// txest('getBirdsByUserID brings back the bird sightings', () => {
-//   return users.getBirdsByUserID(2, testDb)
-//     .then((sightings) => {
-//       expect(sightings[0].birdName).toBe('Bellbird')
-//       return null
-//     })
-// })
+test('getBirdsByUserID brings back the bird sightings', () => {
+  return users.getBirdsByUserID(1, testDb)
+    .then((sightings) => {
+      expect(sightings[0].birdName).toBe('Bellbird')
+      return null
+    })
+})
 
 test('getUserBadges returns all user badges', () => {
   return users.getUserBadges(2, testDb)
