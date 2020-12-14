@@ -25,7 +25,7 @@ test('addUserSighting adds a bird sighting', () => {
     .then(() => {
       return sighting.getBirdSightings(1, testDb)
     }).then((birds) => {
-      expect(birds).toHaveLength(1)
+      expect(birds).toHaveLength(5)
       return null
     })
 })

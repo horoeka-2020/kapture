@@ -15,13 +15,13 @@ beforeEach(() => {
 test('getUsers returns our users', () => {
   return users.getUsers(testDb)
     .then(allUsers => {
-      expect(allUsers).toHaveLength(1)
+      expect(allUsers).toHaveLength(2)
       return null
     })
 })
 
 test('userExists finds an existing user', () => {
-  const username = 'this@email.com'
+  const username = 'kakaruia@kapture.com'
 
   return users.userExists(username, testDb)
     .then(usersUsername => {
@@ -63,7 +63,7 @@ test('createUser creates a new user', () => {
 test('getUserBadges returns all user badges', () => {
   return users.getUserBadges(2, testDb)
     .then((badges) => {
-      expect(badges).toHaveLength(6)
+      expect(badges).toHaveLength(4)
       return null
     })
 })
@@ -77,7 +77,7 @@ test('addBadgeToUser adds a badge to the db', () => {
     .then(() => {
       return users.getUserBadges(2, testDb)
     }).then((badges) => {
-      expect(badges).toHaveLength(7)
+      expect(badges).toHaveLength(5)
       return null
     })
 })
