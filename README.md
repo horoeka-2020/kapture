@@ -5,9 +5,9 @@
 AIM: To encourage interaction with nature by capturing images/descriptions of native birds
 
 ## Known issue
-There is currently a known issue with the login and logout functionality through authenticare.  This prevents existing users being able to login once they have logged out.  This issue is being worked on under https://github.com/horoeka-2020/kapture/issues/160
+There is currently a known issue with the login and logout functionality through authenticare.  This prevents existing users being able to login once they have logged out.  This issue is being worked on under https://github.com/horoeka-2020/kapture/issues/160.  There is a project intention to attempt to replace authenticare with OAuth.
 
-A workaround has been put in place to hardcode user details to allow exposure to application functionality.
+A workaround has been put in place to hardcode user details to allow users to review application functionality.
 
 ## User Stories 
 
