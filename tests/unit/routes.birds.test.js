@@ -1,9 +1,9 @@
 const request = require('supertest')
 
-const server = require('../server')
-const db = require('../db/birds')
+const server = require('../../server/server')
+const db = require('../../server/db/birds')
 
-jest.mock('../db/birds')
+jest.mock('../../server/db/birds')
 
 const mockBirds = [{
   id: 1,

@@ -1,4 +1,4 @@
-import { setUser, clearUser, setUserLocation, SET_USER, CLEAR_USER, USER_LOCATION } from './user'
+import { setUser, clearUser, setUserLocation, SET_USER, CLEAR_USER, USER_LOCATION } from '../../client/actions/user'
 
 test('setUser returns the correct action', () => {
   const user = {

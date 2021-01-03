@@ -1,6 +1,6 @@
 import {
   getSizes
-} from './sizes'
+} from '../../client/api/sizes'
 
 test('getSizes returns all sizes', () => {
   const consume = () => Promise.resolve({

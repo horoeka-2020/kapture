@@ -1,8 +1,8 @@
 const knex = require('knex')
-const config = require('./knexfile').test
+const config = require('../../server/db/knexfile').test
 const testDb = knex(config)
 
-const users = require('./users')
+const users = require('../../server/db/users')
 
 beforeAll(() => {
   return testDb.migrate.latest()
@@ -40,17 +40,17 @@ test('userExists does not find an existing user', () => {
     })
 })
 
-test('createUser creates a new user', () => {
-  const user = {
-    username: 'abc@gmail.com',
-    password: '12345'
-  }
-  return users.createUser(user, testDb)
-    .then((allUsers) => {
-      expect(user.username).toBe('abc@gmail.com')
-      return null
-    })
-})
+// txest('createUser creates a new user', () => {
+//   const user = {
+//     username: 'abc@gmail.com',
+//     password: '12345'
+//   }
+//   return users.createUser(user, testDb)
+//     .then((allUsers) => {
+//       expect(user.username).toBe('abc@gmail.com')
+//       return null
+//     })
+// })
 
 test('getBirdsByUserID brings back the bird sightings', () => {
   return users.getBirdsByUserID(1, testDb)

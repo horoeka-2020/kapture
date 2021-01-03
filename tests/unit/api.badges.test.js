@@ -1,6 +1,6 @@
 import {
   getUserBadges
-} from './badges'
+} from '../../client/api/badges'
 
 test('getUserBadges returns a badges by ID', () => {
   const consume = () => Promise.resolve({

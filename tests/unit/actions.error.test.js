@@ -1,4 +1,4 @@
-import { showError, hideError, SHOW_ERROR, HIDE_ERROR } from './error'
+import { showError, hideError, SHOW_ERROR, HIDE_ERROR } from '../../client/actions/error'
 
 test('showError returns the correct action', () => {
   const action = showError('Bird already in flock')

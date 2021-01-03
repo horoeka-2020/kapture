@@ -1,5 +1,5 @@
-import { SHOW_ERROR, HIDE_ERROR } from '../actions/error'
-import errorReducer from './error'
+import { SHOW_ERROR, HIDE_ERROR } from '../../client/actions/error'
+import errorReducer from '../../client/reducers/error'
 
 test('returns error message on "SHOW_ERROR"', () => {
   const action = {

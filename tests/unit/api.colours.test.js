@@ -1,6 +1,6 @@
 import {
   getColours
-} from './colours'
+} from '../../client/api/colours'
 
 test('getColours returns all colours', () => {
   const consume = () => Promise.resolve({

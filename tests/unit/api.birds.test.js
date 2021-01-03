@@ -2,7 +2,7 @@ import {
   getAllBirds,
   getBirdByID,
   getBirdsByColourAndSize
-} from './birds'
+} from '../../client/api/birds'
 
 test('getAllBirds returns all birds', () => {
   const consume = () => Promise.resolve({

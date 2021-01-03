@@ -1,7 +1,7 @@
-import { SET_WAITING, CLEAR_WAITING } from '../actions/waiting'
-import { SET_USER } from '../actions/user'
-import { SHOW_ERROR } from '../actions/error'
-import waitingReducer from './waiting'
+import { SET_WAITING, CLEAR_WAITING } from '../../client/actions/waiting'
+import { SET_USER } from '../../client/actions/user'
+import { SHOW_ERROR } from '../../client/actions/error'
+import waitingReducer from '../../client/reducers/waiting'
 
 test('returns true on "SET_WAITING"', () => {
   const action = {

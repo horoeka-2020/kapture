@@ -1,5 +1,5 @@
-import { SET_USER, CLEAR_USER } from '../actions/user'
-import userReducer from './user'
+import { SET_USER, CLEAR_USER } from '../../client/actions/user'
+import userReducer from '../../client/reducers/user'
 
 test('returns new user object on "SET_USER"', () => {
   const oldState = {

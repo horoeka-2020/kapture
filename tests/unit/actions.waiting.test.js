@@ -3,7 +3,7 @@ import {
   clearWaiting,
   SET_WAITING,
   CLEAR_WAITING
-} from './waiting'
+} from '../../client/actions/waiting'
 
 test('setWaiting returns the correct action', () => {
   const action = setWaiting()
