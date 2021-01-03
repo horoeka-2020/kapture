@@ -12,7 +12,7 @@
     "webpack:server": "webpack-dev-server --hot --inline --content-base server/public --config client/webpack.config.js",
     "test": "jest --verbose",
     "test:watch": "jest --watchAll --verbose",
-    "test:e2e": "DEBUG=pw:api NODE_ENV=e2e jest",
+    "test:e2e": "NODE_ENV=development jest --verbose e2e.navigation.test.js", 
     "test:all": "npm run lint && npm run test && npm run test:e2e",
     "server": "node server",
     "start": "node server",
