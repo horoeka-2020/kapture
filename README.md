@@ -12,6 +12,8 @@ Must be running on node `v14.17.3`.
 `npx knex migrate:latest --knexfile ./server/db/knexfile.js migrate:latest`
 `npx knex --knexfile ./server/db/knexfile.js seed:run`
 
+heroku config:set PGSSLMODE=no-verify
+
 To set up pgAdmin to maintain production database see the heroku Datastores > Postgresql > Settings
 https://data.heroku.com/datastores/198f8ab0-003e-4d87-a5be-22713fd3977b#administration
 
