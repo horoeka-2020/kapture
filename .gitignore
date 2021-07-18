@@ -4,4 +4,4 @@ bundle.*
 dev.sqlite3
 .env
 coverage
-*DS_Store
+.DS_Store
