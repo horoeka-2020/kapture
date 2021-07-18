@@ -12,6 +12,10 @@ Must be running on node `v14.17.3`.
 `npx knex migrate:latest --knexfile ./server/db/knexfile.js migrate:latest`
 `npx knex --knexfile ./server/db/knexfile.js seed:run`
 
+To set up pgAdmin to maintain production database see the heroku Datastores > Postgresql > Settings
+https://data.heroku.com/datastores/198f8ab0-003e-4d87-a5be-22713fd3977b#administration
+
+
 ## Known issue
 There is currently a known issue with the login and logout functionality through authenticare.  This prevents existing users being able to login once they have logged out.  This issue is being worked on under https://github.com/horoeka-2020/kapture/issues/160.  There is a project intention to attempt to replace authenticare with a suitable alternative.
 
