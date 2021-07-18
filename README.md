@@ -4,6 +4,14 @@
 # kapture
 AIM: To encourage interaction with nature by capturing images/descriptions of native birds
 
+## Repo Setup
+Must be running on node `v14.17.3`.
+`npm install // If needed npm install --legacy-peer-deps`
+`npm install knex`
+`npm install knex sqlite3`
+`npx knex migrate:latest --knexfile ./server/db/knexfile.js migrate:latest`
+`npx knex --knexfile ./server/db/knexfile.js seed:run`
+
 ## Known issue
 There is currently a known issue with the login and logout functionality through authenticare.  This prevents existing users being able to login once they have logged out.  This issue is being worked on under https://github.com/horoeka-2020/kapture/issues/160.  There is a project intention to attempt to replace authenticare with a suitable alternative.
 
